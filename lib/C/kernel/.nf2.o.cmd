@@ -1,0 +1,1 @@
+cmd_/root/netfpga/lib/C/kernel/nf2.o := ld -m elf_i386   -r -o /root/netfpga/lib/C/kernel/nf2.o /root/netfpga/lib/C/kernel/nf2main.o /root/netfpga/lib/C/kernel/nf2_control.o /root/netfpga/lib/C/kernel/nf2util.o /root/netfpga/lib/C/kernel/nf2_ethtool.o 
