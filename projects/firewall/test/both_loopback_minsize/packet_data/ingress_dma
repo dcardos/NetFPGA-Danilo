@@ -1,0 +1,364 @@
+//File packet_data/ingress_dma created Thu Nov 14 19:20:43 2013
+//
+//This is a data file intended to be read in by a Verilog simulation.
+//
+// Packet 1 at port 1
+0000003c // Length without CRC
+00cafe00
+0000aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+010132bd
+fe90dfcc
+61ebb109
+d2dcdfdc
+a1887ce4
+ba61a7ff
+181ceede
+eeeeffff // End of pkt marker for pkt 1 (this is not sent).
+// Packet 1 at port 2
+0000003c // Length without CRC
+00cafe00
+0001aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+0101e316
+0824ece2
+c65ea5ca
+76ea789c
+f5909eb7
+7315a3c0
+df05ee0e
+eeeeffff // End of pkt marker for pkt 1 (this is not sent).
+// Packet 1 at port 3
+0000003c // Length without CRC
+00cafe00
+0002aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+0101a2b7
+0a2b7a9c
+f25a5577
+5b8f397d
+4ff5a338
+b5d31022
+3e3c294c
+eeeeffff // End of pkt marker for pkt 1 (this is not sent).
+// Packet 1 at port 4
+0000003c // Length without CRC
+00cafe00
+0003aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+0101dd0b
+c54f880e
+bf1bb933
+ece47a9c
+076d9aaa
+57234616
+db678039
+eeeeffff // End of pkt marker for pkt 1 (this is not sent).
+// Packet 2 at port 1
+0000003c // Length without CRC
+00cafe00
+0000aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+0101e4b2
+0571f971
+1affbd71
+1eff22fe
+a7d7614f
+ad6af397
+13fdeaab
+eeeeffff // End of pkt marker for pkt 2 (this is not sent).
+// Packet 2 at port 2
+0000003c // Length without CRC
+00cafe00
+0001aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+010146a7
+be1ca395
+09e1f4f1
+33947a07
+2a8f14c3
+b50a51da
+c0f1a36c
+eeeeffff // End of pkt marker for pkt 2 (this is not sent).
+// Packet 2 at port 3
+0000003c // Length without CRC
+00cafe00
+0002aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+0101d29c
+f6c02c43
+dc52551a
+f108d0fc
+60aa5723
+f96f3557
+4962dfd3
+eeeeffff // End of pkt marker for pkt 2 (this is not sent).
+// Packet 2 at port 4
+0000003c // Length without CRC
+00cafe00
+0003aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+01013f70
+c012c235
+d700dc7a
+3d7265ff
+989749fa
+3935705e
+c96cd6fa
+eeeeffff // End of pkt marker for pkt 2 (this is not sent).
+// Packet 3 at port 1
+0000003c // Length without CRC
+00cafe00
+0000aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+0101b652
+4774ac65
+6d1ee194
+ea83ea64
+6801bfe9
+d3adf2d0
+02e010a1
+eeeeffff // End of pkt marker for pkt 3 (this is not sent).
+// Packet 3 at port 2
+0000003c // Length without CRC
+00cafe00
+0001aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+0101c2cd
+9b2b7d24
+86435f30
+148a05f6
+547cb0a1
+77422737
+10a2772d
+eeeeffff // End of pkt marker for pkt 3 (this is not sent).
+// Packet 3 at port 3
+0000003c // Length without CRC
+00cafe00
+0002aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+0101d74f
+9c892766
+96ebde84
+0826201a
+4260729a
+2c59505d
+592d541c
+eeeeffff // End of pkt marker for pkt 3 (this is not sent).
+// Packet 3 at port 4
+0000003c // Length without CRC
+00cafe00
+0003aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+0101362b
+9d6e898f
+38682603
+0933974d
+95de30ed
+84826eac
+d04eebf7
+eeeeffff // End of pkt marker for pkt 3 (this is not sent).
+// Packet 4 at port 1
+0000003c // Length without CRC
+00cafe00
+0000aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+01017d03
+09a24928
+976c1d90
+7035df44
+1cdffce1
+48fccede
+16747056
+eeeeffff // End of pkt marker for pkt 4 (this is not sent).
+// Packet 4 at port 2
+0000003c // Length without CRC
+00cafe00
+0001aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+0101f369
+3fb50c87
+67cac5d5
+fd37e721
+18bb424e
+2af899fb
+19175a00
+eeeeffff // End of pkt marker for pkt 4 (this is not sent).
+// Packet 4 at port 3
+0000003c // Length without CRC
+00cafe00
+0002aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+0101c4bc
+de375493
+7206c219
+a71696cd
+083e2eda
+f75643d7
+40b679e8
+eeeeffff // End of pkt marker for pkt 4 (this is not sent).
+// Packet 4 at port 4
+0000003c // Length without CRC
+00cafe00
+0003aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+01018e8b
+3b11932a
+de5aa1c6
+86d968fd
+ba7658ea
+88dfb887
+0bd98086
+eeeeffff // End of pkt marker for pkt 4 (this is not sent).
+// Packet 5 at port 1
+0000003c // Length without CRC
+00cafe00
+0000aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+01011d06
+0875e8fb
+ac39f878
+60d488d4
+651ae3cf
+0853b59b
+c989bbc4
+eeeeffff // End of pkt marker for pkt 5 (this is not sent).
+// Packet 5 at port 2
+0000003c // Length without CRC
+00cafe00
+0001aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+0101f2ff
+36f66d98
+4ca7237b
+e282affc
+8e3cb8b5
+92da51df
+2039b787
+eeeeffff // End of pkt marker for pkt 5 (this is not sent).
+// Packet 5 at port 3
+0000003c // Length without CRC
+00cafe00
+0002aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+01017b09
+4c76df5a
+ae9c33a7
+87a5a011
+1307afb7
+a9507105
+d6c04ee4
+eeeeffff // End of pkt marker for pkt 5 (this is not sent).
+// Packet 5 at port 4
+0000003c // Length without CRC
+00cafe00
+0003aabb
+ccddeeff
+08004500
+002e0001
+00004000
+f87cc0a8
+0001c0a8
+01013e68
+bfd50ee4
+382150d2
+64a5ce68
+85e20cd7
+2a9894cc
+5b65c4cb
+eeeeffff // End of pkt marker for pkt 5 (this is not sent).

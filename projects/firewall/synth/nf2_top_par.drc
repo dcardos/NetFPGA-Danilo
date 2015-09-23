@@ -1,0 +1,431 @@
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx
+   _fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr
+   /ramloop[0].ram.r/v2.ram/dp18x36.ram.A>:<RAMB16_RAMB16A>.  The block is
+   configured to use input parity pins. There are dangling output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/cpu_queues[1].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx
+   _fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr
+   /ramloop[0].ram.r/v2.ram/dp18x36.ram.A>:<RAMB16_RAMB16A>.  The block is
+   configured to use input parity pins. There are dangling output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/cpu_queues[2].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx
+   _fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr
+   /ramloop[0].ram.r/v2.ram/dp18x36.ram.A>:<RAMB16_RAMB16A>.  The block is
+   configured to use input parity pins. There are dangling output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/cpu_queues[3].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx
+   _fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr
+   /ramloop[0].ram.r/v2.ram/dp18x36.ram.A>:<RAMB16_RAMB16A>.  The block is
+   configured to use input parity pins. There are dangling output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_tx_queue/cpu_fifos64.tx
+   _fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr
+   /ramloop[0].ram.r/v2.ram/dp36x18.ram.B>:<RAMB16_RAMB16B>.  The block is
+   configured to use input parity pins. There are dangling output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/cpu_queues[1].cpu_dma_queue_i/cpu_dma_tx_queue/cpu_fifos64.tx
+   _fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr
+   /ramloop[0].ram.r/v2.ram/dp36x18.ram.B>:<RAMB16_RAMB16B>.  The block is
+   configured to use input parity pins. There are dangling output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/cpu_queues[2].cpu_dma_queue_i/cpu_dma_tx_queue/cpu_fifos64.tx
+   _fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr
+   /ramloop[0].ram.r/v2.ram/dp36x18.ram.B>:<RAMB16_RAMB16B>.  The block is
+   configured to use input parity pins. There are dangling output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/cpu_queues[3].cpu_dma_queue_i/cpu_dma_tx_queue/cpu_fifos64.tx
+   _fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr
+   /ramloop[0].ram.r/v2.ram/dp36x18.ram.B>:<RAMB16_RAMB16B>.  The block is
+   configured to use input parity pins. There are dangling output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/cpci_bus/pci2net_fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.
+   bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2.ram/dp36x36.ram.A>:<RAMB
+   16_RAMB16A>.  The block is configured to use input parity pins. There are
+   dangling output parity pins.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[7].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[6].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[5].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[4].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[3].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[2].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[1].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[0].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[0].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/user_data_path/firewall/output_fifo/Mram_queue1.A>:<RAMB16_RA
+   MB16A>.  The block is configured to use input parity pins. There are dangling
+   output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/user_data_path/firewall/output_fifo/Mram_queue2.A>:<RAMB16_RA
+   MB16A>.  The block is configured to use input parity pins. There are dangling
+   output parity pins.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[7].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[6].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[5].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[4].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[3].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[2].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[1].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[0].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[2].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx
+   _fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr
+   /ramloop[1].ram.r/v2.ram/dp18x36.ram.A>:<RAMB16_RAMB16A>.  The block is
+   configured to use input parity pins. There are dangling output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/cpu_queues[1].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx
+   _fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr
+   /ramloop[1].ram.r/v2.ram/dp18x36.ram.A>:<RAMB16_RAMB16A>.  The block is
+   configured to use input parity pins. There are dangling output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/cpu_queues[2].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx
+   _fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr
+   /ramloop[1].ram.r/v2.ram/dp18x36.ram.A>:<RAMB16_RAMB16A>.  The block is
+   configured to use input parity pins. There are dangling output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/cpu_queues[3].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx
+   _fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr
+   /ramloop[1].ram.r/v2.ram/dp18x36.ram.A>:<RAMB16_RAMB16A>.  The block is
+   configured to use input parity pins. There are dangling output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/user_data_path/firewall/input_fifo/Mram_queue1.A>:<RAMB16_RAM
+   B16A>.  The block is configured to use input parity pins. There are dangling
+   output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/user_data_path/firewall/input_fifo/Mram_queue2.A>:<RAMB16_RAM
+   B16A>.  The block is configured to use input parity pins. There are dangling
+   output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_tx_queue/cpu_fifos64.tx
+   _fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr
+   /ramloop[1].ram.r/v2.ram/dp36x18.ram.B>:<RAMB16_RAMB16B>.  The block is
+   configured to use input parity pins. There are dangling output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/cpu_queues[1].cpu_dma_queue_i/cpu_dma_tx_queue/cpu_fifos64.tx
+   _fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr
+   /ramloop[1].ram.r/v2.ram/dp36x18.ram.B>:<RAMB16_RAMB16B>.  The block is
+   configured to use input parity pins. There are dangling output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/cpu_queues[2].cpu_dma_queue_i/cpu_dma_tx_queue/cpu_fifos64.tx
+   _fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr
+   /ramloop[1].ram.r/v2.ram/dp36x18.ram.B>:<RAMB16_RAMB16B>.  The block is
+   configured to use input parity pins. There are dangling output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/cpu_queues[3].cpu_dma_queue_i/cpu_dma_tx_queue/cpu_fifos64.tx
+   _fifo/BU2/U0/grf.rf/mem/gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr
+   /ramloop[1].ram.r/v2.ram/dp36x18.ram.B>:<RAMB16_RAMB16B>.  The block is
+   configured to use input parity pins. There are dangling output parity pins.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[7].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[6].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[5].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[4].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[3].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[2].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[1].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[0].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[4].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[7].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[6].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[5].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[4].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[3].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[2].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[1].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[0].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[6].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[7].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[6].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[5].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[4].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[3].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[2].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[1].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[0].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[1].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[7].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[6].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[5].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[4].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[3].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[2].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[1].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[0].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[3].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/input_fifo/fifo/Mram_queue1.A>:<
+   RAMB16_RAMB16A>.  The block is configured to use input parity pins. There are
+   dangling output parity pins.
+WARNING:PhysDesignRules:1060 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/input_fifo/fifo/Mram_queue2.A>:<
+   RAMB16_RAMB16A>.  The block is configured to use input parity pins. There are
+   dangling output parity pins.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[7].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[6].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[5].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[4].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[3].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[2].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[1].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[0].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[5].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[7].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[6].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[5].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[4].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[3].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[2].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[1].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+WARNING:PhysDesignRules:1063 - Dangling pins on
+   block:<nf2_core/user_data_path/output_queues/bram_oq[0].oq/BU2/U0/grf.rf/mem/
+   gbm.gbmg.gbmga.ngecc.bmg/blk_mem_generator/valid.cstr/ramloop[7].ram.r/v2.ram
+   /dp9x9.ram.A>:<RAMB16_RAMB16A>.  The block is configured to use an input
+   parity pins. There is a dangling output parity pin.
+DRC detected 0 errors and 87 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

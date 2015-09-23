@@ -1,0 +1,10 @@
+/root/netfpga/projects/firewall/synth/nf2_top.ngc 1425948549
+/root/netfpga/projects/firewall/synth/syncfifo_2048x72.ngc 1386785043
+/root/netfpga/projects/firewall/synth/cdq_tx_fifo_256x72_to_36.ngc 1380314075
+/root/netfpga/projects/firewall/synth/cdq_rx_fifo_512x36_to_72.ngc 1380313983
+/root/netfpga/projects/firewall/synth/txfifo_512x72_to_9.ngc 1380314368
+/root/netfpga/projects/firewall/synth/rxfifo_8kx9_to_72.ngc 1380314244
+/root/netfpga/projects/firewall/synth/rxlengthfifo_128x13.ngc 1380314276
+/root/netfpga/projects/firewall/synth/pci2net_16x60.ngc 1380314441
+/root/netfpga/projects/firewall/synth/net2pci_16x32.ngc 1380314400
+OK

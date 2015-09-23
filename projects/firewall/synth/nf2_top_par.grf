@@ -1,0 +1,465 @@
+Release 10.1.03 - par K.39 (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+Mon Mar 09 22:02:18 2015
+
+  SmartGuide Results
+  ------------------
+  This section describes the guide results after invoking the Router. This
+  report accurately reflects the differences between the input design
+  and the guide design.
+
+  Number of Components in the input design    |  12057
+    Number of guided Components               |  12003 out of  12057  99.6%
+    Number of re-implemented Components       |     49 out of  12057   0.4%
+    Number of new/changed Components          |      5 out of  12057   0.1%
+  Number of Nets in the input design          |  29013
+    Number of guided Nets                     |  28409 out of  29013  97.9%
+    Number of partially guided Nets           |    229 out of  29013   0.8%
+    Number of re-routed Nets                  |    356 out of  29013   1.2%
+    Number of new/changed Nets                |     19 out of  29013   0.1%
+
+
+The following Components were re-implemented.
+---------------------------------------------
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_queue_delta(0) : SLICE_X75Y90.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_dout(16) : SLICE_X72Y94.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_dout(15) : SLICE_X72Y95.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_dout(7) : SLICE_X72Y97.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_dout(8) : SLICE_X70Y96.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_din(23) : SLICE_X75Y92.
+ nf2_core/mac_groups[2].nf2_mac_grp/rx_queue/rx_pkt_good_sync/ackA_clkB : SLICE_X78Y86.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_din(12) : SLICE_X70Y97.
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early2_not0001 : SLICE_X6Y121.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_dout(10) : SLICE_X72Y99.
+ nf2_core/udp_reg_ack : SLICE_X1Y83.
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(0) : SLICE_X71Y94.
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(2) : SLICE_X71Y95.
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(4) : SLICE_X71Y96.
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(6) : SLICE_X71Y97.
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(8) : SLICE_X71Y98.
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(10) : SLICE_X71Y99.
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(1) : SLICE_X0Y57.
+ nf2_core/nf2_mdio/mdc_rising : SLICE_X0Y70.
+ nf2_core/user_data_path/firewall/sram_wr_req_next_and0000_wg_cy(1) : SLICE_X6Y52.
+ nf2_core/sram64.sram_arbiter/rd_0_data(43) : SLICE_X3Y98.
+ nf2_core/user_data_path/firewall/sram_wr_req_next_and0000_wg_cy(3) : SLICE_X6Y53.
+ nf2_core/sram64.sram_arbiter/rd_0_data(61) : SLICE_X3Y95.
+ nf2_core/wr_0_req : SLICE_X6Y54.
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(20) : SLICE_X3Y56.
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(31) : SLICE_X0Y54.
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early1(12) : SLICE_X1Y74.
+ nf2_core/sram64.sram_arbiter/rd_0_data(50) : SLICE_X3Y97.
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(21) : SLICE_X3Y54.
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(14) : SLICE_X2Y59.
+ nf2_core/sram64.sram_arbiter/rd_0_data(4) : SLICE_X3Y99.
+ nf2_core/sram64.sram_arbiter/rd_0_data(12) : SLICE_X2Y94.
+ nf2_core/sram64.sram_arbiter/rd_0_data(7) : SLICE_X2Y100.
+ nf2_core/sram64.sram_arbiter/rd_0_data(17) : SLICE_X5Y97.
+ nf2_core/sram64.sram_arbiter/rd_0_data(42) : SLICE_X3Y100.
+ nf2_core/sram64.sram_arbiter/rd_0_data(9) : SLICE_X2Y98.
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(10) : SLICE_X1Y56.
+ nf2_core/sram64.sram_arbiter/rd_0_data(60) : SLICE_X2Y97.
+ nf2_core/sram64.sram_arbiter/rd_0_data(1) : SLICE_X7Y99.
+ nf2_core/sram64.sram_arbiter/rd_0_data(5) : SLICE_X2Y99.
+ nf2_core/sram64.sram_arbiter/rd_0_data(24) : SLICE_X0Y94.
+ nf2_core/sram64.sram_arbiter/rd_0_data(58) : SLICE_X3Y94.
+ nf2_core/sram64.sram_arbiter/rd_0_data(40) : SLICE_X3Y102.
+ nf2_core/sram64.sram_arbiter/rd_0_data(3) : SLICE_X5Y96.
+ nf2_core/sram64.sram_arbiter/rd_0_data(14) : SLICE_X2Y101.
+ nf2_core/cpu_q_dma_wr_data(0)(27) : SLICE_X73Y91.
+ nf2_core/cpu_q_dma_rd_data(2)(25) : SLICE_X75Y96.
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early1(65) : SLICE_X0Y83.
+ nf2_core/wr_0_data(39) : SLICE_X3Y108.
+
+
+The following Components are new/changed.
+-----------------------------------------
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early2_not0001 : SLICE_X6Y121.
+ nf2_core/user_data_path/firewall/sram_wr_req_next_and0000_wg_cy(1) : SLICE_X6Y52.
+ nf2_core/user_data_path/firewall/sram_wr_req_next_and0000_wg_cy(3) : SLICE_X6Y53.
+ nf2_core/wr_0_req : SLICE_X6Y54.
+ nf2_core/wr_0_data(39) : SLICE_X3Y108.
+
+
+The following Nets were re-routed.
+----------------------------------
+ nf2_core/udp_reg_wr_data(12).
+ nf2_core/cpu_queues[2].cpu_dma_queue_i/.cpu_dma_queue_regs/N58.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/rx_pkt_word_cnt(2).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(10).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/N55.
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(4).
+ nf2_core/user_data_path/input_arbiter/fifo_out_data(6)(26).
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early2(49).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(8).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(9).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(3).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(5).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/_old_delta_112(5)48.
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(7).
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/.cpu_dma_queue_regs/_old_delta_112(2)97.
+ nf2_core/user_data_path/udp_reg_master/count(6).
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early2(10).
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early1(10).
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early2(11).
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early1(11).
+ nf2_core/wr_0_data(46).
+ nf2_core/wr_0_data(44).
+ nf2_core/sram64.sram_arbiter/Mxor_bit_paridade_mod(5)_xo<5>.
+ nf2_core/wr_0_data(43).
+ nf2_core/wr_0_data(39).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/rx_pkt_removed.
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_queue_delta(0).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_queue_delta_mux0000(2).
+ nf2_core/in_ctrl(7)(5).
+ nf2_core/user_data_path/udp_reg_master/core_reg_rd_data_not0001.
+ nf2_core/user_data_path/input_arbiter/fifo_out_data(7)(26).
+ nf2_core/user_data_path/input_arbiter/fifo_out_data(7)(27).
+ nf2_core/in_data(1)(12).
+ N71.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/.cpu_dma_queue_regs/reg_file_in_addsub0000(2).
+ N82.
+ nf2_core/in_data(1)(45).
+ nf2_core/sram64.sram_arbiter/sram_addr_not0001.
+ N108.
+ N107.
+ N98.
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early1(12).
+ N106.
+ N97.
+ N105.
+ N88.
+ N96.
+ N104.
+ N87.
+ N95.
+ N103.
+ N86.
+ N94.
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early1(16).
+ N102.
+ N85.
+ N93.
+ N101.
+ N84.
+ N92.
+ N100.
+ N83.
+ N91.
+ N99.
+ N90.
+ N89.
+ N144.
+ N143.
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early1(56).
+ N134.
+ N142.
+ N133.
+ N141.
+ N124.
+ N132.
+ N140.
+ N123.
+ N131.
+ N139.
+ N122.
+ N130.
+ N138.
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early1(69).
+ N121.
+ N129.
+ N137.
+ N120.
+ N128.
+ N136.
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early1(71).
+ N119.
+ N127.
+ N135.
+ N126.
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early1(65).
+ N125.
+ nf2_core/cpu_queues[2].cpu_dma_queue_i/cpu_dma_tx_queue/tx_fifo_data_out(25).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/N30.
+ N118.
+ N117.
+ N116.
+ N115.
+ N114.
+ N113.
+ N112.
+ N111.
+ N110.
+ N109.
+ N150.
+ N149.
+ N148.
+ N147.
+ N146.
+ N145.
+ nf2_core/nf2_mdio/mdc_rising.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_din(10).
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_din(12).
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx_fifo/BU2/U0/grf.rf/mem/dout_mem<5>.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx_fifo/BU2/U0/grf.rf/mem/dout_mem<6>.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx_fifo/BU2/U0/grf.rf/mem/dout_mem<40>.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx_fifo/BU2/U0/grf.rf/mem/dout_mem<43>.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx_fifo/BU2/U0/grf.rf/mem/dout_mem<46>.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx_fifo/BU2/U0/grf.rf/mem/dout_mem<51>.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx_fifo/BU2/U0/grf.rf/mem/dout_mem<52>.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx_fifo/BU2/U0/grf.rf/mem/dout_mem<44>.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_dout(41).
+ nf2_core/out_data(5)(17).
+ nf2_core/out_data(5)(41).
+ nf2_core/cpci_reg_rd_data(1).
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_din(19).
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_din(23).
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx_fifo/BU2/U0/grf.rf/mem/dout_mem<21>.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx_fifo/BU2/U0/grf.rf/mem/dout_mem<25>.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64.rx_fifo/BU2/U0/grf.rf/mem/dout_mem<61>.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_dout(38).
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_dout(42).
+ nf2_core/nf2_mdio/N27.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_dout(16).
+ nf2_core/cpu_q_dma_wr_data(0)(18).
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_dout(15).
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early2_not0001.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_dout(7).
+ nf2_core/core_reg_rd_data(21).
+ nf2_core/core_reg_rd_data(29).
+ nf2_core/core_reg_rd_data(4).
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early2(63).
+ nf2_core/core_reg_rd_data(12).
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_dout(8).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_word_cnt_delta_or0000.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_dout(57).
+ nf2_core/user_data_path/udp_reg_master/count(7).
+ nf2_core/mac_groups[2].nf2_mac_grp/rx_queue/rx_pkt_good_sync/ackA_synch.
+ nf2_core/cpu_q_dma_wr_data(0)(15).
+ nf2_core/cpu_q_dma_rd_data(2)(25).
+ nf2_core/cpu_q_dma_wr_data(0)(27).
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/.cpu_dma_queue_regs/tx_byte_cnt_delta_not0001.
+ nf2_core/mac_groups[2].nf2_mac_grp/rx_queue/rx_pkt_good_sync/ackA_clkB.
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(10).
+ nf2_core/cpu_q_dma_wr_data(0)(20).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta_not0001.
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(11).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/rx_pkt_word_cnt(4).
+ nf2_core/udp_reg_rd_data(12).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(12).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(20).
+ nf2_core/sram64.sram_arbiter/bit_par_is_valid_or0000_G_2.
+ nf2_core/sram64.sram_arbiter/mod_par_error(2).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(21).
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_dout(3).
+ N364.
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/rx_pkt_word_cnt(6).
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/.cpu_dma_queue_regs/N43.
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/N43.
+ nf2_core/cpu_queues[2].cpu_dma_queue_i/.cpu_dma_queue_regs/N43.
+ nf2_core/cpu_queues[3].cpu_dma_queue_i/.cpu_dma_queue_regs/N43.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/.cpu_dma_queue_regs/N541.
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/N541.
+ nf2_core/cpu_queues[2].cpu_dma_queue_i/.cpu_dma_queue_regs/N541.
+ nf2_core/cpu_queues[3].cpu_dma_queue_i/.cpu_dma_queue_regs/N541.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/.cpu_dma_queue_regs/N561.
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/N561.
+ nf2_core/cpu_queues[2].cpu_dma_queue_i/.cpu_dma_queue_regs/N561.
+ nf2_core/cpu_queues[3].cpu_dma_queue_i/.cpu_dma_queue_regs/N561.
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(14).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(22).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(15).
+ nf2_core/udp_reg_rd_data(31).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(31).
+ N366.
+ N368.
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(6).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/_old_delta_112(6)48.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/.cpu_dma_queue_regs/_old_delta_112(8)48.
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/.cpu_dma_queue_regs/_old_delta_112(9)48.
+ N360.
+ N356.
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(26).
+ nf2_core/nf2_reg_grp_u/cpu_rd_data(26).
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_dout(61).
+ nf2_core/nf2_reg_grp_u/cpu_rd_data(0).
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early2(56).
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early2(57).
+ nf2_core/cpu_queues[0].cpu_dma_queue_i/cpu_dma_rx_queue/cpu_fifos64_rx_fifo_dout(10).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(1).
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early2(13).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(3).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(29).
+ nf2_core/user_data_path/op_lut_in_reg_src(0).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/rx_pkt_word_cnt(7).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data(9).
+ N58.
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(0).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(1).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta_or0000.
+ N52.
+ nf2_core/sram_reg_addr(7).
+ N358.
+ nf2_core/user_data_path/udp_reg_src_in(1).
+ nf2_core/user_data_path/firewall_in_reg_ack.
+ nf2_core/user_data_path/oq_in_reg_src(0).
+ N54.
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/rx_pkt_word_cnt(1).
+ nf2_core/user_data_path/firewall/module_regs/sw_reg_addr_out(3).
+ nf2_core/sram64.sram_arbiter/rd_0_data(0).
+ nf2_core/sram64.sram_arbiter/rd_0_data(1).
+ nf2_core/sram64.sram_arbiter/rd_0_data(2).
+ nf2_core/sram64.sram_arbiter/rd_0_data(3).
+ nf2_core/sram64.sram_arbiter/rd_0_data(4).
+ nf2_core/sram64.sram_arbiter/rd_0_data(5).
+ nf2_core/sram64.sram_arbiter/rd_0_data(6).
+ nf2_core/sram64.sram_arbiter/rd_0_data(7).
+ nf2_core/sram64.sram_arbiter/rd_0_data(9).
+ nf2_core/sram64.sram_arbiter/rd_0_data(12).
+ nf2_core/sram64.sram_arbiter/rd_0_data(13).
+ nf2_core/sram64.sram_arbiter/rd_0_data(14).
+ nf2_core/sram64.sram_arbiter/rd_0_data(15).
+ nf2_core/sram64.sram_arbiter/rd_0_data(16).
+ nf2_core/sram64.sram_arbiter/rd_0_data(17).
+ nf2_core/sram64.sram_arbiter/rd_0_data(21).
+ nf2_core/sram64.sram_arbiter/rd_0_data(24).
+ nf2_core/wr_0_data(40).
+ nf2_core/nf2_mdio/phy_wr_data(0).
+ nf2_core/sram64.sram_arbiter/rd_0_data(38).
+ nf2_core/nf2_mdio/phy_wr_data(3).
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early2(62).
+ nf2_core/sram64.sram_arbiter/rd_0_data(40).
+ nf2_core/sram64.sram_arbiter/rd_0_data(41).
+ nf2_core/sram64.sram_arbiter/rd_0_data(42).
+ nf2_core/sram64.sram_arbiter/rd_0_data(43).
+ nf2_core/sram64.sram_arbiter/rd_0_data(44).
+ nf2_core/sram64.sram_arbiter/rd_0_data(46).
+ nf2_core/sram64.sram_arbiter/rd_0_data(48).
+ nf2_core/sram64.sram_arbiter/rd_0_data(49).
+ nf2_core/sram64.sram_arbiter/rd_0_data(50).
+ nf2_core/sram64.sram_arbiter/rd_0_data(51).
+ nf2_core/sram64.sram_arbiter/rd_0_data(53).
+ nf2_core/sram64.sram_arbiter/rd_0_data(54).
+ nf2_core/sram64.sram_arbiter/rd_0_data(55).
+ nf2_core/sram64.sram_arbiter/rd_0_data(57).
+ nf2_core/sram64.sram_arbiter/rd_0_data(58).
+ nf2_core/sram64.sram_arbiter/rd_0_data(59).
+ nf2_core/sram64.sram_arbiter/rd_0_data(60).
+ nf2_core/sram64.sram_arbiter/rd_0_data(61).
+ nf2_core/sram64.sram_arbiter/rd_0_data(62).
+ nf2_core/sram64.sram_arbiter/rd_0_data(63).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(2).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/N2.
+ nf2_core/udp_reg_ack.
+ nf2_core/user_data_path/udp_reg_master/core_reg_ack_mux0000.
+ N362.
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/Result(0).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/Result(1).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/Maccum_rx_byte_cnt_delta_cy(1).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/Result(2).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/Result(3).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/Maccum_rx_byte_cnt_delta_cy(3).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/Result(4).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/Result(5).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/Maccum_rx_byte_cnt_delta_cy(5).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/Result(6).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/Result(7).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/Maccum_rx_byte_cnt_delta_cy(7).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/Result(8).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/Result(9).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/Maccum_rx_byte_cnt_delta_cy(9).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/rx_byte_cnt_delta(11).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/Result(10).
+ nf2_core/cpu_queues[1].cpu_dma_queue_i/.cpu_dma_queue_regs/Result(11).
+ nf2_core/cpu_queues[3].cpu_dma_queue_i/cpu_dma_tx_queue/cpu_fifos64.tx_fifo/BU2/U0/grf.rf/gcx.clkx/rd_pntr_bin<3>.
+ nf2_core/nf2_mdio/cmd_reg(28).
+ nf2_core/mac_groups[1].nf2_mac_grp/gig_eth_mac/mac_tx/Mrom_max_data_length2.
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(30).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(22).
+ nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(1)_xo<5>.
+ nf2_core/nf2_mdio/mdc_rising_cmp_eq0000_2.
+ nf2_core/nf2_mdio/mdc_rising_cmp_eq0000.
+ nf2_core/udp_reg_addr(15).
+ nf2_core/sram64.sram_arbiter/rd_0_data_and000016.
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(43).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(49).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(61).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(53).
+ nf2_core/user_data_path/op_lut_in_reg_addr(6).
+ nf2_core/mac_groups[1].nf2_mac_grp/mac_grp_regs/control_reg(5).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(11).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(9).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(0).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(2).
+ nf2_core/nf2_mdio/tri_ctrl(8).
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early2(12).
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early2(16).
+ nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(1)_xo<4>.
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(50).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(51).
+ nf2_core/mac_groups[1].nf2_mac_grp/gig_eth_mac/mac_tx/Mrom_max_data_length3.
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(10).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(5).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(17).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(16).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(4).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(48).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(12).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(21).
+ nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(0)_xo<5>.
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(7).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(55).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(17).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(54).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(42).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(46).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(9).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(21).
+ nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(28).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(60).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(57).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(1).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(2).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(5).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(44).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(24).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(63).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(58).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(59).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(40).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(41).
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early2(65).
+ nf2_core/user_data_path/udp_reg_data_in(21).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(3).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(13).
+ nf2_core/user_data_path/firewall_in_reg_src(0).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(14).
+ nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(15).
+ nf2_core/nf2_dma/nf2_dma_que_intfc/cpu_q_dma_wr_data_nxt(0)(27).
+ nf2_core/sram64.sram_arbiter/sram_wr_data_early2(69).
+ nf2_core/sram64.sram_arbiter/rd_0_data_and000016_REPLICA_6.
+ nf2_core/user_data_path/udp_reg_master/count_mux0000(1).
+
+
+The following Nets are new/changed.
+-----------------------------------
+ N65.
+ N75.
+ N154.
+ N153.
+ N152.
+ N151.
+ N372.
+ nf2_core/wr_0_req.
+ N46.
+ N63.
+ N370.
+ N62.
+ N392.
+ N56.
+ nf2_core/user_data_path/firewall/sram_wr_req_next_and0000_wg_cy(1).
+ nf2_core/user_data_path/firewall/sram_wr_req_next_and0000_wg_cy(3).
+ nf2_core/user_data_path/firewall/sram_wr_req_next.
+ N390.
+ nf2_core/sram64.sram_arbiter/rd_0_data_and000016_REPLICA_7.

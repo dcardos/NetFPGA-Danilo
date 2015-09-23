@@ -1,0 +1,212 @@
+//File packet_data/pci_sim_data created Fri Mar 14 17:22:23 2014
+//
+//This is a data file intended to be read in by a Verilog simulation.
+//
+// WRITE:  Address: 0x8 Data: 0x0
+00000002 // WRITE
+00000008 // Address 
+00000000 // Data (0x0)
+00000000 // Mask (0x0)
+// WRITE:  Address: 0x40 Data: 0x0
+00000002 // WRITE
+00000040 // Address 
+00000000 // Data (0x0)
+00000000 // Mask (0x0)
+00000005 // DELAY 
+00000000 // Delay (MSB) 1000 ns
+000003e8 // Delay (LSB) 1000 ns
+00000004 // BARRIER
+00000000 // Number of expected pkts received via DMA port 1
+00000000 // Number of expected pkts received via DMA port 2
+00000000 // Number of expected pkts received via DMA port 3
+00000000 // Number of expected pkts received via DMA port 4
+// DMA: QUEUE: 0x1 LENGTH: 0x4b5
+00000003 // DMA
+00000001 // Queue (0x1)
+000004b5 // Length (0x4b5)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x2 LENGTH: 0x502
+00000003 // DMA
+00000002 // Queue (0x2)
+00000502 // Length (0x502)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x3 LENGTH: 0x3cb
+00000003 // DMA
+00000003 // Queue (0x3)
+000003cb // Length (0x3cb)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x4 LENGTH: 0x572
+00000003 // DMA
+00000004 // Queue (0x4)
+00000572 // Length (0x572)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x1 LENGTH: 0xa9
+00000003 // DMA
+00000001 // Queue (0x1)
+000000a9 // Length (0xa9)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x2 LENGTH: 0x3f1
+00000003 // DMA
+00000002 // Queue (0x2)
+000003f1 // Length (0x3f1)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x3 LENGTH: 0x1c5
+00000003 // DMA
+00000003 // Queue (0x3)
+000001c5 // Length (0x1c5)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x4 LENGTH: 0x3e8
+00000003 // DMA
+00000004 // Queue (0x4)
+000003e8 // Length (0x3e8)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x1 LENGTH: 0x56f
+00000003 // DMA
+00000001 // Queue (0x1)
+0000056f // Length (0x56f)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x2 LENGTH: 0xa9
+00000003 // DMA
+00000002 // Queue (0x2)
+000000a9 // Length (0xa9)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x3 LENGTH: 0x36b
+00000003 // DMA
+00000003 // Queue (0x3)
+0000036b // Length (0x36b)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x4 LENGTH: 0xf5
+00000003 // DMA
+00000004 // Queue (0x4)
+000000f5 // Length (0xf5)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x1 LENGTH: 0xa2
+00000003 // DMA
+00000001 // Queue (0x1)
+000000a2 // Length (0xa2)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x2 LENGTH: 0x564
+00000003 // DMA
+00000002 // Queue (0x2)
+00000564 // Length (0x564)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x3 LENGTH: 0x46b
+00000003 // DMA
+00000003 // Queue (0x3)
+0000046b // Length (0x46b)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x4 LENGTH: 0x243
+00000003 // DMA
+00000004 // Queue (0x4)
+00000243 // Length (0x243)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x1 LENGTH: 0x4f3
+00000003 // DMA
+00000001 // Queue (0x1)
+000004f3 // Length (0x4f3)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x2 LENGTH: 0x109
+00000003 // DMA
+00000002 // Queue (0x2)
+00000109 // Length (0x109)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x3 LENGTH: 0x6b
+00000003 // DMA
+00000003 // Queue (0x3)
+0000006b // Length (0x6b)
+00000000 // Mask (0x0)
+// DMA: QUEUE: 0x4 LENGTH: 0x46
+00000003 // DMA
+00000004 // Queue (0x4)
+00000046 // Length (0x46)
+00000000 // Mask (0x0)
+00000004 // BARRIER
+00000005 // Number of expected pkts received via DMA port 1
+00000005 // Number of expected pkts received via DMA port 2
+00000005 // Number of expected pkts received via DMA port 3
+00000005 // Number of expected pkts received via DMA port 4
+// READ:  Address: 0x600008 Expected Data: 0x5
+00000001 // READ
+00600008 // Address (0x600008)
+00000005 // Data (0x5)
+FFFFFFFF // Mask (0xFFFFFFFF)
+// READ:  Address: 0x600028 Expected Data: 0x5
+00000001 // READ
+00600028 // Address (0x600028)
+00000005 // Data (0x5)
+FFFFFFFF // Mask (0xFFFFFFFF)
+// READ:  Address: 0x60001c Expected Data: 0x1062
+00000001 // READ
+0060001c // Address (0x60001c)
+00001062 // Data (0x1062)
+FFFFFFFF // Mask (0xFFFFFFFF)
+// READ:  Address: 0x600030 Expected Data: 0x1062
+00000001 // READ
+00600030 // Address (0x600030)
+00001062 // Data (0x1062)
+FFFFFFFF // Mask (0xFFFFFFFF)
+// READ:  Address: 0x640008 Expected Data: 0x5
+00000001 // READ
+00640008 // Address (0x640008)
+00000005 // Data (0x5)
+FFFFFFFF // Mask (0xFFFFFFFF)
+// READ:  Address: 0x640028 Expected Data: 0x5
+00000001 // READ
+00640028 // Address (0x640028)
+00000005 // Data (0x5)
+FFFFFFFF // Mask (0xFFFFFFFF)
+// READ:  Address: 0x64001c Expected Data: 0x1009
+00000001 // READ
+0064001c // Address (0x64001c)
+00001009 // Data (0x1009)
+FFFFFFFF // Mask (0xFFFFFFFF)
+// READ:  Address: 0x640030 Expected Data: 0x1009
+00000001 // READ
+00640030 // Address (0x640030)
+00001009 // Data (0x1009)
+FFFFFFFF // Mask (0xFFFFFFFF)
+// READ:  Address: 0x680008 Expected Data: 0x5
+00000001 // READ
+00680008 // Address (0x680008)
+00000005 // Data (0x5)
+FFFFFFFF // Mask (0xFFFFFFFF)
+// READ:  Address: 0x680028 Expected Data: 0x5
+00000001 // READ
+00680028 // Address (0x680028)
+00000005 // Data (0x5)
+FFFFFFFF // Mask (0xFFFFFFFF)
+// READ:  Address: 0x68001c Expected Data: 0xdd1
+00000001 // READ
+0068001c // Address (0x68001c)
+00000dd1 // Data (0xdd1)
+FFFFFFFF // Mask (0xFFFFFFFF)
+// READ:  Address: 0x680030 Expected Data: 0xdd1
+00000001 // READ
+00680030 // Address (0x680030)
+00000dd1 // Data (0xdd1)
+FFFFFFFF // Mask (0xFFFFFFFF)
+// READ:  Address: 0x6c0008 Expected Data: 0x5
+00000001 // READ
+006c0008 // Address (0x6c0008)
+00000005 // Data (0x5)
+FFFFFFFF // Mask (0xFFFFFFFF)
+// READ:  Address: 0x6c0028 Expected Data: 0x5
+00000001 // READ
+006c0028 // Address (0x6c0028)
+00000005 // Data (0x5)
+FFFFFFFF // Mask (0xFFFFFFFF)
+// READ:  Address: 0x6c001c Expected Data: 0xcd8
+00000001 // READ
+006c001c // Address (0x6c001c)
+00000cd8 // Data (0xcd8)
+FFFFFFFF // Mask (0xFFFFFFFF)
+// READ:  Address: 0x6c0030 Expected Data: 0xcd8
+00000001 // READ
+006c0030 // Address (0x6c0030)
+00000cd8 // Data (0xcd8)
+FFFFFFFF // Mask (0xFFFFFFFF)
+00000004 // BARRIER
+00000000 // Number of expected pkts received via DMA port 1
+00000000 // Number of expected pkts received via DMA port 2
+00000000 // Number of expected pkts received via DMA port 3
+00000000 // Number of expected pkts received via DMA port 4
