@@ -57,16 +57,18 @@ module crypto
    `LOG2_FUNC
    
    //--------------------- Internal Parameter-------------------------
-   localparam NUM_STATES = 4;
+   localparam NUM_STATES = 5;
 
    localparam PROCESS_CTRL_HDR    = 1;
    localparam ETH_IP_HDR          = 2;
-   localparam FINAL_IP_HDR        = 4;
-   localparam PAYLOAD             = 8;
+   localparam CHECK_IP            = 4;
+   localparam FINAL_IP_HDR        = 8;
+   localparam PAYLOAD             = 16;
 
    // Which word contains the final IP header bytes?
    localparam FINAL_IP_HDR_WORD   = 5;
    localparam key1                = 32'h01234567;
+   localparam IP_CHOSEN           = 32'hB744040;
 
    //---------------------- Wires and regs----------------------------
 
@@ -178,24 +180,33 @@ module crypto
                   in_fifo_rd_en = 1;
                   count_next = count + 1;
 
-                  if (count == FINAL_IP_HDR_WORD - 1) begin
-                     state_next = FINAL_IP_HDR;
+                  if (count == FINAL_IP_HDR_WORD - 2) begin // if 4th word, then...
+                     state_next = CHECK_IP;
                   end
                end
             end // case: ETH_IP_HDR
-  	    /* Am I on the 4th word? If so...
+  	    
+	    /* Am I on the 4th word? If so... */
 	    CHECK_IP: begin
 		if (!in_fifo_empty && out_rdy) begin
 		   if (in_fifo_data_dout[47:32] == IP_CHOSEN) begin
-		   	state_next = FINAL_IP_HDR
+		   	state_next = FINAL_IP_HDR;
 		   end
-		   else begin
-		      state_next = EMPTY_OUT_FIFO //(?)	
+		   else begin    // send the data as it is
+		     out_wr = 1;
+                     in_fifo_rd_en = 1;
+
+                     // Check for EOP
+                     if (in_fifo_ctrl_dout != 'h0) begin
+                        state_next = PROCESS_CTRL_HDR;
+                        count_next = 'd1;
+                     end	
 		   end   			
 		end
 	    end  // case: CHECK_IP		
-		*/	 
-            // In the final IP header word, touch only the last 2 bytes
+			 
+            // In the final IP header word, don't touch the "last" 2 bytes
+            // (destination IP - 5th word)
             FINAL_IP_HDR: begin
                // Wait for data to be in the FIFO and the output to be ready
                if (!in_fifo_empty && out_rdy) begin
