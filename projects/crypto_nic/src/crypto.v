@@ -183,7 +183,18 @@ module crypto
                   end
                end
             end // case: ETH_IP_HDR
-   
+  	    /* Am I on the 4th word? If so...
+	    CHECK_IP: begin
+		if (!in_fifo_empty && out_rdy) begin
+		   if (in_fifo_data_dout[47:32] == IP_CHOSEN) begin
+		   	state_next = FINAL_IP_HDR
+		   end
+		   else begin
+		      state_next = EMPTY_OUT_FIFO //(?)	
+		   end   			
+		end
+	    end  // case: CHECK_IP		
+		*/	 
             // In the final IP header word, touch only the last 2 bytes
             FINAL_IP_HDR: begin
                // Wait for data to be in the FIFO and the output to be ready
