@@ -68,7 +68,7 @@ module crypto
    // Which word contains the final IP header bytes?
    localparam FINAL_IP_HDR_WORD   = 5;
    localparam key1                = 32'h01234567;
-   localparam IP_CHOSEN           = 32'hB744040;
+   localparam IP_CHOSEN           = 32'hc0a80004;
 
    //---------------------- Wires and regs----------------------------
 
@@ -189,7 +189,7 @@ module crypto
 	    /* Am I on the 4th word? If so... */
 	    CHECK_IP: begin
 		if (!in_fifo_empty && out_rdy) begin
-		   if (in_fifo_data_dout[47:32] == IP_CHOSEN) begin
+		   if (in_fifo_data_dout[47:16] == IP_CHOSEN) begin
 		   	state_next = FINAL_IP_HDR;
 		   end
 		   else begin    // send the data as it is
