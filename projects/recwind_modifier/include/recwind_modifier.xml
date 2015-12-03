@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <nf:module xmlns:nf="http://www.NetFPGA.org/NF2_register_system" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.NetFPGA.org/NF2_register_system NF2_register_system.xsd ">
-	<nf:name>crypto</nf:name>
-	<nf:prefix>crypto</nf:prefix>
+	<nf:name>recwind_modifier</nf:name>
+	<nf:prefix>recwind_modifier</nf:prefix>
 	<nf:location>udp</nf:location>
-	<nf:description>Registers for Crypto Module</nf:description>
+	<nf:description>Registers for recwind_modifier Module</nf:description>
 	<nf:blocksize>64</nf:blocksize>
 	<nf:registers>
 		<nf:register>
-		  <nf:name>key</nf:name>
-			<nf:description>The Key value used by the Crypto Module</nf:description>
+		  <nf:name>recwind</nf:name>
+			<nf:description>The Receive Window value</nf:description>
 			<nf:type>generic_software32</nf:type>
 		</nf:register>
 	</nf:registers>

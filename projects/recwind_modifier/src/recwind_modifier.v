@@ -1,16 +1,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 // vim:set shiftwidth=3 softtabstop=3 expandtab:
-// $Id: crypto.v 5590 2009-05-19 19:43:27Z g9coving $
+// $Id:  $
 //
-// Module: crypto.v
-// Project: NF2.1
-// Description: Performs basic encryption/decryption on packets. This module
-//  uses basic XOR to perform encryption/decryption.
+// Module: recwind_modifier.v
+// Project: 
+// Description: Set a new value for the recieve window and recalculates the
+// checksum if necessary.
 //
-//  The first 34 bytes of a packet are not touched -- this is to ensure that
-//  the IP header remains unaltered to allow it to be forwarded by IPv4
-//  routers.
-//
+//  PAY ATENTION TO THIS: will it continues to break in our case?
 //  Caveats: Things will break for IPv4 packets with options... :-/
 //
 ///////////////////////////////////////////////////////////////////////////////
@@ -61,11 +58,10 @@ module crypto
    // STATES
    localparam PROCESS_CTRL_HDR    = 1;
    localparam ETH_IP_HDR          = 2;
-   localparam WORD5_CHK_TCP       = 4;
+   localparam WORD3_CHK_TCP       = 4;
    localparam WORD7_WIND_CHK      = 8;
-   localparam EMPTY_OUT_FIFO	  = 16;
+   localparam SEND_UNMODIFIED	  = 16;
    // LOCAL PARAMETERS	
-   localparam FINAL_IP_HDR_WORD   = 5;
    localparam WORD7_TCP_HDR	  = 7;
 
    //---------------------- Wires and regs----------------------------
@@ -178,22 +174,19 @@ module crypto
 		  // does not support VLANs (EtherType = 0x8100)
                   if (in_fifo_data_dout[31:16] != 16'h0800 || 
 			in_fifo_data_dout[15:12] != 4'h4) begin
-		     state_next = EMPTY_OUT_FIFO;
+		     state_next = SEND_UNMODIFIED;
 		  end
 		  else begin
 		     out_wr = 1;
                      in_fifo_rd_en = 1;
                      count_next = count + 1;
-			
-                     if (count == FINAL_IP_HDR_WORD - 1) begin // if 5th word, then...
-                        state_next = WORD5_CHK_TCP;
-                     end
+                     state_next = WORD3_CHK_TCP;
                   end
 	       end 	  
             end // case: ETH_IP_HDR
   	    
-            // destination IP - 5th word - check for TCP header
-            WORD5_CHK_TCP: begin
+            // 3rd word - check for TCP header
+            WORD3_CHK_TCP: begin
                // Wait for data to be in the FIFO and the output to be ready
                if (!in_fifo_empty && out_rdy) begin
                   if (in_fifo_data[7:0] == 8'h06) begin
@@ -202,16 +195,24 @@ module crypto
                      count_next = count + 1;
 
                      if (count == WORD7_TCP_HDR - 1) begin // if 7th word, then...
-                        state_next = WORD7_CHK_TCP;
+                        state_next = WORD7_MOD_RECWIND;
                      end
                   end
 		  else
-		     state_next = EMPTY_OUT_FIFO;
+		     state_next = SEND_UNMODIFIED;
                end
-            end // case: WORD5_CHK_TCP
+            end // case: WORD3_CHK_TCP
+
+	    // 7th word - recieve window and checksum
+	    WORD7_MOD_RECWIND: begin
+	       if (!in_fifo_empty && out_rdy) begin
+                  out_wr = 1;
+                  in_fifo_rd_en = 1;
+               end
+	    end // case: WORD7_MOD_RECWIND
    
             // Send the data without modifying anything
-            EMPTY_OUT_FIFO: begin
+            SEND_UNMODIFIED: begin
                // Wait for data to be in the FIFO and the output to be ready
                if (!in_fifo_empty && out_rdy) begin
                   out_wr = 1;
@@ -223,7 +224,7 @@ module crypto
                      count_next = 'd1;
                   end
                end
-            end // case: EMPTY_OUT_FIFO
+            end // case: SEND_UNMODIFIED
    
          endcase // case(state)
       end // else
@@ -233,5 +234,5 @@ module crypto
       state <= state_next;
       count <= count_next;
    end
-
+      
 endmodule // crypto
