@@ -189,7 +189,7 @@ module crypto
         WORD3_CHK_TCP: begin
           // Wait for data to be in the FIFO and the output to be ready
           if (!in_fifo_empty && out_rdy) begin
-            if (in_fifo_data[7:0] == 8'h06) begin
+            if (in_fifo_data_dout[7:0] == 8'h06) begin
               out_wr = 1;
               in_fifo_rd_en = 1;
               count_next = count + 1;
@@ -220,8 +220,10 @@ module crypto
 
             // Check for EOP
             if (in_fifo_ctrl_dout != 'h0) begin
-              state_next = PROCESS_CTRL_HDR;
+							state_next = PROCESS_CTRL_HDR;
               count_next = 'd1;
+							$diplay("Old cheksum: %h, Old receive window: %h", 
+								in_fifo_data_dout[32:47], in_fifo_data_dout[48:63]);
             end
           end
         end // case: SEND_UNMODIFIED
@@ -235,4 +237,4 @@ module crypto
     count <= count_next;
   end
 
-endmodule // crypto
+endmodule // recwind_modifier
