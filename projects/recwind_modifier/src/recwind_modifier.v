@@ -59,8 +59,8 @@ module crypto
   localparam PROCESS_CTRL_HDR    = 1;
   localparam ETH_IP_HDR          = 2;
   localparam WORD3_CHK_TCP       = 4;
-  localparam WORD7_WIND_CHK      = 8;
-  localparam SEND_UNMODIFIED	  = 16;
+  localparam WORD7_MOD_RECWIND   = 8;
+  localparam SEND_UNMODIFIED	   = 16;
   // LOCAL PARAMETERS	
   localparam WORD7_TCP_HDR	  = 7;
 
@@ -96,8 +96,8 @@ module crypto
   generic_regs
   #( 
     .UDP_REG_SRC_WIDTH   (UDP_REG_SRC_WIDTH),
-    .TAG                 (`CRYPTO_BLOCK_ADDR),
-    .REG_ADDR_WIDTH      (`CRYPTO_REG_ADDR_WIDTH),                       // Width of block addresses
+    .TAG                 (`RECWIND_MODIFIER_BLOCK_ADDR),
+    .REG_ADDR_WIDTH      (`RECWIND_MODIFIER_REG_ADDR_WIDTH),                       // Width of block addresses
     .NUM_COUNTERS        (0),                       // How many counters
     .NUM_SOFTWARE_REGS   (1),                       // How many sw regs
     .NUM_HARDWARE_REGS   (0)                        // How many hw regs
