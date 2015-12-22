@@ -12,6 +12,6 @@ Mas o que tudo indica não é um problema no código uma vez que rodando o mesmo
 
 ![Python sem erro](https://github.com/dcardos/NetFPGA-Danilo/blob/master/Pictures/RecWindTestePythonSemErro.PNG)
 
-PS: era esperado que o mesmo mostrasse o que está no 'display' do código verilog em src, mas aparentemente ele parecesse não simular o verilog.
+PS: era esperado que o mesmo mostrasse o que está no 'display' do código verilog em src, mas aparentemente ele parece não simular o verilog.
 
 ### Solução
