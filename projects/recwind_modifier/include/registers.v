@@ -1,10 +1,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
 // Module: registers.v
-// Project: Crypto NIC (crypto_nic)
+// Project: RECIEVE WINDOW MODIFIER (recwind_modifier)
 // Description: Project specific register defines
 //
-//              NIC with basic crypto
+//              Router based code to change receive window
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -16,9 +16,9 @@
 `define DEVICE_MAJOR       1
 `define DEVICE_MINOR       0
 `define DEVICE_REVISION    0
-`define DEVICE_PROJ_DIR    "crypto_nic"
-`define DEVICE_PROJ_NAME   "Crypto NIC"
-`define DEVICE_PROJ_DESC   "NIC with basic crypto"
+`define DEVICE_PROJ_DIR    "recwind_modifier"
+`define DEVICE_PROJ_NAME   "RECIEVE WINDOW MODIFIER"
+`define DEVICE_PROJ_DESC   "Router based code to change receive window"
 
 
 // -------------------------------------
@@ -216,50 +216,50 @@
 // -------------------------------------
 
 // Tag/address widths
-`define CORE_BLOCK_ADDR_WIDTH       1
-`define CORE_REG_ADDR_WIDTH         22
-`define CPU_QUEUE_BLOCK_ADDR_WIDTH  4
-`define CPU_QUEUE_REG_ADDR_WIDTH    16
-`define CRYPTO_BLOCK_ADDR_WIDTH     19
-`define CRYPTO_REG_ADDR_WIDTH       4
-`define DEV_ID_BLOCK_ADDR_WIDTH     4
-`define DEV_ID_REG_ADDR_WIDTH       16
-`define DMA_BLOCK_ADDR_WIDTH        4
-`define DMA_REG_ADDR_WIDTH          16
-`define DRAM_BLOCK_ADDR_WIDTH       1
-`define DRAM_REG_ADDR_WIDTH         24
-`define IN_ARB_BLOCK_ADDR_WIDTH     17
-`define IN_ARB_REG_ADDR_WIDTH       6
-`define MAC_GRP_BLOCK_ADDR_WIDTH    4
-`define MAC_GRP_REG_ADDR_WIDTH      16
-`define MDIO_BLOCK_ADDR_WIDTH       4
-`define MDIO_REG_ADDR_WIDTH         16
-`define OQ_BLOCK_ADDR_WIDTH         13
-`define OQ_REG_ADDR_WIDTH           10
-`define SRAM_BLOCK_ADDR_WIDTH       1
-`define SRAM_REG_ADDR_WIDTH         22
-`define UDP_BLOCK_ADDR_WIDTH        1
-`define UDP_REG_ADDR_WIDTH          23
+`define CORE_BLOCK_ADDR_WIDTH              1
+`define CORE_REG_ADDR_WIDTH                22
+`define CPU_QUEUE_BLOCK_ADDR_WIDTH         4
+`define CPU_QUEUE_REG_ADDR_WIDTH           16
+`define DEV_ID_BLOCK_ADDR_WIDTH            4
+`define DEV_ID_REG_ADDR_WIDTH              16
+`define DMA_BLOCK_ADDR_WIDTH               4
+`define DMA_REG_ADDR_WIDTH                 16
+`define DRAM_BLOCK_ADDR_WIDTH              1
+`define DRAM_REG_ADDR_WIDTH                24
+`define IN_ARB_BLOCK_ADDR_WIDTH            17
+`define IN_ARB_REG_ADDR_WIDTH              6
+`define MAC_GRP_BLOCK_ADDR_WIDTH           4
+`define MAC_GRP_REG_ADDR_WIDTH             16
+`define MDIO_BLOCK_ADDR_WIDTH              4
+`define MDIO_REG_ADDR_WIDTH                16
+`define OQ_BLOCK_ADDR_WIDTH                13
+`define OQ_REG_ADDR_WIDTH                  10
+`define RECWIND_MODIFIER_BLOCK_ADDR_WIDTH  19
+`define RECWIND_MODIFIER_REG_ADDR_WIDTH    4
+`define SRAM_BLOCK_ADDR_WIDTH              1
+`define SRAM_REG_ADDR_WIDTH                22
+`define UDP_BLOCK_ADDR_WIDTH               1
+`define UDP_REG_ADDR_WIDTH                 23
 
 // Module tags
-`define CORE_BLOCK_ADDR         1'h0
-`define DEV_ID_BLOCK_ADDR       4'h0
-`define MDIO_BLOCK_ADDR         4'h1
-`define DMA_BLOCK_ADDR          4'h4
-`define MAC_GRP_0_BLOCK_ADDR    4'h8
-`define MAC_GRP_1_BLOCK_ADDR    4'h9
-`define MAC_GRP_2_BLOCK_ADDR    4'ha
-`define MAC_GRP_3_BLOCK_ADDR    4'hb
-`define CPU_QUEUE_0_BLOCK_ADDR  4'hc
-`define CPU_QUEUE_1_BLOCK_ADDR  4'hd
-`define CPU_QUEUE_2_BLOCK_ADDR  4'he
-`define CPU_QUEUE_3_BLOCK_ADDR  4'hf
-`define SRAM_BLOCK_ADDR         1'h1
-`define UDP_BLOCK_ADDR          1'h1
-`define CRYPTO_BLOCK_ADDR       19'h00000
-`define IN_ARB_BLOCK_ADDR       17'h00001
-`define OQ_BLOCK_ADDR           13'h0001
-`define DRAM_BLOCK_ADDR         1'h1
+`define CORE_BLOCK_ADDR              1'h0
+`define DEV_ID_BLOCK_ADDR            4'h0
+`define MDIO_BLOCK_ADDR              4'h1
+`define DMA_BLOCK_ADDR               4'h4
+`define MAC_GRP_0_BLOCK_ADDR         4'h8
+`define MAC_GRP_1_BLOCK_ADDR         4'h9
+`define MAC_GRP_2_BLOCK_ADDR         4'ha
+`define MAC_GRP_3_BLOCK_ADDR         4'hb
+`define CPU_QUEUE_0_BLOCK_ADDR       4'hc
+`define CPU_QUEUE_1_BLOCK_ADDR       4'hd
+`define CPU_QUEUE_2_BLOCK_ADDR       4'he
+`define CPU_QUEUE_3_BLOCK_ADDR       4'hf
+`define SRAM_BLOCK_ADDR              1'h1
+`define UDP_BLOCK_ADDR               1'h1
+`define RECWIND_MODIFIER_BLOCK_ADDR  19'h00000
+`define IN_ARB_BLOCK_ADDR            17'h00001
+`define OQ_BLOCK_ADDR                13'h0001
+`define DRAM_BLOCK_ADDR              1'h1
 
 
 // -------------------------------------
@@ -285,11 +285,6 @@
 `define CPU_QUEUE_TX_QUEUE_NUM_OVERRUNS          16'hd
 `define CPU_QUEUE_TX_QUEUE_NUM_WORDS_PUSHED      16'he
 `define CPU_QUEUE_TX_QUEUE_NUM_BYTES_PUSHED      16'hf
-
-// Name: crypto
-// Description: Registers for Crypto Module
-// File: projects/crypto_nic/include/crypto.xml
-`define CRYPTO_KEY  4'h0
 
 // Name: device_id
 // Description: Device identification
@@ -484,6 +479,11 @@
 `define OQ_QUEUE_NUM_WORDS_LEFT              7'hf
 `define OQ_QUEUE_FULL_THRESH                 7'h10
 
+
+// Name: recwind_modifier
+// Description: Registers for recwind_modifier Module
+// File: projects/recwind_modifier/include/recwind_modifier.xml
+`define RECWIND_MODIFIER_RECWIND  4'h0
 
 
 
