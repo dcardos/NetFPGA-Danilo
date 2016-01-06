@@ -3,7 +3,7 @@
 #
 # Python register defines
 #
-# Project: RECIEVE WINDOW MODIFIER (recwind_modifier)
+# Project: RECEIVE WINDOW MODIFIER (recwind_modifier)
 # Description: Router based code to change receive window
 #
 #############################################################
@@ -27,7 +27,7 @@ def DEVICE_PROJ_DIR ():
     return "recwind_modifier"
 
 def DEVICE_PROJ_NAME ():
-    return "RECIEVE WINDOW MODIFIER"
+    return "RECEIVE WINDOW MODIFIER"
 
 def DEVICE_PROJ_DESC ():
     return "Router based code to change receive window"

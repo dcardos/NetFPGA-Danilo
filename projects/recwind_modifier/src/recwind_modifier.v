@@ -12,7 +12,7 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 `timescale 1ns/1ps
-module crypto 
+module recwind_modifier 
   #(
     parameter DATA_WIDTH = 64,
     parameter CTRL_WIDTH = DATA_WIDTH/8,
@@ -101,7 +101,7 @@ module crypto
     .NUM_COUNTERS        (0),                       // How many counters
     .NUM_SOFTWARE_REGS   (1),                       // How many sw regs
     .NUM_HARDWARE_REGS   (0)                        // How many hw regs
-  ) crypto_regs (
+  ) recwind_modifier(
     .reg_req_in       (reg_req_in),
     .reg_ack_in       (reg_ack_in),
     .reg_rd_wr_L_in   (reg_rd_wr_L_in),

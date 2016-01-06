@@ -211,18 +211,18 @@ module user_data_path
    wire [`CPCI_NF2_DATA_WIDTH-1:0]  op_lut_in_reg_data;
    wire [UDP_REG_SRC_WIDTH-1:0]     op_lut_in_reg_src;
 
-   //------- crypto wires/regs ------
-   wire [CTRL_WIDTH-1:0]            crypto_in_ctrl;
-   wire [DATA_WIDTH-1:0]            crypto_in_data;
-   wire                             crypto_in_wr;
-   wire                             crypto_in_rdy;
+   //------- recwind_modifier wires/regs ------
+   wire [CTRL_WIDTH-1:0]            recwind_modifier_in_ctrl;
+   wire [DATA_WIDTH-1:0]            recwind_modifier_in_data;
+   wire                             recwind_modifier_in_wr;
+   wire                             recwind_modifier_in_rdy;
 
-   wire                             crypto_in_reg_req;
-   wire                             crypto_in_reg_ack;
-   wire                             crypto_in_reg_rd_wr_L;
-   wire [`UDP_REG_ADDR_WIDTH-1:0]   crypto_in_reg_addr;
-   wire [`CPCI_NF2_DATA_WIDTH-1:0]  crypto_in_reg_data;
-   wire [UDP_REG_SRC_WIDTH-1:0]     crypto_in_reg_src;
+   wire                             recwind_modifier_in_reg_req;
+   wire                             recwind_modifier_in_reg_ack;
+   wire                             recwind_modifier_in_reg_rd_wr_L;
+   wire [`UDP_REG_ADDR_WIDTH-1:0]   recwind_modifier_in_reg_addr;
+   wire [`CPCI_NF2_DATA_WIDTH-1:0]  recwind_modifier_in_reg_data;
+   wire [UDP_REG_SRC_WIDTH-1:0]     recwind_modifier_in_reg_src;
 
    //------- output queues wires/regs ------
    wire [CTRL_WIDTH-1:0]            oq_in_ctrl;
@@ -330,10 +330,10 @@ module user_data_path
        .NUM_OUTPUT_QUEUES(NUM_OUTPUT_QUEUES),
        .NUM_IQ_BITS(NUM_IQ_BITS))
    output_port_lookup
-     (.out_data            (crypto_in_data),
-     .out_ctrl             (crypto_in_ctrl),
-     .out_wr               (crypto_in_wr),
-     .out_rdy              (crypto_in_rdy),
+     (.out_data            (recwind_modifier_in_data),
+     .out_ctrl             (recwind_modifier_in_ctrl),
+     .out_wr               (recwind_modifier_in_wr),
+     .out_rdy              (recwind_modifier_in_rdy),
                            
       // --- Interface to the rx input queues
      .in_data              (op_lut_in_data),
@@ -349,40 +349,40 @@ module user_data_path
      .reg_data_in          (op_lut_in_reg_data),
      .reg_src_in           (op_lut_in_reg_src),
 
-     .reg_req_out          (crypto_in_reg_req),
-     .reg_ack_out          (crypto_in_reg_ack),
-     .reg_rd_wr_L_out      (crypto_in_reg_rd_wr_L),
-     .reg_addr_out         (crypto_in_reg_addr),
-     .reg_data_out         (crypto_in_reg_data),
-     .reg_src_out          (crypto_in_reg_src),
+     .reg_req_out          (recwind_modifier_in_reg_req),
+     .reg_ack_out          (recwind_modifier_in_reg_ack),
+     .reg_rd_wr_L_out      (recwind_modifier_in_reg_rd_wr_L),
+     .reg_addr_out         (recwind_modifier_in_reg_addr),
+     .reg_data_out         (recwind_modifier_in_reg_data),
+     .reg_src_out          (recwind_modifier_in_reg_src),
 
       // --- Misc
      .clk                  (clk),
      .reset                (reset));
 
-   crypto #(
+   recwind_modifier #(
       .DATA_WIDTH(DATA_WIDTH),
       .CTRL_WIDTH(CTRL_WIDTH),
       .UDP_REG_SRC_WIDTH (UDP_REG_SRC_WIDTH)
-   ) crypto (
+   ) recwind_modifier (
       // --- data path interface
       .out_data                          (oq_in_data),
       .out_ctrl                          (oq_in_ctrl),
       .out_wr                            (oq_in_wr),
       .out_rdy                           (oq_in_rdy),
 
-      .in_data                           (crypto_in_data),
-      .in_ctrl                           (crypto_in_ctrl),
-      .in_wr                             (crypto_in_wr),
-      .in_rdy                            (crypto_in_rdy),
+      .in_data                           (recwind_modifier_in_data),
+      .in_ctrl                           (recwind_modifier_in_ctrl),
+      .in_wr                             (recwind_modifier_in_wr),
+      .in_rdy                            (recwind_modifier_in_rdy),
 
       // --- Register interface
-      .reg_req_in                        (crypto_in_reg_req),
-      .reg_ack_in                        (crypto_in_reg_ack),
-      .reg_rd_wr_L_in                    (crypto_in_reg_rd_wr_L),
-      .reg_addr_in                       (crypto_in_reg_addr),
-      .reg_data_in                       (crypto_in_reg_data),
-      .reg_src_in                        (crypto_in_reg_src),
+      .reg_req_in                        (recwind_modifier_in_reg_req),
+      .reg_ack_in                        (recwind_modifier_in_reg_ack),
+      .reg_rd_wr_L_in                    (recwind_modifier_in_reg_rd_wr_L),
+      .reg_addr_in                       (recwind_modifier_in_reg_addr),
+      .reg_data_in                       (recwind_modifier_in_reg_data),
+      .reg_src_in                        (recwind_modifier_in_reg_src),
 
       .reg_req_out                       (oq_in_reg_req),
       .reg_ack_out                       (oq_in_reg_ack),

@@ -1,7 +1,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 //
 // Module: registers.v
-// Project: RECIEVE WINDOW MODIFIER (recwind_modifier)
+// Project: RECEIVE WINDOW MODIFIER (recwind_modifier)
 // Description: Project specific register defines
 //
 //              Router based code to change receive window
@@ -17,7 +17,7 @@
 `define DEVICE_MINOR       0
 `define DEVICE_REVISION    0
 `define DEVICE_PROJ_DIR    "recwind_modifier"
-`define DEVICE_PROJ_NAME   "RECIEVE WINDOW MODIFIER"
+`define DEVICE_PROJ_NAME   "RECEIVE WINDOW MODIFIER"
 `define DEVICE_PROJ_DESC   "Router based code to change receive window"
 
 

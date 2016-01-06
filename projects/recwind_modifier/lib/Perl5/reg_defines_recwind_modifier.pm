@@ -2,7 +2,7 @@
 #
 # Perl register defines
 #
-# Project: RECIEVE WINDOW MODIFIER (recwind_modifier)
+# Project: RECEIVE WINDOW MODIFIER (recwind_modifier)
 # Description: Router based code to change receive window
 #
 #############################################################
@@ -657,7 +657,7 @@ sub DEVICE_MAJOR ()     { 1; }
 sub DEVICE_MINOR ()     { 0; }
 sub DEVICE_REVISION ()  { 0; }
 sub DEVICE_PROJ_DIR ()  { "recwind_modifier"; }
-sub DEVICE_PROJ_NAME () { "RECIEVE WINDOW MODIFIER"; }
+sub DEVICE_PROJ_NAME () { "RECEIVE WINDOW MODIFIER"; }
 sub DEVICE_PROJ_DESC () { "Router based code to change receive window"; }
 
 
