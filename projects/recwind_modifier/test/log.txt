@@ -1,0 +1,204 @@
+make -C /root/NetFPGA-Danilo/projects/recwind_modifier/synth registers
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/recwind_modifier/synth'
++++testStarted:build.registers.recwind_modifier
+
+NetFPGA environment:
+  Root dir:       /root/NetFPGA-Danilo
+  Project name:   recwind_modifier
+  Project dir:    /root/NetFPGA-Danilo/projects/recwind_modifier
+  Work dir:       /tmp/root
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/global.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/nf_defines.xml...
+Processing /root/NetFPGA-Danilo/projects/recwind_modifier/include/project.xml...
+
+Project: 'RECIEVE WINDOW MODIFIER' (recwind_modifier)
+Description: Router based code to change receive window
+Version: 1.0.0
+Device ID: 0
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/xml/cpu_dma_queue.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/xml/ethernet_mac.xml...
+WARNING: No module specific XML found for module 'contrib/ucsd/gig_eth_mac'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/input_arbiter/rr_input_arbiter/xml/rr_input_arbiter.xml...
+WARNING: No module specific XML found for module 'core/nf2/generic_top'
+WARNING: No module specific XML found for module 'core/nf2/reference_core'
+WARNING: No module specific XML found for module 'core/output_port_lookup/nic'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/xml/sram_rr_output_queues.xml...
+WARNING: No module specific XML found for module 'core/sram_arbiter/sram_weighted_rr'
+WARNING: No module specific XML found for module 'core/user_data_path/reference_user_data_path'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io/mdio/xml/mdio.xml...
+WARNING: No module specific XML found for module 'core/cpci_bus'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/dma/xml/dma.xml...
+WARNING: No module specific XML found for module 'core/user_data_path/udp_reg_master'
+WARNING: No module specific XML found for module 'core/io_queues/add_rm_hdr'
+WARNING: No module specific XML found for module 'core/utils/generic_regs'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/utils/xml/device_id_reg.xml...
+Processing /root/NetFPGA-Danilo/projects/recwind_modifier/include/recwind_modifier.xml...
+Processed registers.
++++testFinished:build.registers.recwind_modifier
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/recwind_modifier/synth'
+make -C /root/NetFPGA-Danilo/projects/cpci/synth registers
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/cpci/synth'
++++testStarted:build.registers.cpci
+
+NetFPGA environment:
+  Root dir:       /root/NetFPGA-Danilo
+  Project name:   cpci
+  Project dir:    /root/NetFPGA-Danilo/projects/cpci
+  Work dir:       /tmp/root
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/global.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/nf_defines.xml...
+Processing /root/NetFPGA-Danilo/projects/cpci/include/project.xml...
+
+Project: 'CPCI' (cpci)
+Description: NetFPGA PCI interface
+Version: 4.1.0
+Device ID: 0
+
+Processing /root/NetFPGA-Danilo/projects/cpci/include/cpci_regs.xml...
+Processed registers.
++++testFinished:build.registers.cpci
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/cpci/synth'
+make -C /root/NetFPGA-Danilo/projects/recwind_modifier/synth cores
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/recwind_modifier/synth'
+Made cores.
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/recwind_modifier/synth'
+make -C /root/NetFPGA-Danilo/projects/cpci/synth cores
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/cpci/synth'
+Made cores.
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/cpci/synth'
+
+NetFPGA environment:
+  Root dir:       /root/NetFPGA-Danilo
+  Project name:   recwind_modifier
+  Project dir:    /root/NetFPGA-Danilo/projects/recwind_modifier
+  Work dir:       /tmp/root
+
+--- Reading configuration file
+--- Running test.
+
+--- Generating packets...
+--- Test failed (sim_recwind_read) - run.py broke!.
+NetFPGA environment:
+   Root dir:       /root/NetFPGA-Danilo
+   Project name:   recwind_modifier
+   Project dir:    /tmp/root/test/recwind_modifier
+   Work dir:       /tmp/root
+=== Work directory is /tmp/root/test/recwind_modifier
+=== Calling make to build simulation binary with
+make -f Makefile DUMP_CTRL= SIM_OPT=  vsim_top
+
+=== Simulation compiled.
+=== Setting up test in /tmp/root/test/recwind_modifier/sim_recwind_read
+=== Running test /tmp/root/test/recwind_modifier/sim_recwind_read ... using cmd ['/root/NetFPGA-Danilo/lib/scripts/verif_run/pyrun.pl', '--sim', 'vsim']
+Error: test sim_recwind_read failed!
+------------SUMMARY---------------
+PASSING TESTS: 
+FAILING TESTS: 
+sim_recwind_read
+TOTAL: 1 PASS: 0 FAIL: 1 GUI: 0
+
+make -C /root/NetFPGA-Danilo/projects/recwind_modifier/synth registers
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/recwind_modifier/synth'
++++testStarted:build.registers.recwind_modifier
+
+NetFPGA environment:
+  Root dir:       /root/NetFPGA-Danilo
+  Project name:   recwind_modifier
+  Project dir:    /root/NetFPGA-Danilo/projects/recwind_modifier
+  Work dir:       /tmp/root
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/global.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/nf_defines.xml...
+Processing /root/NetFPGA-Danilo/projects/recwind_modifier/include/project.xml...
+
+Project: 'RECIEVE WINDOW MODIFIER' (recwind_modifier)
+Description: Router based code to change receive window
+Version: 1.0.0
+Device ID: 0
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/xml/cpu_dma_queue.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/xml/ethernet_mac.xml...
+WARNING: No module specific XML found for module 'contrib/ucsd/gig_eth_mac'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/input_arbiter/rr_input_arbiter/xml/rr_input_arbiter.xml...
+WARNING: No module specific XML found for module 'core/nf2/generic_top'
+WARNING: No module specific XML found for module 'core/nf2/reference_core'
+WARNING: No module specific XML found for module 'core/output_port_lookup/nic'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/xml/sram_rr_output_queues.xml...
+WARNING: No module specific XML found for module 'core/sram_arbiter/sram_weighted_rr'
+WARNING: No module specific XML found for module 'core/user_data_path/reference_user_data_path'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io/mdio/xml/mdio.xml...
+WARNING: No module specific XML found for module 'core/cpci_bus'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/dma/xml/dma.xml...
+WARNING: No module specific XML found for module 'core/user_data_path/udp_reg_master'
+WARNING: No module specific XML found for module 'core/io_queues/add_rm_hdr'
+WARNING: No module specific XML found for module 'core/utils/generic_regs'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/utils/xml/device_id_reg.xml...
+Processing /root/NetFPGA-Danilo/projects/recwind_modifier/include/recwind_modifier.xml...
+Processed registers.
++++testFinished:build.registers.recwind_modifier
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/recwind_modifier/synth'
+make -C /root/NetFPGA-Danilo/projects/cpci/synth registers
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/cpci/synth'
++++testStarted:build.registers.cpci
+
+NetFPGA environment:
+  Root dir:       /root/NetFPGA-Danilo
+  Project name:   cpci
+  Project dir:    /root/NetFPGA-Danilo/projects/cpci
+  Work dir:       /tmp/root
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/global.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/nf_defines.xml...
+Processing /root/NetFPGA-Danilo/projects/cpci/include/project.xml...
+
+Project: 'CPCI' (cpci)
+Description: NetFPGA PCI interface
+Version: 4.1.0
+Device ID: 0
+
+Processing /root/NetFPGA-Danilo/projects/cpci/include/cpci_regs.xml...
+Processed registers.
++++testFinished:build.registers.cpci
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/cpci/synth'
+make -C /root/NetFPGA-Danilo/projects/recwind_modifier/synth cores
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/recwind_modifier/synth'
+Made cores.
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/recwind_modifier/synth'
+make -C /root/NetFPGA-Danilo/projects/cpci/synth cores
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/cpci/synth'
+Made cores.
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/cpci/synth'
+
+NetFPGA environment:
+  Root dir:       /root/NetFPGA-Danilo
+  Project name:   recwind_modifier
+  Project dir:    /root/NetFPGA-Danilo/projects/recwind_modifier
+  Work dir:       /tmp/root
+
+--- Reading configuration file
+--- Running test.
+
+--- Generating packets...
+--- Test failed (sim_recwind_read) - run.py broke!.
+NetFPGA environment:
+   Root dir:       /root/NetFPGA-Danilo
+   Project name:   recwind_modifier
+   Project dir:    /tmp/root/test/recwind_modifier
+   Work dir:       /tmp/root
+=== Work directory is /tmp/root/test/recwind_modifier
+=== Calling make to build simulation binary with
+make -f Makefile DUMP_CTRL= SIM_OPT=  vsim_top
+
+=== Simulation compiled.
+=== Setting up test in /tmp/root/test/recwind_modifier/sim_recwind_read
+=== Running test /tmp/root/test/recwind_modifier/sim_recwind_read ... using cmd ['/root/NetFPGA-Danilo/lib/scripts/verif_run/pyrun.pl', '--sim', 'vsim']
+Error: test sim_recwind_read failed!
+------------SUMMARY---------------
+PASSING TESTS: 
+FAILING TESTS: 
+sim_recwind_read
+TOTAL: 1 PASS: 0 FAIL: 1 GUI: 0
+

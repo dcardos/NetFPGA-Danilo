@@ -1,0 +1,5 @@
+#!/bin/bash
+# Script para setar variáveis para projeto da NetFPGA recwind_modifier
+
+export NF_ROOT="/root/NetFPGA-Danilo"
+export NF_DESIGN_DIR="/root/NetFPGA-Danilo/projects/recwind_modifier"

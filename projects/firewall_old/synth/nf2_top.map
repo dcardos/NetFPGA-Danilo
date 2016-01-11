@@ -1,0 +1,114 @@
+Release 10.1.03 Map K.39 (lin)
+Xilinx Map Application Log File for Design 'nf2_top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -timing -detail -ol high -cm speed
+-register_duplication -smartguide smartguide.ncd -ignore_keep_hierarchy -pr b -k
+4 -c 100 -tx off nf2_top.ngd 
+Target Device  : xc2vp50
+Target Package : ff1152
+Target Speed   : -7
+Mapper Version : virtex2p -- $Revision: 1.46.12.2 $
+Mapped Date    : Mon Mar  9 21:49:36 2015
+
+Mapping design into LUTs...
+Running directed packing...
+Constraining slice packing based on guide NCD.
+Running delay-based LUT packing...
+Running timing-driven packing...
+
+Phase 1.7
+Phase 1.7 (Checksum:1d880bf8) REAL time: 57 secs 
+
+Phase 2.31
+Phase 2.31 (Checksum:1d880bf8) REAL time: 57 secs 
+
+Phase 3.2
+Phase 3.2 (Checksum:1d880bf8) REAL time: 1 mins 1 secs 
+
+Phase 4.30
+Phase 4.30 (Checksum:1d880bf8) REAL time: 1 mins 1 secs 
+
+Phase 5.3
+Phase 5.3 (Checksum:1d880bf8) REAL time: 1 mins 2 secs 
+
+Phase 6.5
+Phase 6.5 (Checksum:1d880bf8) REAL time: 1 mins 2 secs 
+
+Phase 7.4
+.
+Phase 7.4 (Checksum:1d880bf8) REAL time: 1 mins 7 secs 
+
+Phase 8.28
+Phase 8.28 (Checksum:1d880bf8) REAL time: 1 mins 8 secs 
+
+Phase 9.8
+.
+.
+...............
+...............
+...............
+...............
+Phase 9.8 (Checksum:8024dd45) REAL time: 3 mins 9 secs 
+
+Phase 10.29
+Phase 10.29 (Checksum:8024dd45) REAL time: 3 mins 9 secs 
+
+Phase 11.5
+Phase 11.5 (Checksum:8024dd45) REAL time: 3 mins 10 secs 
+
+Phase 12.18
+Phase 12.18 (Checksum:8024606b) REAL time: 4 mins 4 secs 
+
+Phase 13.5
+Phase 13.5 (Checksum:8024606b) REAL time: 4 mins 5 secs 
+
+Phase 14.27
+Phase 14.27 (Checksum:8024606b) REAL time: 4 mins 12 secs 
+
+Phase 15.24
+Phase 15.24 (Checksum:8024606b) REAL time: 4 mins 17 secs 
+
+REAL time consumed by placer: 4 mins 18 secs 
+CPU  time consumed by placer: 4 mins 17 secs 
+Invoking physical synthesis ...
+
+Physical synthesis completed.
+Updating route info ...
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings: 1869
+Logic Utilization:
+  Number of Slice Flip Flops:        12,100 out of  47,232   25%
+  Number of 4 input LUTs:            14,848 out of  47,232   31%
+Logic Distribution:
+  Number of occupied Slices:         11,556 out of  23,616   48%
+    Number of Slices containing only related logic:  11,556 out of  11,556 100%
+    Number of Slices containing unrelated logic:          0 out of  11,556   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:      15,799 out of  47,232   33%
+    Number used as logic:            12,682
+    Number used as a route-thru:        951
+    Number used for Dual Port RAMs:   1,688
+      (Two LUTs used per Dual Port RAM)
+    Number used for 32x1 RAMs:          256
+      (Two LUTs used per 32x1 RAM)
+    Number used as 16x1 RAMs:           160
+    Number used as Shift registers:      62
+  Number of bonded IOBs:                356 out of     692   51%
+    IOB Flip Flops:                     560
+  Number of RAMB16s:                    126 out of     232   54%
+  Number of BUFGMUXs:                     8 out of      16   50%
+  Number of DCMs:                         6 out of       8   75%
+
+Peak Memory Usage:  758 MB
+Total REAL time to MAP completion:  5 mins 39 secs 
+Total CPU time to MAP completion:   5 mins 37 secs 
+
+Mapping completed.
+See MAP report file "nf2_top.mrp" for details.

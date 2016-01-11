@@ -1,0 +1,274 @@
++++testStarted:build.registers.recwind_modifier
+
+NetFPGA environment:
+  Root dir:       /root/NetFPGA-Danilo
+  Project name:   recwind_modifier
+  Project dir:    /root/NetFPGA-Danilo/projects/recwind_modifier
+  Work dir:       /tmp/root
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/global.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/nf_defines.xml...
+Processing /root/NetFPGA-Danilo/projects/recwind_modifier/include/project.xml...
+
+Project: 'RECEIVE WINDOW MODIFIER' (recwind_modifier)
+Description: Router based code to change receive window
+Version: 1.0.0
+Device ID: 0
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/xml/cpu_dma_queue.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/xml/ethernet_mac.xml...
+WARNING: No module specific XML found for module 'contrib/ucsd/gig_eth_mac'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/input_arbiter/rr_input_arbiter/xml/rr_input_arbiter.xml...
+WARNING: No module specific XML found for module 'core/nf2/generic_top'
+WARNING: No module specific XML found for module 'core/nf2/reference_core'
+WARNING: No module specific XML found for module 'core/output_port_lookup/nic'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/xml/sram_rr_output_queues.xml...
+WARNING: No module specific XML found for module 'core/sram_arbiter/sram_weighted_rr'
+WARNING: No module specific XML found for module 'core/user_data_path/reference_user_data_path'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io/mdio/xml/mdio.xml...
+WARNING: No module specific XML found for module 'core/cpci_bus'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/dma/xml/dma.xml...
+WARNING: No module specific XML found for module 'core/user_data_path/udp_reg_master'
+WARNING: No module specific XML found for module 'core/io_queues/add_rm_hdr'
+WARNING: No module specific XML found for module 'core/utils/generic_regs'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/utils/xml/device_id_reg.xml...
+Processing /root/NetFPGA-Danilo/projects/recwind_modifier/include/recwind_modifier.xml...
+Processed registers.
++++testFinished:build.registers.recwind_modifier
+Made cores.
++++testStarted:build.registers.cpci
+
+NetFPGA environment:
+  Root dir:       /root/NetFPGA-Danilo
+  Project name:   cpci
+  Project dir:    /root/NetFPGA-Danilo/projects/cpci
+  Work dir:       /tmp/root
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/global.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/nf_defines.xml...
+Processing /root/NetFPGA-Danilo/projects/cpci/include/project.xml...
+
+Project: 'CPCI' (cpci)
+Description: NetFPGA PCI interface
+Version: 4.1.0
+Device ID: 0
+
+Processing /root/NetFPGA-Danilo/projects/cpci/include/cpci_regs.xml...
+Processed registers.
++++testFinished:build.registers.cpci
+==================================================
+=== Run Synthesis (XST)
+==================================================
++++testStarted:build.xst.nf2_top.ngc
+Reading design: nf2_top.prj
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/common/src/NF_2.1_defines.v" in library work
+Compiling verilog include file "/root/NetFPGA-Danilo/lib/verilog/core/common/src/udp_defines.v"
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/common/src/udp_defines.v" in library work
+Compiling verilog file "/root/NetFPGA-Danilo/projects/cpci/include/registers.v" in library work
+Compiling verilog file "../include/registers.v" in library work
+Compiling verilog file "../src/module_template.v" in library work
+Compiling verilog file "../src/recwind_modifier.v" in library work
+Module <module_template> compiled
+Compiling verilog file "../src/user_data_path.v" in library work
+Module <recwind_modifier> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/cpu_dma_queue_no_regs.v" in library work
+Module <user_data_path> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/cpu_dma_queue_regs.v" in library work
+Module <cpu_dma_queue_no_regs> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/cpu_dma_queue.v" in library work
+Module <cpu_dma_queue_regs> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/cpu_dma_rx_queue.v" in library work
+Module <cpu_dma_queue> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/cpu_dma_tx_queue.v" in library work
+Module <cpu_dma_rx_queue> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/mac_grp_regs.v" in library work
+Module <cpu_dma_tx_queue> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/nf2_mac_grp.v" in library work
+Module <mac_grp_regs> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/rx_queue.v" in library work
+Module <nf2_mac_grp> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/tx_queue.v" in library work
+Module <rx_queue> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/contrib/ucsd/gig_eth_mac/src/CRC_chk.v" in library work
+Module <tx_queue> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/contrib/ucsd/gig_eth_mac/src/CRC_gen.v" in library work
+Module <CRC_chk> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/contrib/ucsd/gig_eth_mac/src/gig_eth_mac_rx.v" in library work
+Module <CRC_gen> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/contrib/ucsd/gig_eth_mac/src/gig_eth_mac_tx.v" in library work
+Module <gig_eth_mac_rx> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/contrib/ucsd/gig_eth_mac/src/gig_eth_mac.v" in library work
+Module <gig_eth_mac_tx> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/input_arbiter/rr_input_arbiter/src/in_arb_regs.v" in library work
+Module <gig_eth_mac> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/input_arbiter/rr_input_arbiter/src/input_arbiter.v" in library work
+Module <in_arb_regs> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/nf2/generic_top/src/dump.v" in library work
+Module <input_arbiter> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/nf2/generic_top/src/nf2_top.v" in library work
+Module <dump> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/nf2/generic_top/src/rgmii_io.v" in library work
+Module <nf2_top> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/nf2/reference_core/src/nf2_core.v" in library work
+Module <rgmii_io> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/nf2/reference_core/src/nf2_reg_grp.v" in library work
+Module <nf2_core> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/output_port_lookup/nic/src/output_port_lookup.v" in library work
+Module <nf2_reg_grp> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_header_parser.v" in library work
+Module <output_port_lookup> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_reg_helper.v" in library work
+Module <oq_header_parser> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_reg_instances.v" in library work
+Module <oq_reg_helper> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_ctrl.v" in library work
+Module <oq_reg_instances> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_dual_port_ram.v" in library work
+Module <oq_regs_ctrl> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_eval_empty.v" in library work
+Module <oq_regs_dual_port_ram> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_eval_full.v" in library work
+Module <oq_regs_eval_empty> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_generic_reg_grp.v" in library work
+Module <oq_regs_eval_full> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_host_iface.v" in library work
+Module <oq_regs_generic_reg_grp> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs.v" in library work
+Module <oq_regs_host_iface> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/output_queues.v" in library work
+Module <oq_regs> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/remove_pkt.v" in library work
+Module <output_queues> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/store_pkt.v" in library work
+Module <remove_pkt> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/sram_arbiter/sram_weighted_rr/src/cnet_sram_sm.v" in library work
+Module <store_pkt> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/sram_arbiter/sram_weighted_rr/src/sram_arbiter.v" in library work
+Module <cnet_sram_sm> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/sram_arbiter/sram_weighted_rr/src/sram_reg_access.v" in library work
+Module <sram_arbiter> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io/mdio/src/nf2_mdio.v" in library work
+Module <sram_reg_access> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/cpci_bus/src/cpci_bus.v" in library work
+Module <nf2_mdio> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/dma/src/nf2_dma_bus_fsm.v" in library work
+Module <cpci_bus> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/dma/src/nf2_dma_que_intfc.v" in library work
+Module <nf2_dma_bus_fsm> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/dma/src/nf2_dma_regs.v" in library work
+Module <nf2_dma_que_intfc> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/dma/src/nf2_dma_sync.v" in library work
+Module <nf2_dma_regs> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/dma/src/nf2_dma.v" in library work
+Module <nf2_dma_sync> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/user_data_path/udp_reg_master/src/udp_reg_master.v" in library work
+Module <nf2_dma> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/add_rm_hdr/src/add_hdr.v" in library work
+Module <udp_reg_master> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/add_rm_hdr/src/add_rm_hdr.v" in library work
+Module <add_hdr> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/add_rm_hdr/src/rm_hdr.v" in library work
+Module <add_rm_hdr> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/generic_regs/src/generic_cntr_regs.v" in library work
+Module <rm_hdr> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/generic_regs/src/generic_hw_regs.v" in library work
+Module <generic_cntr_regs> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/generic_regs/src/generic_regs.v" in library work
+Module <generic_hw_regs> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/generic_regs/src/generic_sw_regs.v" in library work
+Module <generic_regs> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/generic_regs/src/generic_table_regs.v" in library work
+Module <generic_sw_regs> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/arbitrator.v" in library work
+Module <generic_table_regs> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/decoder.v" in library work
+Module <arbitrator> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/device_id_reg.v" in library work
+Module <decoder> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/fallthrough_small_fifo_old.v" in library work
+Module <device_id_reg> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/fallthrough_small_fifo.v" in library work
+Module <fallthrough_small_fifo_old> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/fallthrough_small_fifo_v2.v" in library work
+Module <fallthrough_small_fifo> compiled
+ERROR:HDLCompilers:27 - "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/fallthrough_small_fifo_v2.v" line 15 Illegal redeclaration of 'fallthrough_small_fifo'
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/lfsr32.v" in library work
+Module <fallthrough_small_fifo> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/priority_encoder.v" in library work
+Module <lfsr32> compiled
+Module <priority_encoder> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/pulse_synchronizer.v" in library work
+Module <pri_encode_test> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/reg_grp.v" in library work
+Module <pulse_synchronizer> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/rotate.v" in library work
+Module <reg_grp> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/small_async_fifo.v" in library work
+Module <rotate> compiled
+Module <small_async_fifo> compiled
+Module <sync_r2w> compiled
+Module <sync_w2r> compiled
+Module <rptr_empty> compiled
+Module <wptr_full> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/small_fifo.v" in library work
+Module <fifo_mem> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/small_fifo_v2.v" in library work
+Module <small_fifo_v1> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/small_fifo_v3.v" in library work
+Module <small_fifo_v2> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/unused_reg.v" in library work
+Module <small_fifo> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/src_coregen/cdq_rx_fifo_512x36_to_72.v" in library work
+Module <unused_reg> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/src_coregen/cdq_rx_fifo_512x36.v" in library work
+Module <cdq_rx_fifo_512x36_to_72> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/src_coregen/cdq_tx_fifo_256x72_to_36.v" in library work
+Module <cdq_rx_fifo_512x36> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/src_coregen/cdq_tx_fifo_512x36.v" in library work
+Module <cdq_tx_fifo_256x72_to_36> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/src_coregen/rxfifo_8kx9_to_36.v" in library work
+Module <cdq_tx_fifo_512x36> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/src_coregen/rxfifo_8kx9_to_72.v" in library work
+Module <rxfifo_8kx9_to_36> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/src_coregen/rxlengthfifo_128x13.v" in library work
+Module <rxfifo_8kx9_to_72> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/src_coregen/txfifo_1024x36_to_9.v" in library work
+Module <rxlengthfifo_128x13> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/src_coregen/txfifo_512x72_to_9.v" in library work
+Module <txfifo_1024x36_to_9> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/cpci_bus/src/src_coregen/net2pci_16x32.v" in library work
+Module <txfifo_512x72_to_9> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/cpci_bus/src/src_coregen/pci2net_16x60.v" in library work
+Module <net2pci_16x32> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/dma/src/src_coregen/syncfifo_512x32.v" in library work
+Module <pci2net_16x60> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/io_queues/add_rm_hdr/src/src_coregen/hdr_fifo.v" in library work
+Module <syncfifo_512x32> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/src_coregen/async_fifo_256x72_to_36.v" in library work
+Module <hdr_fifo> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/src_coregen/async_fifo_512x36_progfull_500.v" in library work
+Module <async_fifo_256x72_to_36> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/src_coregen/async_fifo_512x36_to_72_progfull_500.v" in library work
+Module <async_fifo_512x36_progfull_500> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/src_coregen/syncfifo_512x36_fallthrough.v" in library work
+Module <async_fifo_512x36_to_72_progfull_500> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/src_coregen/syncfifo_512x36.v" in library work
+Module <syncfifo_512x36_fallthrough> compiled
+Compiling verilog file "/root/NetFPGA-Danilo/lib/verilog/core/utils/src/src_coregen/syncfifo_512x72.v" in library work
+Module <syncfifo_512x36> compiled
+Module <syncfifo_512x72> compiled
+Analysis of file <"nf2_top.prj"> failed.
+--> 
+
+
+Total memory usage is 119332 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
+Synthesis failed - see nf2_top.srp for details.

@@ -1,0 +1,1474 @@
+--------------------------------------------------------------------------------
+Release 10.1.03 Trace  (lin)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/10.1/ISE/bin/lin/unwrapped/trce -e 3 nf2_top_par.ncd nf2_top.pcf
+
+Design file:              nf2_top_par.ncd
+Physical constraint file: nf2_top.pcf
+Device,package,speed:     xc2vp50,ff1152,-7 (PRODUCTION 1.94 2008-07-25)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3377 - Intersecting Constraints found and resolved.  For more 
+   information see the TSI report.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: NET "rgmii_0_rxc_ibuf" MAXDELAY = 2.5 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.603ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "rgmii_1_rxc_ibuf" MAXDELAY = 2.5 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.466ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "rgmii_2_rxc_ibuf" MAXDELAY = 2.5 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.588ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "rgmii_3_rxc_ibuf" MAXDELAY = 2.5 ns;
+
+ 1 net analyzed, 0 failing nets detected.
+ 0 timing errors detected.
+ Maximum net delay is   0.466ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_rgmii_falling_to_rising = MAXDELAY FROM TIMEGRP 
+"rgmii_falling" TO TIMEGRP         "rgmii_rising" 3.2 ns;
+
+ 20 paths analyzed, 20 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   3.056ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_rx_clk = PERIOD TIMEGRP "rx_clock" 8 ns HIGH 50%;
+
+ 64432 paths analyzed, 2096 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   7.958ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_tx_clk_gmii = PERIOD TIMEGRP "tx_clock_gmii" 8 ns HIGH 
+50%;
+
+ 42244 paths analyzed, 1228 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   7.988ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_cpci_clk = PERIOD TIMEGRP "cpci_clk" 16 ns HIGH 50%;
+
+ 7796 paths analyzed, 785 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is  12.333ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_core_clk_int = PERIOD TIMEGRP "core_clk_int" 8 ns HIGH 
+50%;
+
+ 1015261 paths analyzed, 28627 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum period is   7.997ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "CPCI_ADDR" OFFSET = IN 4 ns BEFORE COMP "cpci_clk";
+
+ 27 paths analyzed, 27 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   2.865ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "CPCI_DATA" OFFSET = OUT 10 ns AFTER COMP 
+"cpci_clk";
+
+ 64 paths analyzed, 32 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+ Minimum allowable offset is   4.630ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "CPCI_WR_DATA" OFFSET = IN 4 ns BEFORE COMP 
+"cpci_clk";
+
+ 32 paths analyzed, 32 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   2.853ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "CPCI_RDY" OFFSET = OUT 8 ns AFTER COMP "cpci_clk";
+
+ 2 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+ Minimum allowable offset is   4.650ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "CPCI_REQ" OFFSET = IN 4 ns BEFORE COMP "cpci_clk";
+
+ 2 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   2.684ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "CPCI_DMA_OUT" OFFSET = OUT 8 ns AFTER COMP 
+"cpci_clk";
+
+ 4 paths analyzed, 4 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+ Minimum allowable offset is   4.641ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "CPCI_DMA_IN" OFFSET = IN 4 ns BEFORE COMP 
+"cpci_clk";
+
+ 8 paths analyzed, 8 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   2.728ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "CPCI_DMA_INOUT" OFFSET = IN 4 ns BEFORE COMP 
+"cpci_clk";
+
+ 32 paths analyzed, 32 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   2.767ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "CPCI_DMA_INOUT" OFFSET = OUT 7 ns AFTER COMP 
+"cpci_clk";
+
+ 64 paths analyzed, 32 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+ Minimum allowable offset is   4.689ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "SRAM1_OUT" OFFSET = OUT 4 ns AFTER COMP "core_clk";
+
+ 24 paths analyzed, 24 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+ Minimum allowable offset is   2.260ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "SRAM1_DATA" OFFSET = IN 4 ns BEFORE COMP 
+"core_clk";
+
+ 3520 paths analyzed, 96 endpoints analyzed, 96 failing endpoints
+ 96 timing errors detected. (96 setup errors, 0 hold errors)
+ Minimum allowable offset is   6.302ns.
+--------------------------------------------------------------------------------
+Slack:                  -2.302ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               sram1_data(31) (PAD)
+  Destination:          nf2_core/sram64.sram_arbiter/rd_0_data_11 (FF)
+  Destination Clock:    core_clk_int rising at 0.000ns
+  Requirement:          4.000ns
+  Data Path Delay:      5.411ns (Levels of Logic = 5)
+  Clock Path Delay:     -0.891ns (Levels of Logic = 3)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sram1_data(31) to nf2_core/sram64.sram_arbiter/rd_0_data_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    AJ34.I               Tiopi                 0.793   sram1_data(31)
+                                                       sram1_data(31)
+                                                       sram1_data_31_IOBUF/IBUF
+    SLICE_X0Y15.F1       net (fanout=3)        0.715   N87
+    SLICE_X0Y15.X        Tilo                  0.254   nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(3)_xo<5>
+                                                       nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(3)_xo<5>1
+    SLICE_X0Y16.F1       net (fanout=1)        0.319   nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(3)_xo<5>
+    SLICE_X0Y16.X        Tilo                  0.254   nf2_core/sram64.sram_arbiter/mod_par_error(3)
+                                                       nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(3)_xo<7>1
+    SLICE_X2Y98.G1       net (fanout=4)        1.772   nf2_core/sram64.sram_arbiter/mod_par_error(3)
+    SLICE_X2Y98.Y        Tilo                  0.275   nf2_core/sram64.sram_arbiter/rd_0_data(9)
+                                                       nf2_core/sram64.sram_arbiter/rd_0_data_and000016
+    SLICE_X4Y97.G4       net (fanout=50)       0.754   nf2_core/sram64.sram_arbiter/rd_0_data_and000016
+    SLICE_X4Y97.Y        Tilo                  0.275   nf2_core/sram64.sram_arbiter/rd_0_data(0)
+                                                       nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(11)1
+    SLICE_X4Y97.DY       net (fanout=1)        0.000   nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(11)
+    SLICE_X4Y97.CLK      Tdyck                 0.000   nf2_core/sram64.sram_arbiter/rd_0_data(0)
+                                                       nf2_core/sram64.sram_arbiter/rd_0_data_11
+    -------------------------------------------------  ---------------------------
+    Total                                      5.411ns (1.851ns logic, 3.560ns route)
+                                                       (34.2% logic, 65.8% route)
+
+  Minimum Clock Path: core_clk to nf2_core/sram64.sram_arbiter/rd_0_data_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    D17.I                Tiopi                 0.604   core_clk
+                                                       core_clk
+                                                       inst_core_clk_ibuf
+    DCM_X3Y1.CLKIN       net (fanout=1)        0.470   core_clk_ibuf
+    DCM_X3Y1.CLK0        Tdcmino              -4.315   CORE_DCM_CLK
+                                                       CORE_DCM_CLK
+    BUFGMUX1P.I0         net (fanout=1)        1.168   core_clk0
+    BUFGMUX1P.O          Tgi0o                 0.043   BUFGMUX_CORE_CLK
+                                                       BUFGMUX_CORE_CLK
+    SLICE_X4Y97.CLK      net (fanout=8035)     1.139   core_clk_int
+    -------------------------------------------------  ---------------------------
+    Total                                     -0.891ns (-3.668ns logic, 2.777ns route)
+
+--------------------------------------------------------------------------------
+Slack:                  -2.302ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               sram1_data(31) (PAD)
+  Destination:          nf2_core/sram64.sram_arbiter/rd_0_data_54 (FF)
+  Destination Clock:    core_clk_int rising at 0.000ns
+  Requirement:          4.000ns
+  Data Path Delay:      5.411ns (Levels of Logic = 5)
+  Clock Path Delay:     -0.891ns (Levels of Logic = 3)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sram1_data(31) to nf2_core/sram64.sram_arbiter/rd_0_data_54
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    AJ34.I               Tiopi                 0.793   sram1_data(31)
+                                                       sram1_data(31)
+                                                       sram1_data_31_IOBUF/IBUF
+    SLICE_X0Y15.F1       net (fanout=3)        0.715   N87
+    SLICE_X0Y15.X        Tilo                  0.254   nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(3)_xo<5>
+                                                       nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(3)_xo<5>1
+    SLICE_X0Y16.F1       net (fanout=1)        0.319   nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(3)_xo<5>
+    SLICE_X0Y16.X        Tilo                  0.254   nf2_core/sram64.sram_arbiter/mod_par_error(3)
+                                                       nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(3)_xo<7>1
+    SLICE_X2Y98.G1       net (fanout=4)        1.772   nf2_core/sram64.sram_arbiter/mod_par_error(3)
+    SLICE_X2Y98.Y        Tilo                  0.275   nf2_core/sram64.sram_arbiter/rd_0_data(9)
+                                                       nf2_core/sram64.sram_arbiter/rd_0_data_and000016
+    SLICE_X5Y97.G4       net (fanout=50)       0.754   nf2_core/sram64.sram_arbiter/rd_0_data_and000016
+    SLICE_X5Y97.Y        Tilo                  0.275   nf2_core/sram64.sram_arbiter/rd_0_data(17)
+                                                       nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(54)1
+    SLICE_X5Y97.DY       net (fanout=1)        0.000   nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(54)
+    SLICE_X5Y97.CLK      Tdyck                 0.000   nf2_core/sram64.sram_arbiter/rd_0_data(17)
+                                                       nf2_core/sram64.sram_arbiter/rd_0_data_54
+    -------------------------------------------------  ---------------------------
+    Total                                      5.411ns (1.851ns logic, 3.560ns route)
+                                                       (34.2% logic, 65.8% route)
+
+  Minimum Clock Path: core_clk to nf2_core/sram64.sram_arbiter/rd_0_data_54
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    D17.I                Tiopi                 0.604   core_clk
+                                                       core_clk
+                                                       inst_core_clk_ibuf
+    DCM_X3Y1.CLKIN       net (fanout=1)        0.470   core_clk_ibuf
+    DCM_X3Y1.CLK0        Tdcmino              -4.315   CORE_DCM_CLK
+                                                       CORE_DCM_CLK
+    BUFGMUX1P.I0         net (fanout=1)        1.168   core_clk0
+    BUFGMUX1P.O          Tgi0o                 0.043   BUFGMUX_CORE_CLK
+                                                       BUFGMUX_CORE_CLK
+    SLICE_X5Y97.CLK      net (fanout=8035)     1.139   core_clk_int
+    -------------------------------------------------  ---------------------------
+    Total                                     -0.891ns (-3.668ns logic, 2.777ns route)
+
+--------------------------------------------------------------------------------
+Slack:                  -2.290ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               sram1_data(32) (PAD)
+  Destination:          nf2_core/sram64.sram_arbiter/rd_0_data_11 (FF)
+  Destination Clock:    core_clk_int rising at 0.000ns
+  Requirement:          4.000ns
+  Data Path Delay:      5.399ns (Levels of Logic = 5)
+  Clock Path Delay:     -0.891ns (Levels of Logic = 3)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sram1_data(32) to nf2_core/sram64.sram_arbiter/rd_0_data_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    AK31.I               Tiopi                 0.777   sram1_data(32)
+                                                       sram1_data(32)
+                                                       sram1_data_32_IOBUF/IBUF
+    SLICE_X0Y15.F2       net (fanout=3)        0.719   N86
+    SLICE_X0Y15.X        Tilo                  0.254   nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(3)_xo<5>
+                                                       nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(3)_xo<5>1
+    SLICE_X0Y16.F1       net (fanout=1)        0.319   nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(3)_xo<5>
+    SLICE_X0Y16.X        Tilo                  0.254   nf2_core/sram64.sram_arbiter/mod_par_error(3)
+                                                       nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(3)_xo<7>1
+    SLICE_X2Y98.G1       net (fanout=4)        1.772   nf2_core/sram64.sram_arbiter/mod_par_error(3)
+    SLICE_X2Y98.Y        Tilo                  0.275   nf2_core/sram64.sram_arbiter/rd_0_data(9)
+                                                       nf2_core/sram64.sram_arbiter/rd_0_data_and000016
+    SLICE_X4Y97.G4       net (fanout=50)       0.754   nf2_core/sram64.sram_arbiter/rd_0_data_and000016
+    SLICE_X4Y97.Y        Tilo                  0.275   nf2_core/sram64.sram_arbiter/rd_0_data(0)
+                                                       nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(11)1
+    SLICE_X4Y97.DY       net (fanout=1)        0.000   nf2_core/sram64.sram_arbiter/rd_0_data_mux0000(11)
+    SLICE_X4Y97.CLK      Tdyck                 0.000   nf2_core/sram64.sram_arbiter/rd_0_data(0)
+                                                       nf2_core/sram64.sram_arbiter/rd_0_data_11
+    -------------------------------------------------  ---------------------------
+    Total                                      5.399ns (1.835ns logic, 3.564ns route)
+                                                       (34.0% logic, 66.0% route)
+
+  Minimum Clock Path: core_clk to nf2_core/sram64.sram_arbiter/rd_0_data_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    D17.I                Tiopi                 0.604   core_clk
+                                                       core_clk
+                                                       inst_core_clk_ibuf
+    DCM_X3Y1.CLKIN       net (fanout=1)        0.470   core_clk_ibuf
+    DCM_X3Y1.CLK0        Tdcmino              -4.315   CORE_DCM_CLK
+                                                       CORE_DCM_CLK
+    BUFGMUX1P.I0         net (fanout=1)        1.168   core_clk0
+    BUFGMUX1P.O          Tgi0o                 0.043   BUFGMUX_CORE_CLK
+                                                       BUFGMUX_CORE_CLK
+    SLICE_X4Y97.CLK      net (fanout=8035)     1.139   core_clk_int
+    -------------------------------------------------  ---------------------------
+    Total                                     -0.891ns (-3.668ns logic, 2.777ns route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "SRAM1_DATA" OFFSET = OUT 4 ns AFTER COMP 
+"core_clk";
+
+ 72 paths analyzed, 36 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+ Minimum allowable offset is   2.299ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "SRAM2_OUT" OFFSET = OUT 4 ns AFTER COMP "core_clk";
+
+ 24 paths analyzed, 24 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+ Minimum allowable offset is   2.972ns.
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "SRAM2_DATA" OFFSET = IN 4 ns BEFORE COMP 
+"core_clk";
+
+ 3520 paths analyzed, 96 endpoints analyzed, 96 failing endpoints
+ 96 timing errors detected. (96 setup errors, 0 hold errors)
+ Minimum allowable offset is   6.066ns.
+--------------------------------------------------------------------------------
+Slack:                  -2.066ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               sram2_data(4) (PAD)
+  Destination:          nf2_core/sram64.sram_arbiter/sram_reg_rd_data_19 (FF)
+  Destination Clock:    core_clk_int rising at 0.000ns
+  Requirement:          4.000ns
+  Data Path Delay:      5.185ns (Levels of Logic = 5)
+  Clock Path Delay:     -0.881ns (Levels of Logic = 3)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sram2_data(4) to nf2_core/sram64.sram_arbiter/sram_reg_rd_data_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    H31.I                Tiopi                 0.783   sram2_data(4)
+                                                       sram2_data(4)
+                                                       sram2_data_4_IOBUF/IBUF
+    SLICE_X0Y150.F2      net (fanout=3)        0.460   N150
+    SLICE_X0Y150.X       Tilo                  0.254   nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(4)_xo<5>
+                                                       nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(4)_xo<5>1
+    SLICE_X1Y142.F2      net (fanout=1)        0.493   nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(4)_xo<5>
+    SLICE_X1Y142.X       Tilo                  0.254   nf2_core/sram_reg_addr(1)
+                                                       nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(4)_xo<7>1
+    SLICE_X0Y56.F3       net (fanout=7)        1.658   nf2_core/sram64.sram_arbiter/mod_par_error(4)
+    SLICE_X0Y56.X        Tif5x                 0.578   nf2_core/user_data_path/output_queues/generic_regs_b/hw_reg_addr_out_swapped(6)
+                                                       nf2_core/sram64.sram_arbiter/bit_par_is_valid_or0000_G
+                                                       nf2_core/sram64.sram_arbiter/bit_par_is_valid_or0000
+    SLICE_X3Y58.G4       net (fanout=32)       0.430   nf2_core/sram64.sram_arbiter/bit_par_is_valid_or0000
+    SLICE_X3Y58.Y        Tilo                  0.275   nf2_core/sram64.sram_arbiter/sram_reg_rd_data(30)
+                                                       nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(12)1
+    SLICE_X3Y58.DY       net (fanout=1)        0.000   nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(12)
+    SLICE_X3Y58.CLK      Tdyck                 0.000   nf2_core/sram64.sram_arbiter/sram_reg_rd_data(30)
+                                                       nf2_core/sram64.sram_arbiter/sram_reg_rd_data_19
+    -------------------------------------------------  ---------------------------
+    Total                                      5.185ns (2.144ns logic, 3.041ns route)
+                                                       (41.4% logic, 58.6% route)
+
+  Minimum Clock Path: core_clk to nf2_core/sram64.sram_arbiter/sram_reg_rd_data_19
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    D17.I                Tiopi                 0.604   core_clk
+                                                       core_clk
+                                                       inst_core_clk_ibuf
+    DCM_X3Y1.CLKIN       net (fanout=1)        0.470   core_clk_ibuf
+    DCM_X3Y1.CLK0        Tdcmino              -4.315   CORE_DCM_CLK
+                                                       CORE_DCM_CLK
+    BUFGMUX1P.I0         net (fanout=1)        1.168   core_clk0
+    BUFGMUX1P.O          Tgi0o                 0.043   BUFGMUX_CORE_CLK
+                                                       BUFGMUX_CORE_CLK
+    SLICE_X3Y58.CLK      net (fanout=8035)     1.149   core_clk_int
+    -------------------------------------------------  ---------------------------
+    Total                                     -0.881ns (-3.668ns logic, 2.787ns route)
+
+--------------------------------------------------------------------------------
+Slack:                  -2.066ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               sram2_data(4) (PAD)
+  Destination:          nf2_core/sram64.sram_arbiter/sram_reg_rd_data_13 (FF)
+  Destination Clock:    core_clk_int rising at 0.000ns
+  Requirement:          4.000ns
+  Data Path Delay:      5.185ns (Levels of Logic = 5)
+  Clock Path Delay:     -0.881ns (Levels of Logic = 3)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sram2_data(4) to nf2_core/sram64.sram_arbiter/sram_reg_rd_data_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    H31.I                Tiopi                 0.783   sram2_data(4)
+                                                       sram2_data(4)
+                                                       sram2_data_4_IOBUF/IBUF
+    SLICE_X0Y150.F2      net (fanout=3)        0.460   N150
+    SLICE_X0Y150.X       Tilo                  0.254   nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(4)_xo<5>
+                                                       nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(4)_xo<5>1
+    SLICE_X1Y142.F2      net (fanout=1)        0.493   nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(4)_xo<5>
+    SLICE_X1Y142.X       Tilo                  0.254   nf2_core/sram_reg_addr(1)
+                                                       nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(4)_xo<7>1
+    SLICE_X0Y56.F3       net (fanout=7)        1.658   nf2_core/sram64.sram_arbiter/mod_par_error(4)
+    SLICE_X0Y56.X        Tif5x                 0.578   nf2_core/user_data_path/output_queues/generic_regs_b/hw_reg_addr_out_swapped(6)
+                                                       nf2_core/sram64.sram_arbiter/bit_par_is_valid_or0000_G
+                                                       nf2_core/sram64.sram_arbiter/bit_par_is_valid_or0000
+    SLICE_X2Y58.G4       net (fanout=32)       0.430   nf2_core/sram64.sram_arbiter/bit_par_is_valid_or0000
+    SLICE_X2Y58.Y        Tilo                  0.275   nf2_core/sram64.sram_arbiter/sram_wr_data_early1(26)
+                                                       nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(18)1
+    SLICE_X2Y58.DY       net (fanout=1)        0.000   nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(18)
+    SLICE_X2Y58.CLK      Tdyck                 0.000   nf2_core/sram64.sram_arbiter/sram_wr_data_early1(26)
+                                                       nf2_core/sram64.sram_arbiter/sram_reg_rd_data_13
+    -------------------------------------------------  ---------------------------
+    Total                                      5.185ns (2.144ns logic, 3.041ns route)
+                                                       (41.4% logic, 58.6% route)
+
+  Minimum Clock Path: core_clk to nf2_core/sram64.sram_arbiter/sram_reg_rd_data_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    D17.I                Tiopi                 0.604   core_clk
+                                                       core_clk
+                                                       inst_core_clk_ibuf
+    DCM_X3Y1.CLKIN       net (fanout=1)        0.470   core_clk_ibuf
+    DCM_X3Y1.CLK0        Tdcmino              -4.315   CORE_DCM_CLK
+                                                       CORE_DCM_CLK
+    BUFGMUX1P.I0         net (fanout=1)        1.168   core_clk0
+    BUFGMUX1P.O          Tgi0o                 0.043   BUFGMUX_CORE_CLK
+                                                       BUFGMUX_CORE_CLK
+    SLICE_X2Y58.CLK      net (fanout=8035)     1.149   core_clk_int
+    -------------------------------------------------  ---------------------------
+    Total                                     -0.881ns (-3.668ns logic, 2.787ns route)
+
+--------------------------------------------------------------------------------
+Slack:                  -2.055ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               sram2_data(4) (PAD)
+  Destination:          nf2_core/sram64.sram_arbiter/sram_reg_rd_data_15 (FF)
+  Destination Clock:    core_clk_int rising at 0.000ns
+  Requirement:          4.000ns
+  Data Path Delay:      5.174ns (Levels of Logic = 5)
+  Clock Path Delay:     -0.881ns (Levels of Logic = 3)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: sram2_data(4) to nf2_core/sram64.sram_arbiter/sram_reg_rd_data_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    H31.I                Tiopi                 0.783   sram2_data(4)
+                                                       sram2_data(4)
+                                                       sram2_data_4_IOBUF/IBUF
+    SLICE_X0Y150.F2      net (fanout=3)        0.460   N150
+    SLICE_X0Y150.X       Tilo                  0.254   nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(4)_xo<5>
+                                                       nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(4)_xo<5>1
+    SLICE_X1Y142.F2      net (fanout=1)        0.493   nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(4)_xo<5>
+    SLICE_X1Y142.X       Tilo                  0.254   nf2_core/sram_reg_addr(1)
+                                                       nf2_core/sram64.sram_arbiter/Mxor_mod_par_error(4)_xo<7>1
+    SLICE_X0Y56.F3       net (fanout=7)        1.658   nf2_core/sram64.sram_arbiter/mod_par_error(4)
+    SLICE_X0Y56.X        Tif5x                 0.578   nf2_core/user_data_path/output_queues/generic_regs_b/hw_reg_addr_out_swapped(6)
+                                                       nf2_core/sram64.sram_arbiter/bit_par_is_valid_or0000_G
+                                                       nf2_core/sram64.sram_arbiter/bit_par_is_valid_or0000
+    SLICE_X2Y59.G3       net (fanout=32)       0.419   nf2_core/sram64.sram_arbiter/bit_par_is_valid_or0000
+    SLICE_X2Y59.Y        Tilo                  0.275   nf2_core/sram64.sram_arbiter/sram_reg_rd_data(14)
+                                                       nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(16)1
+    SLICE_X2Y59.DY       net (fanout=1)        0.000   nf2_core/sram64.sram_arbiter/sram_reg_rd_data_mux0000(16)
+    SLICE_X2Y59.CLK      Tdyck                 0.000   nf2_core/sram64.sram_arbiter/sram_reg_rd_data(14)
+                                                       nf2_core/sram64.sram_arbiter/sram_reg_rd_data_15
+    -------------------------------------------------  ---------------------------
+    Total                                      5.174ns (2.144ns logic, 3.030ns route)
+                                                       (41.4% logic, 58.6% route)
+
+  Minimum Clock Path: core_clk to nf2_core/sram64.sram_arbiter/sram_reg_rd_data_15
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    D17.I                Tiopi                 0.604   core_clk
+                                                       core_clk
+                                                       inst_core_clk_ibuf
+    DCM_X3Y1.CLKIN       net (fanout=1)        0.470   core_clk_ibuf
+    DCM_X3Y1.CLK0        Tdcmino              -4.315   CORE_DCM_CLK
+                                                       CORE_DCM_CLK
+    BUFGMUX1P.I0         net (fanout=1)        1.168   core_clk0
+    BUFGMUX1P.O          Tgi0o                 0.043   BUFGMUX_CORE_CLK
+                                                       BUFGMUX_CORE_CLK
+    SLICE_X2Y59.CLK      net (fanout=8035)     1.149   core_clk_int
+    -------------------------------------------------  ---------------------------
+    Total                                     -0.881ns (-3.668ns logic, 2.787ns route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "SRAM2_DATA" OFFSET = OUT 4 ns AFTER COMP 
+"core_clk";
+
+ 72 paths analyzed, 36 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+ Minimum allowable offset is   2.283ns.
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock core_clk
+--------------+------------+------------+------------------+--------+
+              |  Setup to  |  Hold to   |                  | Clock  |
+Source        | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+--------------+------------+------------+------------------+--------+
+sram1_data(0) |    4.959(R)|   -2.654(R)|core_clk_int      |   0.000|
+sram1_data(1) |    5.024(R)|   -1.774(R)|core_clk_int      |   0.000|
+sram1_data(2) |    5.082(R)|   -1.650(R)|core_clk_int      |   0.000|
+sram1_data(3) |    5.028(R)|   -1.669(R)|core_clk_int      |   0.000|
+sram1_data(4) |    4.890(R)|   -1.731(R)|core_clk_int      |   0.000|
+sram1_data(5) |    4.998(R)|   -1.640(R)|core_clk_int      |   0.000|
+sram1_data(6) |    4.774(R)|   -1.547(R)|core_clk_int      |   0.000|
+sram1_data(7) |    5.068(R)|   -1.599(R)|core_clk_int      |   0.000|
+sram1_data(8) |    4.511(R)|   -1.699(R)|core_clk_int      |   0.000|
+sram1_data(9) |    5.277(R)|   -2.834(R)|core_clk_int      |   0.000|
+sram1_data(10)|    5.347(R)|   -1.258(R)|core_clk_int      |   0.000|
+sram1_data(11)|    5.503(R)|   -1.676(R)|core_clk_int      |   0.000|
+sram1_data(12)|    5.270(R)|   -1.575(R)|core_clk_int      |   0.000|
+sram1_data(13)|    5.257(R)|   -1.830(R)|core_clk_int      |   0.000|
+sram1_data(14)|    6.045(R)|   -1.297(R)|core_clk_int      |   0.000|
+sram1_data(15)|    5.681(R)|   -1.306(R)|core_clk_int      |   0.000|
+sram1_data(16)|    5.499(R)|   -1.708(R)|core_clk_int      |   0.000|
+sram1_data(17)|    5.572(R)|   -1.557(R)|core_clk_int      |   0.000|
+sram1_data(18)|    5.627(R)|   -3.192(R)|core_clk_int      |   0.000|
+sram1_data(19)|    6.034(R)|   -2.285(R)|core_clk_int      |   0.000|
+sram1_data(20)|    6.007(R)|   -2.267(R)|core_clk_int      |   0.000|
+sram1_data(21)|    5.587(R)|   -2.092(R)|core_clk_int      |   0.000|
+sram1_data(22)|    5.476(R)|   -1.882(R)|core_clk_int      |   0.000|
+sram1_data(23)|    5.421(R)|   -2.300(R)|core_clk_int      |   0.000|
+sram1_data(24)|    5.320(R)|   -1.927(R)|core_clk_int      |   0.000|
+sram1_data(25)|    5.822(R)|   -2.094(R)|core_clk_int      |   0.000|
+sram1_data(26)|    5.567(R)|   -1.670(R)|core_clk_int      |   0.000|
+sram1_data(27)|    6.088(R)|   -3.492(R)|core_clk_int      |   0.000|
+sram1_data(28)|    5.966(R)|   -2.004(R)|core_clk_int      |   0.000|
+sram1_data(29)|    6.017(R)|   -2.298(R)|core_clk_int      |   0.000|
+sram1_data(30)|    5.780(R)|   -1.937(R)|core_clk_int      |   0.000|
+sram1_data(31)|    6.302(R)|   -2.222(R)|core_clk_int      |   0.000|
+sram1_data(32)|    6.290(R)|   -2.031(R)|core_clk_int      |   0.000|
+sram1_data(33)|    6.218(R)|   -2.300(R)|core_clk_int      |   0.000|
+sram1_data(34)|    5.986(R)|   -2.175(R)|core_clk_int      |   0.000|
+sram1_data(35)|    5.398(R)|   -2.193(R)|core_clk_int      |   0.000|
+sram2_data(0) |    5.875(R)|   -3.261(R)|core_clk_int      |   0.000|
+sram2_data(1) |    5.545(R)|   -2.098(R)|core_clk_int      |   0.000|
+sram2_data(2) |    5.628(R)|   -2.132(R)|core_clk_int      |   0.000|
+sram2_data(3) |    5.348(R)|   -2.120(R)|core_clk_int      |   0.000|
+sram2_data(4) |    6.066(R)|   -2.237(R)|core_clk_int      |   0.000|
+sram2_data(5) |    5.935(R)|   -2.302(R)|core_clk_int      |   0.000|
+sram2_data(6) |    5.837(R)|   -2.317(R)|core_clk_int      |   0.000|
+sram2_data(7) |    5.985(R)|   -2.225(R)|core_clk_int      |   0.000|
+sram2_data(8) |    5.542(R)|   -2.355(R)|core_clk_int      |   0.000|
+sram2_data(9) |    5.828(R)|   -3.186(R)|core_clk_int      |   0.000|
+sram2_data(10)|    5.499(R)|   -2.050(R)|core_clk_int      |   0.000|
+sram2_data(11)|    5.531(R)|   -2.291(R)|core_clk_int      |   0.000|
+sram2_data(12)|    5.594(R)|   -2.139(R)|core_clk_int      |   0.000|
+sram2_data(13)|    5.573(R)|   -2.297(R)|core_clk_int      |   0.000|
+sram2_data(14)|    5.620(R)|   -2.258(R)|core_clk_int      |   0.000|
+sram2_data(15)|    5.501(R)|   -2.205(R)|core_clk_int      |   0.000|
+sram2_data(16)|    5.617(R)|   -1.921(R)|core_clk_int      |   0.000|
+sram2_data(17)|    5.294(R)|   -1.747(R)|core_clk_int      |   0.000|
+sram2_data(18)|    4.905(R)|   -2.140(R)|core_clk_int      |   0.000|
+sram2_data(19)|    4.780(R)|   -1.632(R)|core_clk_int      |   0.000|
+sram2_data(20)|    5.036(R)|   -1.137(R)|core_clk_int      |   0.000|
+sram2_data(21)|    4.880(R)|   -1.477(R)|core_clk_int      |   0.000|
+sram2_data(22)|    5.188(R)|   -1.254(R)|core_clk_int      |   0.000|
+sram2_data(23)|    5.225(R)|   -1.239(R)|core_clk_int      |   0.000|
+sram2_data(24)|    5.132(R)|   -1.188(R)|core_clk_int      |   0.000|
+sram2_data(25)|    5.097(R)|   -1.649(R)|core_clk_int      |   0.000|
+sram2_data(26)|    4.919(R)|   -1.277(R)|core_clk_int      |   0.000|
+sram2_data(27)|    5.133(R)|   -2.934(R)|core_clk_int      |   0.000|
+sram2_data(28)|    4.978(R)|   -1.683(R)|core_clk_int      |   0.000|
+sram2_data(29)|    5.087(R)|   -1.488(R)|core_clk_int      |   0.000|
+sram2_data(30)|    5.042(R)|   -1.346(R)|core_clk_int      |   0.000|
+sram2_data(31)|    5.060(R)|   -1.707(R)|core_clk_int      |   0.000|
+sram2_data(32)|    5.046(R)|   -1.558(R)|core_clk_int      |   0.000|
+sram2_data(33)|    5.134(R)|   -1.473(R)|core_clk_int      |   0.000|
+sram2_data(34)|    5.374(R)|   -1.392(R)|core_clk_int      |   0.000|
+sram2_data(35)|    5.089(R)|   -1.301(R)|core_clk_int      |   0.000|
+--------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock cpci_clk
+---------------------+------------+------------+------------------+--------+
+                     |  Setup to  |  Hold to   |                  | Clock  |
+Source               | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+---------------------+------------+------------+------------------+--------+
+cpci_addr(0)         |    2.854(R)|   -1.253(R)|cpci_clk_int      |   0.000|
+cpci_addr(1)         |    2.861(R)|   -1.260(R)|cpci_clk_int      |   0.000|
+cpci_addr(2)         |    2.863(R)|   -1.262(R)|cpci_clk_int      |   0.000|
+cpci_addr(3)         |    2.796(R)|   -1.183(R)|cpci_clk_int      |   0.000|
+cpci_addr(4)         |    2.853(R)|   -1.253(R)|cpci_clk_int      |   0.000|
+cpci_addr(5)         |    2.854(R)|   -1.254(R)|cpci_clk_int      |   0.000|
+cpci_addr(6)         |    2.864(R)|   -1.264(R)|cpci_clk_int      |   0.000|
+cpci_addr(7)         |    2.865(R)|   -1.265(R)|cpci_clk_int      |   0.000|
+cpci_addr(8)         |    2.795(R)|   -1.180(R)|cpci_clk_int      |   0.000|
+cpci_addr(9)         |    2.784(R)|   -1.169(R)|cpci_clk_int      |   0.000|
+cpci_addr(10)        |    2.788(R)|   -1.173(R)|cpci_clk_int      |   0.000|
+cpci_addr(11)        |    2.705(R)|   -1.083(R)|cpci_clk_int      |   0.000|
+cpci_addr(12)        |    2.712(R)|   -1.090(R)|cpci_clk_int      |   0.000|
+cpci_addr(13)        |    2.752(R)|   -1.133(R)|cpci_clk_int      |   0.000|
+cpci_addr(14)        |    2.754(R)|   -1.135(R)|cpci_clk_int      |   0.000|
+cpci_addr(15)        |    2.801(R)|   -1.186(R)|cpci_clk_int      |   0.000|
+cpci_addr(16)        |    2.778(R)|   -1.159(R)|cpci_clk_int      |   0.000|
+cpci_addr(17)        |    2.672(R)|   -1.044(R)|cpci_clk_int      |   0.000|
+cpci_addr(18)        |    2.677(R)|   -1.049(R)|cpci_clk_int      |   0.000|
+cpci_addr(19)        |    2.726(R)|   -1.103(R)|cpci_clk_int      |   0.000|
+cpci_addr(20)        |    2.718(R)|   -1.095(R)|cpci_clk_int      |   0.000|
+cpci_addr(21)        |    2.757(R)|   -1.136(R)|cpci_clk_int      |   0.000|
+cpci_addr(22)        |    2.805(R)|   -1.189(R)|cpci_clk_int      |   0.000|
+cpci_addr(23)        |    2.766(R)|   -1.145(R)|cpci_clk_int      |   0.000|
+cpci_addr(24)        |    2.777(R)|   -1.167(R)|cpci_clk_int      |   0.000|
+cpci_addr(25)        |    2.706(R)|   -1.076(R)|cpci_clk_int      |   0.000|
+cpci_addr(26)        |    2.799(R)|   -1.189(R)|cpci_clk_int      |   0.000|
+cpci_data(0)         |    2.661(R)|   -1.027(R)|cpci_clk_int      |   0.000|
+cpci_data(1)         |    2.660(R)|   -1.026(R)|cpci_clk_int      |   0.000|
+cpci_data(2)         |    2.633(R)|   -0.998(R)|cpci_clk_int      |   0.000|
+cpci_data(3)         |    2.641(R)|   -1.006(R)|cpci_clk_int      |   0.000|
+cpci_data(4)         |    2.670(R)|   -1.037(R)|cpci_clk_int      |   0.000|
+cpci_data(5)         |    2.667(R)|   -1.034(R)|cpci_clk_int      |   0.000|
+cpci_data(6)         |    2.727(R)|   -1.099(R)|cpci_clk_int      |   0.000|
+cpci_data(7)         |    2.729(R)|   -1.101(R)|cpci_clk_int      |   0.000|
+cpci_data(8)         |    2.666(R)|   -1.032(R)|cpci_clk_int      |   0.000|
+cpci_data(9)         |    2.664(R)|   -1.030(R)|cpci_clk_int      |   0.000|
+cpci_data(10)        |    2.733(R)|   -1.110(R)|cpci_clk_int      |   0.000|
+cpci_data(11)        |    2.736(R)|   -1.113(R)|cpci_clk_int      |   0.000|
+cpci_data(12)        |    2.769(R)|   -1.149(R)|cpci_clk_int      |   0.000|
+cpci_data(13)        |    2.767(R)|   -1.147(R)|cpci_clk_int      |   0.000|
+cpci_data(14)        |    2.766(R)|   -1.146(R)|cpci_clk_int      |   0.000|
+cpci_data(15)        |    2.674(R)|   -1.046(R)|cpci_clk_int      |   0.000|
+cpci_data(16)        |    2.678(R)|   -1.050(R)|cpci_clk_int      |   0.000|
+cpci_data(17)        |    2.728(R)|   -1.105(R)|cpci_clk_int      |   0.000|
+cpci_data(18)        |    2.720(R)|   -1.097(R)|cpci_clk_int      |   0.000|
+cpci_data(19)        |    2.757(R)|   -1.137(R)|cpci_clk_int      |   0.000|
+cpci_data(20)        |    2.805(R)|   -1.189(R)|cpci_clk_int      |   0.000|
+cpci_data(21)        |    2.706(R)|   -1.084(R)|cpci_clk_int      |   0.000|
+cpci_data(22)        |    2.713(R)|   -1.091(R)|cpci_clk_int      |   0.000|
+cpci_data(23)        |    2.752(R)|   -1.134(R)|cpci_clk_int      |   0.000|
+cpci_data(24)        |    2.754(R)|   -1.136(R)|cpci_clk_int      |   0.000|
+cpci_data(25)        |    2.799(R)|   -1.184(R)|cpci_clk_int      |   0.000|
+cpci_data(26)        |    2.778(R)|   -1.160(R)|cpci_clk_int      |   0.000|
+cpci_data(27)        |    2.795(R)|   -1.180(R)|cpci_clk_int      |   0.000|
+cpci_data(28)        |    2.784(R)|   -1.169(R)|cpci_clk_int      |   0.000|
+cpci_data(29)        |    2.787(R)|   -1.172(R)|cpci_clk_int      |   0.000|
+cpci_data(30)        |    2.795(R)|   -1.182(R)|cpci_clk_int      |   0.000|
+cpci_data(31)        |    2.853(R)|   -1.252(R)|cpci_clk_int      |   0.000|
+cpci_rd_wr_L         |    2.684(R)|   -1.051(R)|cpci_clk_int      |   0.000|
+cpci_req             |    2.664(R)|   -1.029(R)|cpci_clk_int      |   0.000|
+dma_data(0)          |    2.767(R)|   -1.146(R)|cpci_clk_int      |   0.000|
+dma_data(1)          |    2.665(R)|   -1.030(R)|cpci_clk_int      |   0.000|
+dma_data(2)          |    2.663(R)|   -1.028(R)|cpci_clk_int      |   0.000|
+dma_data(3)          |    2.730(R)|   -1.107(R)|cpci_clk_int      |   0.000|
+dma_data(4)          |    2.733(R)|   -1.110(R)|cpci_clk_int      |   0.000|
+dma_data(5)          |    2.639(R)|   -1.004(R)|cpci_clk_int      |   0.000|
+dma_data(6)          |    2.669(R)|   -1.035(R)|cpci_clk_int      |   0.000|
+dma_data(7)          |    2.666(R)|   -1.032(R)|cpci_clk_int      |   0.000|
+dma_data(8)          |    2.724(R)|   -1.096(R)|cpci_clk_int      |   0.000|
+dma_data(9)          |    2.727(R)|   -1.099(R)|cpci_clk_int      |   0.000|
+dma_data(10)         |    2.659(R)|   -1.024(R)|cpci_clk_int      |   0.000|
+dma_data(11)         |    2.660(R)|   -1.025(R)|cpci_clk_int      |   0.000|
+dma_data(12)         |    2.658(R)|   -1.023(R)|cpci_clk_int      |   0.000|
+dma_data(13)         |    2.662(R)|   -1.027(R)|cpci_clk_int      |   0.000|
+dma_data(14)         |    2.684(R)|   -1.050(R)|cpci_clk_int      |   0.000|
+dma_data(15)         |    2.687(R)|   -1.053(R)|cpci_clk_int      |   0.000|
+dma_data(16)         |    2.688(R)|   -1.053(R)|cpci_clk_int      |   0.000|
+dma_data(17)         |    2.698(R)|   -1.063(R)|cpci_clk_int      |   0.000|
+dma_data(18)         |    2.674(R)|   -1.039(R)|cpci_clk_int      |   0.000|
+dma_data(19)         |    2.683(R)|   -1.048(R)|cpci_clk_int      |   0.000|
+dma_data(20)         |    2.690(R)|   -1.055(R)|cpci_clk_int      |   0.000|
+dma_data(21)         |    2.699(R)|   -1.064(R)|cpci_clk_int      |   0.000|
+dma_data(22)         |    2.679(R)|   -1.045(R)|cpci_clk_int      |   0.000|
+dma_data(23)         |    2.672(R)|   -1.038(R)|cpci_clk_int      |   0.000|
+dma_data(24)         |    2.664(R)|   -1.026(R)|cpci_clk_int      |   0.000|
+dma_data(25)         |    2.671(R)|   -1.033(R)|cpci_clk_int      |   0.000|
+dma_data(26)         |    2.641(R)|   -1.003(R)|cpci_clk_int      |   0.000|
+dma_data(27)         |    2.648(R)|   -1.010(R)|cpci_clk_int      |   0.000|
+dma_data(28)         |    2.644(R)|   -1.005(R)|cpci_clk_int      |   0.000|
+dma_data(29)         |    2.653(R)|   -1.014(R)|cpci_clk_int      |   0.000|
+dma_data(30)         |    2.715(R)|   -1.085(R)|cpci_clk_int      |   0.000|
+dma_data(31)         |    2.722(R)|   -1.092(R)|cpci_clk_int      |   0.000|
+dma_op_code_req(0)   |    2.720(R)|   -1.094(R)|cpci_clk_int      |   0.000|
+dma_op_code_req(1)   |    2.705(R)|   -1.076(R)|cpci_clk_int      |   0.000|
+dma_op_queue_id(0)   |    2.673(R)|   -1.043(R)|cpci_clk_int      |   0.000|
+dma_op_queue_id(1)   |    2.728(R)|   -1.102(R)|cpci_clk_int      |   0.000|
+dma_op_queue_id(2)   |    2.678(R)|   -1.048(R)|cpci_clk_int      |   0.000|
+dma_op_queue_id(3)   |    2.692(R)|   -1.063(R)|cpci_clk_int      |   0.000|
+dma_q_nearly_full_c2n|    2.676(R)|   -1.046(R)|cpci_clk_int      |   0.000|
+dma_vld_c2n          |    2.699(R)|   -1.065(R)|cpci_clk_int      |   0.000|
+sram1_data(0)        |    2.273(R)|   -0.271(R)|core_clk_int      |   0.000|
+sram1_data(1)        |    2.338(R)|    0.609(R)|core_clk_int      |   0.000|
+sram1_data(2)        |    2.396(R)|    0.733(R)|core_clk_int      |   0.000|
+sram1_data(3)        |    2.342(R)|    0.714(R)|core_clk_int      |   0.000|
+sram1_data(4)        |    2.204(R)|    0.652(R)|core_clk_int      |   0.000|
+sram1_data(5)        |    2.312(R)|    0.743(R)|core_clk_int      |   0.000|
+sram1_data(6)        |    2.088(R)|    0.836(R)|core_clk_int      |   0.000|
+sram1_data(7)        |    2.382(R)|    0.784(R)|core_clk_int      |   0.000|
+sram1_data(8)        |    1.825(R)|    0.684(R)|core_clk_int      |   0.000|
+sram1_data(9)        |    2.591(R)|   -0.451(R)|core_clk_int      |   0.000|
+sram1_data(10)       |    2.661(R)|    1.125(R)|core_clk_int      |   0.000|
+sram1_data(11)       |    2.817(R)|    0.707(R)|core_clk_int      |   0.000|
+sram1_data(12)       |    2.584(R)|    0.808(R)|core_clk_int      |   0.000|
+sram1_data(13)       |    2.571(R)|    0.553(R)|core_clk_int      |   0.000|
+sram1_data(14)       |    3.359(R)|    1.086(R)|core_clk_int      |   0.000|
+sram1_data(15)       |    2.995(R)|    1.077(R)|core_clk_int      |   0.000|
+sram1_data(16)       |    2.813(R)|    0.675(R)|core_clk_int      |   0.000|
+sram1_data(17)       |    2.886(R)|    0.826(R)|core_clk_int      |   0.000|
+sram1_data(18)       |    2.941(R)|   -0.809(R)|core_clk_int      |   0.000|
+sram1_data(19)       |    3.348(R)|    0.098(R)|core_clk_int      |   0.000|
+sram1_data(20)       |    3.321(R)|    0.116(R)|core_clk_int      |   0.000|
+sram1_data(21)       |    2.901(R)|    0.291(R)|core_clk_int      |   0.000|
+sram1_data(22)       |    2.790(R)|    0.501(R)|core_clk_int      |   0.000|
+sram1_data(23)       |    2.735(R)|    0.083(R)|core_clk_int      |   0.000|
+sram1_data(24)       |    2.634(R)|    0.456(R)|core_clk_int      |   0.000|
+sram1_data(25)       |    3.136(R)|    0.289(R)|core_clk_int      |   0.000|
+sram1_data(26)       |    2.881(R)|    0.713(R)|core_clk_int      |   0.000|
+sram1_data(27)       |    3.402(R)|   -1.109(R)|core_clk_int      |   0.000|
+sram1_data(28)       |    3.280(R)|    0.379(R)|core_clk_int      |   0.000|
+sram1_data(29)       |    3.331(R)|    0.085(R)|core_clk_int      |   0.000|
+sram1_data(30)       |    3.094(R)|    0.446(R)|core_clk_int      |   0.000|
+sram1_data(31)       |    3.616(R)|    0.161(R)|core_clk_int      |   0.000|
+sram1_data(32)       |    3.604(R)|    0.352(R)|core_clk_int      |   0.000|
+sram1_data(33)       |    3.532(R)|    0.083(R)|core_clk_int      |   0.000|
+sram1_data(34)       |    3.300(R)|    0.208(R)|core_clk_int      |   0.000|
+sram1_data(35)       |    2.712(R)|    0.190(R)|core_clk_int      |   0.000|
+sram2_data(0)        |    3.189(R)|   -0.878(R)|core_clk_int      |   0.000|
+sram2_data(1)        |    2.859(R)|    0.285(R)|core_clk_int      |   0.000|
+sram2_data(2)        |    2.942(R)|    0.251(R)|core_clk_int      |   0.000|
+sram2_data(3)        |    2.662(R)|    0.263(R)|core_clk_int      |   0.000|
+sram2_data(4)        |    3.380(R)|    0.146(R)|core_clk_int      |   0.000|
+sram2_data(5)        |    3.249(R)|    0.081(R)|core_clk_int      |   0.000|
+sram2_data(6)        |    3.151(R)|    0.066(R)|core_clk_int      |   0.000|
+sram2_data(7)        |    3.299(R)|    0.158(R)|core_clk_int      |   0.000|
+sram2_data(8)        |    2.856(R)|    0.028(R)|core_clk_int      |   0.000|
+sram2_data(9)        |    3.142(R)|   -0.803(R)|core_clk_int      |   0.000|
+sram2_data(10)       |    2.813(R)|    0.333(R)|core_clk_int      |   0.000|
+sram2_data(11)       |    2.845(R)|    0.092(R)|core_clk_int      |   0.000|
+sram2_data(12)       |    2.908(R)|    0.244(R)|core_clk_int      |   0.000|
+sram2_data(13)       |    2.887(R)|    0.086(R)|core_clk_int      |   0.000|
+sram2_data(14)       |    2.934(R)|    0.125(R)|core_clk_int      |   0.000|
+sram2_data(15)       |    2.815(R)|    0.178(R)|core_clk_int      |   0.000|
+sram2_data(16)       |    2.931(R)|    0.462(R)|core_clk_int      |   0.000|
+sram2_data(17)       |    2.608(R)|    0.636(R)|core_clk_int      |   0.000|
+sram2_data(18)       |    2.219(R)|    0.243(R)|core_clk_int      |   0.000|
+sram2_data(19)       |    2.094(R)|    0.751(R)|core_clk_int      |   0.000|
+sram2_data(20)       |    2.350(R)|    1.246(R)|core_clk_int      |   0.000|
+sram2_data(21)       |    2.194(R)|    0.906(R)|core_clk_int      |   0.000|
+sram2_data(22)       |    2.502(R)|    1.129(R)|core_clk_int      |   0.000|
+sram2_data(23)       |    2.539(R)|    1.144(R)|core_clk_int      |   0.000|
+sram2_data(24)       |    2.446(R)|    1.195(R)|core_clk_int      |   0.000|
+sram2_data(25)       |    2.411(R)|    0.734(R)|core_clk_int      |   0.000|
+sram2_data(26)       |    2.233(R)|    1.106(R)|core_clk_int      |   0.000|
+sram2_data(27)       |    2.447(R)|   -0.551(R)|core_clk_int      |   0.000|
+sram2_data(28)       |    2.292(R)|    0.700(R)|core_clk_int      |   0.000|
+sram2_data(29)       |    2.401(R)|    0.895(R)|core_clk_int      |   0.000|
+sram2_data(30)       |    2.356(R)|    1.037(R)|core_clk_int      |   0.000|
+sram2_data(31)       |    2.374(R)|    0.676(R)|core_clk_int      |   0.000|
+sram2_data(32)       |    2.360(R)|    0.825(R)|core_clk_int      |   0.000|
+sram2_data(33)       |    2.448(R)|    0.910(R)|core_clk_int      |   0.000|
+sram2_data(34)       |    2.688(R)|    0.991(R)|core_clk_int      |   0.000|
+sram2_data(35)       |    2.403(R)|    1.082(R)|core_clk_int      |   0.000|
+---------------------+------------+------------+------------------+--------+
+
+Clock core_clk to Pad
+--------------+------------+------------------+--------+
+              | clk (edge) |                  | Clock  |
+Destination   |   to PAD   |Internal Clock(s) | Phase  |
+--------------+------------+------------------+--------+
+sram1_addr(0) |    2.193(R)|core_clk_int      |   0.000|
+sram1_addr(1) |    2.194(R)|core_clk_int      |   0.000|
+sram1_addr(2) |    2.190(R)|core_clk_int      |   0.000|
+sram1_addr(3) |    2.195(R)|core_clk_int      |   0.000|
+sram1_addr(4) |    2.218(R)|core_clk_int      |   0.000|
+sram1_addr(5) |    2.254(R)|core_clk_int      |   0.000|
+sram1_addr(6) |    2.260(R)|core_clk_int      |   0.000|
+sram1_addr(7) |    2.209(R)|core_clk_int      |   0.000|
+sram1_addr(8) |    2.191(R)|core_clk_int      |   0.000|
+sram1_addr(9) |    2.079(R)|core_clk_int      |   0.000|
+sram1_addr(10)|    2.074(R)|core_clk_int      |   0.000|
+sram1_addr(11)|    2.053(R)|core_clk_int      |   0.000|
+sram1_addr(12)|    2.069(R)|core_clk_int      |   0.000|
+sram1_addr(13)|    2.080(R)|core_clk_int      |   0.000|
+sram1_addr(14)|    2.188(R)|core_clk_int      |   0.000|
+sram1_addr(15)|    2.190(R)|core_clk_int      |   0.000|
+sram1_addr(16)|    2.200(R)|core_clk_int      |   0.000|
+sram1_addr(17)|    2.205(R)|core_clk_int      |   0.000|
+sram1_addr(18)|    2.085(R)|core_clk_int      |   0.000|
+sram1_bw(0)   |    2.195(R)|core_clk_int      |   0.000|
+sram1_bw(1)   |    2.211(R)|core_clk_int      |   0.000|
+sram1_bw(2)   |    2.227(R)|core_clk_int      |   0.000|
+sram1_bw(3)   |    2.248(R)|core_clk_int      |   0.000|
+sram1_data(0) |    2.077(R)|core_clk_int      |   0.000|
+sram1_data(1) |    2.078(R)|core_clk_int      |   0.000|
+sram1_data(2) |    2.052(R)|core_clk_int      |   0.000|
+sram1_data(3) |    2.047(R)|core_clk_int      |   0.000|
+sram1_data(4) |    2.070(R)|core_clk_int      |   0.000|
+sram1_data(5) |    2.062(R)|core_clk_int      |   0.000|
+sram1_data(6) |    2.057(R)|core_clk_int      |   0.000|
+sram1_data(7) |    2.041(R)|core_clk_int      |   0.000|
+sram1_data(8) |    2.036(R)|core_clk_int      |   0.000|
+sram1_data(9) |    2.046(R)|core_clk_int      |   0.000|
+sram1_data(10)|    2.049(R)|core_clk_int      |   0.000|
+sram1_data(11)|    2.055(R)|core_clk_int      |   0.000|
+sram1_data(12)|    2.056(R)|core_clk_int      |   0.000|
+sram1_data(13)|    2.079(R)|core_clk_int      |   0.000|
+sram1_data(14)|    2.060(R)|core_clk_int      |   0.000|
+sram1_data(15)|    2.065(R)|core_clk_int      |   0.000|
+sram1_data(16)|    2.062(R)|core_clk_int      |   0.000|
+sram1_data(17)|    2.076(R)|core_clk_int      |   0.000|
+sram1_data(18)|    2.215(R)|core_clk_int      |   0.000|
+sram1_data(19)|    2.239(R)|core_clk_int      |   0.000|
+sram1_data(20)|    2.242(R)|core_clk_int      |   0.000|
+sram1_data(21)|    2.217(R)|core_clk_int      |   0.000|
+sram1_data(22)|    2.219(R)|core_clk_int      |   0.000|
+sram1_data(23)|    2.221(R)|core_clk_int      |   0.000|
+sram1_data(24)|    2.225(R)|core_clk_int      |   0.000|
+sram1_data(25)|    2.212(R)|core_clk_int      |   0.000|
+sram1_data(26)|    2.216(R)|core_clk_int      |   0.000|
+sram1_data(27)|    2.246(R)|core_clk_int      |   0.000|
+sram1_data(28)|    2.256(R)|core_clk_int      |   0.000|
+sram1_data(29)|    2.242(R)|core_clk_int      |   0.000|
+sram1_data(30)|    2.291(R)|core_clk_int      |   0.000|
+sram1_data(31)|    2.296(R)|core_clk_int      |   0.000|
+sram1_data(32)|    2.253(R)|core_clk_int      |   0.000|
+sram1_data(33)|    2.255(R)|core_clk_int      |   0.000|
+sram1_data(34)|    2.294(R)|core_clk_int      |   0.000|
+sram1_data(35)|    2.299(R)|core_clk_int      |   0.000|
+sram1_we      |    2.183(R)|core_clk_int      |   0.000|
+sram2_addr(0) |    2.655(R)|core_clk_int      |   0.000|
+sram2_addr(1) |    2.689(R)|core_clk_int      |   0.000|
+sram2_addr(2) |    2.646(R)|core_clk_int      |   0.000|
+sram2_addr(3) |    2.618(R)|core_clk_int      |   0.000|
+sram2_addr(4) |    2.630(R)|core_clk_int      |   0.000|
+sram2_addr(5) |    2.627(R)|core_clk_int      |   0.000|
+sram2_addr(6) |    2.855(R)|core_clk_int      |   0.000|
+sram2_addr(7) |    2.682(R)|core_clk_int      |   0.000|
+sram2_addr(8) |    2.844(R)|core_clk_int      |   0.000|
+sram2_addr(9) |    2.664(R)|core_clk_int      |   0.000|
+sram2_addr(10)|    2.783(R)|core_clk_int      |   0.000|
+sram2_addr(11)|    2.972(R)|core_clk_int      |   0.000|
+sram2_addr(12)|    2.816(R)|core_clk_int      |   0.000|
+sram2_addr(13)|    2.786(R)|core_clk_int      |   0.000|
+sram2_addr(14)|    2.680(R)|core_clk_int      |   0.000|
+sram2_addr(15)|    2.684(R)|core_clk_int      |   0.000|
+sram2_addr(16)|    2.651(R)|core_clk_int      |   0.000|
+sram2_addr(17)|    2.673(R)|core_clk_int      |   0.000|
+sram2_addr(18)|    2.662(R)|core_clk_int      |   0.000|
+sram2_bw(0)   |    2.085(R)|core_clk_int      |   0.000|
+sram2_bw(1)   |    2.041(R)|core_clk_int      |   0.000|
+sram2_bw(2)   |    2.038(R)|core_clk_int      |   0.000|
+sram2_bw(3)   |    2.046(R)|core_clk_int      |   0.000|
+sram2_data(0) |    2.213(R)|core_clk_int      |   0.000|
+sram2_data(1) |    2.208(R)|core_clk_int      |   0.000|
+sram2_data(2) |    2.199(R)|core_clk_int      |   0.000|
+sram2_data(3) |    2.217(R)|core_clk_int      |   0.000|
+sram2_data(4) |    2.220(R)|core_clk_int      |   0.000|
+sram2_data(5) |    2.243(R)|core_clk_int      |   0.000|
+sram2_data(6) |    2.236(R)|core_clk_int      |   0.000|
+sram2_data(7) |    2.283(R)|core_clk_int      |   0.000|
+sram2_data(8) |    2.274(R)|core_clk_int      |   0.000|
+sram2_data(9) |    2.205(R)|core_clk_int      |   0.000|
+sram2_data(10)|    2.183(R)|core_clk_int      |   0.000|
+sram2_data(11)|    2.191(R)|core_clk_int      |   0.000|
+sram2_data(12)|    2.209(R)|core_clk_int      |   0.000|
+sram2_data(13)|    2.218(R)|core_clk_int      |   0.000|
+sram2_data(14)|    2.184(R)|core_clk_int      |   0.000|
+sram2_data(15)|    2.188(R)|core_clk_int      |   0.000|
+sram2_data(16)|    2.205(R)|core_clk_int      |   0.000|
+sram2_data(17)|    2.211(R)|core_clk_int      |   0.000|
+sram2_data(18)|    2.040(R)|core_clk_int      |   0.000|
+sram2_data(19)|    2.040(R)|core_clk_int      |   0.000|
+sram2_data(20)|    2.067(R)|core_clk_int      |   0.000|
+sram2_data(21)|    2.063(R)|core_clk_int      |   0.000|
+sram2_data(22)|    2.054(R)|core_clk_int      |   0.000|
+sram2_data(23)|    2.046(R)|core_clk_int      |   0.000|
+sram2_data(24)|    2.037(R)|core_clk_int      |   0.000|
+sram2_data(25)|    2.031(R)|core_clk_int      |   0.000|
+sram2_data(26)|    2.065(R)|core_clk_int      |   0.000|
+sram2_data(27)|    2.050(R)|core_clk_int      |   0.000|
+sram2_data(28)|    2.058(R)|core_clk_int      |   0.000|
+sram2_data(29)|    2.067(R)|core_clk_int      |   0.000|
+sram2_data(30)|    2.071(R)|core_clk_int      |   0.000|
+sram2_data(31)|    2.045(R)|core_clk_int      |   0.000|
+sram2_data(32)|    2.050(R)|core_clk_int      |   0.000|
+sram2_data(33)|    2.059(R)|core_clk_int      |   0.000|
+sram2_data(34)|    2.064(R)|core_clk_int      |   0.000|
+sram2_data(35)|    2.075(R)|core_clk_int      |   0.000|
+sram2_we      |    2.070(R)|core_clk_int      |   0.000|
+--------------+------------+------------------+--------+
+
+Clock cpci_clk to Pad
+---------------------+------------+------------------+--------+
+                     | clk (edge) |                  | Clock  |
+Destination          |   to PAD   |Internal Clock(s) | Phase  |
+---------------------+------------+------------------+--------+
+cpci_data(0)         |    4.629(R)|cpci_clk_int      |   0.000|
+cpci_data(1)         |    4.628(R)|cpci_clk_int      |   0.000|
+cpci_data(2)         |    4.600(R)|cpci_clk_int      |   0.000|
+cpci_data(3)         |    4.608(R)|cpci_clk_int      |   0.000|
+cpci_data(4)         |    4.619(R)|cpci_clk_int      |   0.000|
+cpci_data(5)         |    4.616(R)|cpci_clk_int      |   0.000|
+cpci_data(6)         |    4.609(R)|cpci_clk_int      |   0.000|
+cpci_data(7)         |    4.611(R)|cpci_clk_int      |   0.000|
+cpci_data(8)         |    4.630(R)|cpci_clk_int      |   0.000|
+cpci_data(9)         |    4.628(R)|cpci_clk_int      |   0.000|
+cpci_data(10)        |    4.556(R)|cpci_clk_int      |   0.000|
+cpci_data(11)        |    4.559(R)|cpci_clk_int      |   0.000|
+cpci_data(12)        |    4.567(R)|cpci_clk_int      |   0.000|
+cpci_data(13)        |    4.565(R)|cpci_clk_int      |   0.000|
+cpci_data(14)        |    4.564(R)|cpci_clk_int      |   0.000|
+cpci_data(15)        |    4.556(R)|cpci_clk_int      |   0.000|
+cpci_data(16)        |    4.560(R)|cpci_clk_int      |   0.000|
+cpci_data(17)        |    4.551(R)|cpci_clk_int      |   0.000|
+cpci_data(18)        |    4.543(R)|cpci_clk_int      |   0.000|
+cpci_data(19)        |    4.555(R)|cpci_clk_int      |   0.000|
+cpci_data(20)        |    4.539(R)|cpci_clk_int      |   0.000|
+cpci_data(21)        |    4.516(R)|cpci_clk_int      |   0.000|
+cpci_data(22)        |    4.523(R)|cpci_clk_int      |   0.000|
+cpci_data(23)        |    4.524(R)|cpci_clk_int      |   0.000|
+cpci_data(24)        |    4.526(R)|cpci_clk_int      |   0.000|
+cpci_data(25)        |    4.518(R)|cpci_clk_int      |   0.000|
+cpci_data(26)        |    4.550(R)|cpci_clk_int      |   0.000|
+cpci_data(27)        |    4.514(R)|cpci_clk_int      |   0.000|
+cpci_data(28)        |    4.503(R)|cpci_clk_int      |   0.000|
+cpci_data(29)        |    4.506(R)|cpci_clk_int      |   0.000|
+cpci_data(30)        |    4.498(R)|cpci_clk_int      |   0.000|
+cpci_data(31)        |    4.400(R)|cpci_clk_int      |   0.000|
+cpci_rd_rdy          |    4.627(R)|cpci_clk_int      |   0.000|
+cpci_wr_rdy          |    4.650(R)|cpci_clk_int      |   0.000|
+dma_data(0)          |    4.566(R)|cpci_clk_int      |   0.000|
+dma_data(1)          |    4.632(R)|cpci_clk_int      |   0.000|
+dma_data(2)          |    4.630(R)|cpci_clk_int      |   0.000|
+dma_data(3)          |    4.555(R)|cpci_clk_int      |   0.000|
+dma_data(4)          |    4.558(R)|cpci_clk_int      |   0.000|
+dma_data(5)          |    4.610(R)|cpci_clk_int      |   0.000|
+dma_data(6)          |    4.621(R)|cpci_clk_int      |   0.000|
+dma_data(7)          |    4.618(R)|cpci_clk_int      |   0.000|
+dma_data(8)          |    4.608(R)|cpci_clk_int      |   0.000|
+dma_data(9)          |    4.611(R)|cpci_clk_int      |   0.000|
+dma_data(10)         |    4.630(R)|cpci_clk_int      |   0.000|
+dma_data(11)         |    4.631(R)|cpci_clk_int      |   0.000|
+dma_data(12)         |    4.629(R)|cpci_clk_int      |   0.000|
+dma_data(13)         |    4.633(R)|cpci_clk_int      |   0.000|
+dma_data(14)         |    4.636(R)|cpci_clk_int      |   0.000|
+dma_data(15)         |    4.639(R)|cpci_clk_int      |   0.000|
+dma_data(16)         |    4.659(R)|cpci_clk_int      |   0.000|
+dma_data(17)         |    4.669(R)|cpci_clk_int      |   0.000|
+dma_data(18)         |    4.643(R)|cpci_clk_int      |   0.000|
+dma_data(19)         |    4.652(R)|cpci_clk_int      |   0.000|
+dma_data(20)         |    4.655(R)|cpci_clk_int      |   0.000|
+dma_data(21)         |    4.664(R)|cpci_clk_int      |   0.000|
+dma_data(22)         |    4.639(R)|cpci_clk_int      |   0.000|
+dma_data(23)         |    4.632(R)|cpci_clk_int      |   0.000|
+dma_data(24)         |    4.682(R)|cpci_clk_int      |   0.000|
+dma_data(25)         |    4.689(R)|cpci_clk_int      |   0.000|
+dma_data(26)         |    4.659(R)|cpci_clk_int      |   0.000|
+dma_data(27)         |    4.666(R)|cpci_clk_int      |   0.000|
+dma_data(28)         |    4.659(R)|cpci_clk_int      |   0.000|
+dma_data(29)         |    4.668(R)|cpci_clk_int      |   0.000|
+dma_data(30)         |    4.621(R)|cpci_clk_int      |   0.000|
+dma_data(31)         |    4.628(R)|cpci_clk_int      |   0.000|
+dma_op_code_ack(0)   |    4.605(R)|cpci_clk_int      |   0.000|
+dma_op_code_ack(1)   |    4.592(R)|cpci_clk_int      |   0.000|
+dma_q_nearly_full_n2c|    4.641(R)|cpci_clk_int      |   0.000|
+dma_vld_n2c          |    4.598(R)|cpci_clk_int      |   0.000|
+sram1_addr(0)        |    4.576(R)|core_clk_int      |   0.000|
+sram1_addr(1)        |    4.577(R)|core_clk_int      |   0.000|
+sram1_addr(2)        |    4.573(R)|core_clk_int      |   0.000|
+sram1_addr(3)        |    4.578(R)|core_clk_int      |   0.000|
+sram1_addr(4)        |    4.601(R)|core_clk_int      |   0.000|
+sram1_addr(5)        |    4.637(R)|core_clk_int      |   0.000|
+sram1_addr(6)        |    4.643(R)|core_clk_int      |   0.000|
+sram1_addr(7)        |    4.592(R)|core_clk_int      |   0.000|
+sram1_addr(8)        |    4.574(R)|core_clk_int      |   0.000|
+sram1_addr(9)        |    4.462(R)|core_clk_int      |   0.000|
+sram1_addr(10)       |    4.457(R)|core_clk_int      |   0.000|
+sram1_addr(11)       |    4.436(R)|core_clk_int      |   0.000|
+sram1_addr(12)       |    4.452(R)|core_clk_int      |   0.000|
+sram1_addr(13)       |    4.463(R)|core_clk_int      |   0.000|
+sram1_addr(14)       |    4.571(R)|core_clk_int      |   0.000|
+sram1_addr(15)       |    4.573(R)|core_clk_int      |   0.000|
+sram1_addr(16)       |    4.583(R)|core_clk_int      |   0.000|
+sram1_addr(17)       |    4.588(R)|core_clk_int      |   0.000|
+sram1_addr(18)       |    4.468(R)|core_clk_int      |   0.000|
+sram1_bw(0)          |    4.578(R)|core_clk_int      |   0.000|
+sram1_bw(1)          |    4.594(R)|core_clk_int      |   0.000|
+sram1_bw(2)          |    4.610(R)|core_clk_int      |   0.000|
+sram1_bw(3)          |    4.631(R)|core_clk_int      |   0.000|
+sram1_data(0)        |    4.460(R)|core_clk_int      |   0.000|
+sram1_data(1)        |    4.461(R)|core_clk_int      |   0.000|
+sram1_data(2)        |    4.435(R)|core_clk_int      |   0.000|
+sram1_data(3)        |    4.430(R)|core_clk_int      |   0.000|
+sram1_data(4)        |    4.453(R)|core_clk_int      |   0.000|
+sram1_data(5)        |    4.445(R)|core_clk_int      |   0.000|
+sram1_data(6)        |    4.440(R)|core_clk_int      |   0.000|
+sram1_data(7)        |    4.424(R)|core_clk_int      |   0.000|
+sram1_data(8)        |    4.419(R)|core_clk_int      |   0.000|
+sram1_data(9)        |    4.429(R)|core_clk_int      |   0.000|
+sram1_data(10)       |    4.432(R)|core_clk_int      |   0.000|
+sram1_data(11)       |    4.438(R)|core_clk_int      |   0.000|
+sram1_data(12)       |    4.439(R)|core_clk_int      |   0.000|
+sram1_data(13)       |    4.462(R)|core_clk_int      |   0.000|
+sram1_data(14)       |    4.443(R)|core_clk_int      |   0.000|
+sram1_data(15)       |    4.448(R)|core_clk_int      |   0.000|
+sram1_data(16)       |    4.445(R)|core_clk_int      |   0.000|
+sram1_data(17)       |    4.459(R)|core_clk_int      |   0.000|
+sram1_data(18)       |    4.598(R)|core_clk_int      |   0.000|
+sram1_data(19)       |    4.622(R)|core_clk_int      |   0.000|
+sram1_data(20)       |    4.625(R)|core_clk_int      |   0.000|
+sram1_data(21)       |    4.600(R)|core_clk_int      |   0.000|
+sram1_data(22)       |    4.602(R)|core_clk_int      |   0.000|
+sram1_data(23)       |    4.604(R)|core_clk_int      |   0.000|
+sram1_data(24)       |    4.608(R)|core_clk_int      |   0.000|
+sram1_data(25)       |    4.595(R)|core_clk_int      |   0.000|
+sram1_data(26)       |    4.599(R)|core_clk_int      |   0.000|
+sram1_data(27)       |    4.629(R)|core_clk_int      |   0.000|
+sram1_data(28)       |    4.639(R)|core_clk_int      |   0.000|
+sram1_data(29)       |    4.625(R)|core_clk_int      |   0.000|
+sram1_data(30)       |    4.674(R)|core_clk_int      |   0.000|
+sram1_data(31)       |    4.679(R)|core_clk_int      |   0.000|
+sram1_data(32)       |    4.636(R)|core_clk_int      |   0.000|
+sram1_data(33)       |    4.638(R)|core_clk_int      |   0.000|
+sram1_data(34)       |    4.677(R)|core_clk_int      |   0.000|
+sram1_data(35)       |    4.682(R)|core_clk_int      |   0.000|
+sram1_we             |    4.566(R)|core_clk_int      |   0.000|
+sram2_addr(0)        |    5.038(R)|core_clk_int      |   0.000|
+sram2_addr(1)        |    5.072(R)|core_clk_int      |   0.000|
+sram2_addr(2)        |    5.029(R)|core_clk_int      |   0.000|
+sram2_addr(3)        |    5.001(R)|core_clk_int      |   0.000|
+sram2_addr(4)        |    5.013(R)|core_clk_int      |   0.000|
+sram2_addr(5)        |    5.010(R)|core_clk_int      |   0.000|
+sram2_addr(6)        |    5.238(R)|core_clk_int      |   0.000|
+sram2_addr(7)        |    5.065(R)|core_clk_int      |   0.000|
+sram2_addr(8)        |    5.227(R)|core_clk_int      |   0.000|
+sram2_addr(9)        |    5.047(R)|core_clk_int      |   0.000|
+sram2_addr(10)       |    5.166(R)|core_clk_int      |   0.000|
+sram2_addr(11)       |    5.355(R)|core_clk_int      |   0.000|
+sram2_addr(12)       |    5.199(R)|core_clk_int      |   0.000|
+sram2_addr(13)       |    5.169(R)|core_clk_int      |   0.000|
+sram2_addr(14)       |    5.063(R)|core_clk_int      |   0.000|
+sram2_addr(15)       |    5.067(R)|core_clk_int      |   0.000|
+sram2_addr(16)       |    5.034(R)|core_clk_int      |   0.000|
+sram2_addr(17)       |    5.056(R)|core_clk_int      |   0.000|
+sram2_addr(18)       |    5.045(R)|core_clk_int      |   0.000|
+sram2_bw(0)          |    4.468(R)|core_clk_int      |   0.000|
+sram2_bw(1)          |    4.424(R)|core_clk_int      |   0.000|
+sram2_bw(2)          |    4.421(R)|core_clk_int      |   0.000|
+sram2_bw(3)          |    4.429(R)|core_clk_int      |   0.000|
+sram2_data(0)        |    4.596(R)|core_clk_int      |   0.000|
+sram2_data(1)        |    4.591(R)|core_clk_int      |   0.000|
+sram2_data(2)        |    4.582(R)|core_clk_int      |   0.000|
+sram2_data(3)        |    4.600(R)|core_clk_int      |   0.000|
+sram2_data(4)        |    4.603(R)|core_clk_int      |   0.000|
+sram2_data(5)        |    4.626(R)|core_clk_int      |   0.000|
+sram2_data(6)        |    4.619(R)|core_clk_int      |   0.000|
+sram2_data(7)        |    4.666(R)|core_clk_int      |   0.000|
+sram2_data(8)        |    4.657(R)|core_clk_int      |   0.000|
+sram2_data(9)        |    4.588(R)|core_clk_int      |   0.000|
+sram2_data(10)       |    4.566(R)|core_clk_int      |   0.000|
+sram2_data(11)       |    4.574(R)|core_clk_int      |   0.000|
+sram2_data(12)       |    4.592(R)|core_clk_int      |   0.000|
+sram2_data(13)       |    4.601(R)|core_clk_int      |   0.000|
+sram2_data(14)       |    4.567(R)|core_clk_int      |   0.000|
+sram2_data(15)       |    4.571(R)|core_clk_int      |   0.000|
+sram2_data(16)       |    4.588(R)|core_clk_int      |   0.000|
+sram2_data(17)       |    4.594(R)|core_clk_int      |   0.000|
+sram2_data(18)       |    4.423(R)|core_clk_int      |   0.000|
+sram2_data(19)       |    4.423(R)|core_clk_int      |   0.000|
+sram2_data(20)       |    4.450(R)|core_clk_int      |   0.000|
+sram2_data(21)       |    4.446(R)|core_clk_int      |   0.000|
+sram2_data(22)       |    4.437(R)|core_clk_int      |   0.000|
+sram2_data(23)       |    4.429(R)|core_clk_int      |   0.000|
+sram2_data(24)       |    4.420(R)|core_clk_int      |   0.000|
+sram2_data(25)       |    4.414(R)|core_clk_int      |   0.000|
+sram2_data(26)       |    4.448(R)|core_clk_int      |   0.000|
+sram2_data(27)       |    4.433(R)|core_clk_int      |   0.000|
+sram2_data(28)       |    4.441(R)|core_clk_int      |   0.000|
+sram2_data(29)       |    4.450(R)|core_clk_int      |   0.000|
+sram2_data(30)       |    4.454(R)|core_clk_int      |   0.000|
+sram2_data(31)       |    4.428(R)|core_clk_int      |   0.000|
+sram2_data(32)       |    4.433(R)|core_clk_int      |   0.000|
+sram2_data(33)       |    4.442(R)|core_clk_int      |   0.000|
+sram2_data(34)       |    4.447(R)|core_clk_int      |   0.000|
+sram2_data(35)       |    4.458(R)|core_clk_int      |   0.000|
+sram2_we             |    4.453(R)|core_clk_int      |   0.000|
+---------------------+------------+------------------+--------+
+
+Clock to Setup on destination clock core_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+core_clk       |    7.997|         |         |         |
+cpci_clk       |    7.997|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cpci_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+core_clk       |    7.997|         |         |         |
+cpci_clk       |   12.333|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock gtx_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+gtx_clk        |    7.988|         |    2.338|    2.643|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rgmii_0_rxc
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+rgmii_0_rxc    |    7.627|    1.999|         |    2.109|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rgmii_1_rxc
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+rgmii_1_rxc    |    7.958|    1.901|         |    2.109|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rgmii_2_rxc
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+rgmii_2_rxc    |    7.762|    2.048|         |    2.100|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rgmii_3_rxc
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+rgmii_3_rxc    |    7.778|    3.056|         |    2.895|
+---------------+---------+---------+---------+---------+
+
+TIMEGRP "CPCI_DATA" OFFSET = OUT 10 ns AFTER COMP "cpci_clk";
+Bus Skew: 0.230 ns; 
+-----------------------------------------------+-------------+-------------+
+PAD                                            | Delay (ns)  |Edge Skew (ns)|
+-----------------------------------------------+-------------+-------------+
+cpci_data(0)                                   |        4.629|        0.229|
+cpci_data(1)                                   |        4.628|        0.228|
+cpci_data(2)                                   |        4.600|        0.200|
+cpci_data(3)                                   |        4.608|        0.208|
+cpci_data(4)                                   |        4.619|        0.219|
+cpci_data(5)                                   |        4.616|        0.216|
+cpci_data(6)                                   |        4.609|        0.209|
+cpci_data(7)                                   |        4.611|        0.211|
+cpci_data(8)                                   |        4.630|        0.230|
+cpci_data(9)                                   |        4.628|        0.228|
+cpci_data(10)                                  |        4.556|        0.156|
+cpci_data(11)                                  |        4.559|        0.159|
+cpci_data(12)                                  |        4.567|        0.167|
+cpci_data(13)                                  |        4.565|        0.165|
+cpci_data(14)                                  |        4.564|        0.164|
+cpci_data(15)                                  |        4.556|        0.156|
+cpci_data(16)                                  |        4.560|        0.160|
+cpci_data(17)                                  |        4.551|        0.151|
+cpci_data(18)                                  |        4.543|        0.143|
+cpci_data(19)                                  |        4.555|        0.155|
+cpci_data(20)                                  |        4.539|        0.139|
+cpci_data(21)                                  |        4.516|        0.116|
+cpci_data(22)                                  |        4.523|        0.123|
+cpci_data(23)                                  |        4.524|        0.124|
+cpci_data(24)                                  |        4.526|        0.126|
+cpci_data(25)                                  |        4.518|        0.118|
+cpci_data(26)                                  |        4.550|        0.150|
+cpci_data(27)                                  |        4.514|        0.114|
+cpci_data(28)                                  |        4.503|        0.103|
+cpci_data(29)                                  |        4.506|        0.106|
+cpci_data(30)                                  |        4.498|        0.098|
+cpci_data(31)                                  |        4.400|        0.000|
+-----------------------------------------------+-------------+-------------+
+
+TIMEGRP "CPCI_RDY" OFFSET = OUT 8 ns AFTER COMP "cpci_clk";
+Bus Skew: 0.023 ns; 
+-----------------------------------------------+-------------+-------------+
+PAD                                            | Delay (ns)  |Edge Skew (ns)|
+-----------------------------------------------+-------------+-------------+
+cpci_rd_rdy                                    |        4.627|        0.000|
+cpci_wr_rdy                                    |        4.650|        0.023|
+-----------------------------------------------+-------------+-------------+
+
+TIMEGRP "CPCI_DMA_OUT" OFFSET = OUT 8 ns AFTER COMP "cpci_clk";
+Bus Skew: 0.049 ns; 
+-----------------------------------------------+-------------+-------------+
+PAD                                            | Delay (ns)  |Edge Skew (ns)|
+-----------------------------------------------+-------------+-------------+
+dma_op_code_ack(0)                             |        4.605|        0.013|
+dma_op_code_ack(1)                             |        4.592|        0.000|
+dma_q_nearly_full_n2c                          |        4.641|        0.049|
+dma_vld_n2c                                    |        4.598|        0.006|
+-----------------------------------------------+-------------+-------------+
+
+TIMEGRP "CPCI_DMA_INOUT" OFFSET = OUT 7 ns AFTER COMP "cpci_clk";
+Bus Skew: 0.134 ns; 
+-----------------------------------------------+-------------+-------------+
+PAD                                            | Delay (ns)  |Edge Skew (ns)|
+-----------------------------------------------+-------------+-------------+
+dma_data(0)                                    |        4.566|        0.011|
+dma_data(1)                                    |        4.632|        0.077|
+dma_data(2)                                    |        4.630|        0.075|
+dma_data(3)                                    |        4.555|        0.000|
+dma_data(4)                                    |        4.558|        0.003|
+dma_data(5)                                    |        4.610|        0.055|
+dma_data(6)                                    |        4.621|        0.066|
+dma_data(7)                                    |        4.618|        0.063|
+dma_data(8)                                    |        4.608|        0.053|
+dma_data(9)                                    |        4.611|        0.056|
+dma_data(10)                                   |        4.630|        0.075|
+dma_data(11)                                   |        4.631|        0.076|
+dma_data(12)                                   |        4.629|        0.074|
+dma_data(13)                                   |        4.633|        0.078|
+dma_data(14)                                   |        4.636|        0.081|
+dma_data(15)                                   |        4.639|        0.084|
+dma_data(16)                                   |        4.659|        0.104|
+dma_data(17)                                   |        4.669|        0.114|
+dma_data(18)                                   |        4.643|        0.088|
+dma_data(19)                                   |        4.652|        0.097|
+dma_data(20)                                   |        4.655|        0.100|
+dma_data(21)                                   |        4.664|        0.109|
+dma_data(22)                                   |        4.639|        0.084|
+dma_data(23)                                   |        4.632|        0.077|
+dma_data(24)                                   |        4.682|        0.127|
+dma_data(25)                                   |        4.689|        0.134|
+dma_data(26)                                   |        4.659|        0.104|
+dma_data(27)                                   |        4.666|        0.111|
+dma_data(28)                                   |        4.659|        0.104|
+dma_data(29)                                   |        4.668|        0.113|
+dma_data(30)                                   |        4.621|        0.066|
+dma_data(31)                                   |        4.628|        0.073|
+-----------------------------------------------+-------------+-------------+
+
+TIMEGRP "SRAM1_OUT" OFFSET = OUT 4 ns AFTER COMP "core_clk";
+Bus Skew: 0.207 ns; 
+-----------------------------------------------+-------------+-------------+
+PAD                                            | Delay (ns)  |Edge Skew (ns)|
+-----------------------------------------------+-------------+-------------+
+sram1_addr(0)                                  |        2.193|        0.140|
+sram1_addr(1)                                  |        2.194|        0.141|
+sram1_addr(2)                                  |        2.190|        0.137|
+sram1_addr(3)                                  |        2.195|        0.142|
+sram1_addr(4)                                  |        2.218|        0.165|
+sram1_addr(5)                                  |        2.254|        0.201|
+sram1_addr(6)                                  |        2.260|        0.207|
+sram1_addr(7)                                  |        2.209|        0.156|
+sram1_addr(8)                                  |        2.191|        0.138|
+sram1_addr(9)                                  |        2.079|        0.026|
+sram1_addr(10)                                 |        2.074|        0.021|
+sram1_addr(11)                                 |        2.053|        0.000|
+sram1_addr(12)                                 |        2.069|        0.016|
+sram1_addr(13)                                 |        2.080|        0.027|
+sram1_addr(14)                                 |        2.188|        0.135|
+sram1_addr(15)                                 |        2.190|        0.137|
+sram1_addr(16)                                 |        2.200|        0.147|
+sram1_addr(17)                                 |        2.205|        0.152|
+sram1_addr(18)                                 |        2.085|        0.032|
+sram1_bw(0)                                    |        2.195|        0.142|
+sram1_bw(1)                                    |        2.211|        0.158|
+sram1_bw(2)                                    |        2.227|        0.174|
+sram1_bw(3)                                    |        2.248|        0.195|
+sram1_we                                       |        2.183|        0.130|
+-----------------------------------------------+-------------+-------------+
+
+TIMEGRP "SRAM1_DATA" OFFSET = OUT 4 ns AFTER COMP "core_clk";
+Bus Skew: 0.263 ns; 
+-----------------------------------------------+-------------+-------------+
+PAD                                            | Delay (ns)  |Edge Skew (ns)|
+-----------------------------------------------+-------------+-------------+
+sram1_data(0)                                  |        2.077|        0.041|
+sram1_data(1)                                  |        2.078|        0.042|
+sram1_data(2)                                  |        2.052|        0.016|
+sram1_data(3)                                  |        2.047|        0.011|
+sram1_data(4)                                  |        2.070|        0.034|
+sram1_data(5)                                  |        2.062|        0.026|
+sram1_data(6)                                  |        2.057|        0.021|
+sram1_data(7)                                  |        2.041|        0.005|
+sram1_data(8)                                  |        2.036|        0.000|
+sram1_data(9)                                  |        2.046|        0.010|
+sram1_data(10)                                 |        2.049|        0.013|
+sram1_data(11)                                 |        2.055|        0.019|
+sram1_data(12)                                 |        2.056|        0.020|
+sram1_data(13)                                 |        2.079|        0.043|
+sram1_data(14)                                 |        2.060|        0.024|
+sram1_data(15)                                 |        2.065|        0.029|
+sram1_data(16)                                 |        2.062|        0.026|
+sram1_data(17)                                 |        2.076|        0.040|
+sram1_data(18)                                 |        2.215|        0.179|
+sram1_data(19)                                 |        2.239|        0.203|
+sram1_data(20)                                 |        2.242|        0.206|
+sram1_data(21)                                 |        2.217|        0.181|
+sram1_data(22)                                 |        2.219|        0.183|
+sram1_data(23)                                 |        2.221|        0.185|
+sram1_data(24)                                 |        2.225|        0.189|
+sram1_data(25)                                 |        2.212|        0.176|
+sram1_data(26)                                 |        2.216|        0.180|
+sram1_data(27)                                 |        2.246|        0.210|
+sram1_data(28)                                 |        2.256|        0.220|
+sram1_data(29)                                 |        2.242|        0.206|
+sram1_data(30)                                 |        2.291|        0.255|
+sram1_data(31)                                 |        2.296|        0.260|
+sram1_data(32)                                 |        2.253|        0.217|
+sram1_data(33)                                 |        2.255|        0.219|
+sram1_data(34)                                 |        2.294|        0.258|
+sram1_data(35)                                 |        2.299|        0.263|
+-----------------------------------------------+-------------+-------------+
+
+TIMEGRP "SRAM2_OUT" OFFSET = OUT 4 ns AFTER COMP "core_clk";
+Bus Skew: 0.934 ns; 
+-----------------------------------------------+-------------+-------------+
+PAD                                            | Delay (ns)  |Edge Skew (ns)|
+-----------------------------------------------+-------------+-------------+
+sram2_addr(0)                                  |        2.655|        0.617|
+sram2_addr(1)                                  |        2.689|        0.651|
+sram2_addr(2)                                  |        2.646|        0.608|
+sram2_addr(3)                                  |        2.618|        0.580|
+sram2_addr(4)                                  |        2.630|        0.592|
+sram2_addr(5)                                  |        2.627|        0.589|
+sram2_addr(6)                                  |        2.855|        0.817|
+sram2_addr(7)                                  |        2.682|        0.644|
+sram2_addr(8)                                  |        2.844|        0.806|
+sram2_addr(9)                                  |        2.664|        0.626|
+sram2_addr(10)                                 |        2.783|        0.745|
+sram2_addr(11)                                 |        2.972|        0.934|
+sram2_addr(12)                                 |        2.816|        0.778|
+sram2_addr(13)                                 |        2.786|        0.748|
+sram2_addr(14)                                 |        2.680|        0.642|
+sram2_addr(15)                                 |        2.684|        0.646|
+sram2_addr(16)                                 |        2.651|        0.613|
+sram2_addr(17)                                 |        2.673|        0.635|
+sram2_addr(18)                                 |        2.662|        0.624|
+sram2_bw(0)                                    |        2.085|        0.047|
+sram2_bw(1)                                    |        2.041|        0.003|
+sram2_bw(2)                                    |        2.038|        0.000|
+sram2_bw(3)                                    |        2.046|        0.008|
+sram2_we                                       |        2.070|        0.032|
+-----------------------------------------------+-------------+-------------+
+
+TIMEGRP "SRAM2_DATA" OFFSET = OUT 4 ns AFTER COMP "core_clk";
+Bus Skew: 0.252 ns; 
+-----------------------------------------------+-------------+-------------+
+PAD                                            | Delay (ns)  |Edge Skew (ns)|
+-----------------------------------------------+-------------+-------------+
+sram2_data(0)                                  |        2.213|        0.182|
+sram2_data(1)                                  |        2.208|        0.177|
+sram2_data(2)                                  |        2.199|        0.168|
+sram2_data(3)                                  |        2.217|        0.186|
+sram2_data(4)                                  |        2.220|        0.189|
+sram2_data(5)                                  |        2.243|        0.212|
+sram2_data(6)                                  |        2.236|        0.205|
+sram2_data(7)                                  |        2.283|        0.252|
+sram2_data(8)                                  |        2.274|        0.243|
+sram2_data(9)                                  |        2.205|        0.174|
+sram2_data(10)                                 |        2.183|        0.152|
+sram2_data(11)                                 |        2.191|        0.160|
+sram2_data(12)                                 |        2.209|        0.178|
+sram2_data(13)                                 |        2.218|        0.187|
+sram2_data(14)                                 |        2.184|        0.153|
+sram2_data(15)                                 |        2.188|        0.157|
+sram2_data(16)                                 |        2.205|        0.174|
+sram2_data(17)                                 |        2.211|        0.180|
+sram2_data(18)                                 |        2.040|        0.009|
+sram2_data(19)                                 |        2.040|        0.009|
+sram2_data(20)                                 |        2.067|        0.036|
+sram2_data(21)                                 |        2.063|        0.032|
+sram2_data(22)                                 |        2.054|        0.023|
+sram2_data(23)                                 |        2.046|        0.015|
+sram2_data(24)                                 |        2.037|        0.006|
+sram2_data(25)                                 |        2.031|        0.000|
+sram2_data(26)                                 |        2.065|        0.034|
+sram2_data(27)                                 |        2.050|        0.019|
+sram2_data(28)                                 |        2.058|        0.027|
+sram2_data(29)                                 |        2.067|        0.036|
+sram2_data(30)                                 |        2.071|        0.040|
+sram2_data(31)                                 |        2.045|        0.014|
+sram2_data(32)                                 |        2.050|        0.019|
+sram2_data(33)                                 |        2.059|        0.028|
+sram2_data(34)                                 |        2.064|        0.033|
+sram2_data(35)                                 |        2.075|        0.044|
+-----------------------------------------------+-------------+-------------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 192  Score: 338474
+
+Constraints cover 1137220 paths, 4 nets, and 87674 connections
+
+Design statistics:
+   Minimum period:  12.333ns   (Maximum frequency:  81.083MHz)
+   Maximum path delay from/to any node:   3.056ns
+   Maximum net delay:   0.603ns
+   Minimum input required time before clock:   6.302ns
+   Minimum output required time after clock:   4.689ns
+
+
+Analysis completed Mon Mar  9 22:03:17 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 470 MB
+
+
+

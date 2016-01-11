@@ -1,0 +1,186 @@
+//File packet_data/ingress_port_1 created Fri Mar 13 16:38:04 2015
+//
+//This is a data file intended to be read in by a Verilog simulation.
+//
+00000002 // BARRIER
+00000000 // Number of Packets
+// Packet 1
+// DA: d0:27:88:bc:a8:00 SA: 00:4e:46:32:43:00 [0800] 45 00 00 32 00 01 ...
+00000001 // SEND
+00000040 // Length without CRC
+00000001 // Port 1
+d02788bc
+a800004e
+46324300
+08004500
+00320001
+00004006
+2f73c0a8
+6501c0a8
+65000050
+02370000
+00000000
+00005002
+2000cf74
+000080fc
+99a82c00
+26610584
+eeeeffff // End of pkt marker for pkt 1 (this is not sent).
+// Packet 2
+// DA: d0:27:88:bc:a8:01 SA: 00:4e:46:32:43:01 [0800] 45 00 00 32 00 01 ...
+00000001 // SEND
+00000040 // Length without CRC
+00000001 // Port 1
+d02788bc
+a801004e
+46324301
+08004500
+00320001
+00004006
+2f71c0a8
+6502c0a8
+65010025
+04ba0000
+00000000
+00005002
+2000cd1a
+000080fc
+99a82c00
+26610584
+eeeeffff // End of pkt marker for pkt 2 (this is not sent).
+// Packet 3
+// DA: d0:27:88:bc:a8:02 SA: 00:4e:46:32:43:02 [0800] 45 00 00 32 00 01 ...
+00000001 // SEND
+00000040 // Length without CRC
+00000001 // Port 1
+d02788bc
+a802004e
+46324302
+08004500
+00320001
+00004006
+2f6fc0a8
+6503c0a8
+65020016
+036c0000
+00000000
+00005002
+2000ce75
+000080fc
+99a82c00
+26610584
+eeeeffff // End of pkt marker for pkt 3 (this is not sent).
+// Packet 4
+// DA: d0:27:88:bc:a8:03 SA: 00:4e:46:32:43:03 [0800] 45 00 00 32 00 01 ...
+00000001 // SEND
+00000040 // Length without CRC
+00000001 // Port 1
+d02788bc
+a803004e
+46324303
+08004500
+00320001
+00004006
+2f6dc0a8
+6504c0a8
+65030015
+029b0000
+00000000
+00005002
+2000cf45
+000080fc
+99a82c00
+26610584
+eeeeffff // End of pkt marker for pkt 4 (this is not sent).
+// Packet 5
+// DA: d0:27:88:bc:a8:04 SA: 00:4e:46:32:43:04 [0800] 45 00 00 32 00 01 ...
+00000001 // SEND
+00000040 // Length without CRC
+00000001 // Port 1
+d02788bc
+a804004e
+46324304
+08004500
+00320001
+00004006
+2f6bc0a8
+6505c0a8
+6504029b
+00150000
+00000000
+00005002
+2000cf43
+000080fc
+99a82c00
+26610584
+eeeeffff // End of pkt marker for pkt 5 (this is not sent).
+// Packet 6
+// DA: d0:27:88:bc:a8:05 SA: 00:4e:46:32:43:05 [0800] 45 00 00 32 00 01 ...
+00000001 // SEND
+00000040 // Length without CRC
+00000001 // Port 1
+d02788bc
+a805004e
+46324305
+08004500
+00320001
+00004006
+2f69c0a8
+6506c0a8
+6505036c
+00160000
+00000000
+00005002
+2000ce6f
+000080fc
+99a82c00
+26610584
+eeeeffff // End of pkt marker for pkt 6 (this is not sent).
+// Packet 7
+// DA: d0:27:88:bc:a8:06 SA: 00:4e:46:32:43:06 [0800] 45 00 00 32 00 01 ...
+00000001 // SEND
+00000040 // Length without CRC
+00000001 // Port 1
+d02788bc
+a806004e
+46324306
+08004500
+00320001
+00004006
+2f67c0a8
+6507c0a8
+650604ba
+00250000
+00000000
+00005002
+2000cd10
+000080fc
+99a82c00
+26610584
+eeeeffff // End of pkt marker for pkt 7 (this is not sent).
+// Packet 8
+// DA: d0:27:88:bc:a8:07 SA: 00:4e:46:32:43:07 [0800] 45 00 00 32 00 01 ...
+00000001 // SEND
+00000040 // Length without CRC
+00000001 // Port 1
+d02788bc
+a807004e
+46324307
+08004500
+00320001
+00004006
+2f65c0a8
+6508c0a8
+65070237
+00500000
+00000000
+00005002
+2000cf66
+000080fc
+99a82c00
+26610584
+eeeeffff // End of pkt marker for pkt 8 (this is not sent).
+00000002 // BARRIER
+00000000 // Number of Packets
+00000002 // BARRIER
+00000000 // Number of Packets

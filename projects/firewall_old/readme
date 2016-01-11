@@ -1,0 +1,2 @@
+Posicionado controlador cy7... entre synthesis tranlate of on para nao ser interpretado na sintese.
+Proximo teste, criar testar acesso ao cy... sem mandar barramentos para nf2_core (dentro do proprio simulacao.v) pois output_queue nao utiliza sram.

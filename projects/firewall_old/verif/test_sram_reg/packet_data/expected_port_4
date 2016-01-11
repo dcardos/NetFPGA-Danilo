@@ -1,0 +1,7 @@
+<?xml version="1.0" standalone="yes" ?>
+<!-- File packet_data/expected_port_4 created Mon Jul 14 11:01:58 2014 -->
+<!-- PHYS_PORTS = 4 MAX_PORTS = 4 -->
+<PACKET_STREAM>
+
+<RULE> UNORDERED </RULE>
+</PACKET_STREAM>

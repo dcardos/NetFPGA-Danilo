@@ -222,8 +222,8 @@ module recwind_modifier
             if (in_fifo_ctrl_dout != 'h0) begin
 							state_next = PROCESS_CTRL_HDR;
               count_next = 'd1;
-							$diplay("Old cheksum: %h, Old receive window: %h", 
-								in_fifo_data_dout[32:47], in_fifo_data_dout[48:63]);
+							$display("Old cheksum: %h, Old receive window: %h", 
+								in_fifo_data_dout[47:32], in_fifo_data_dout[63:48]);
             end
           end
         end // case: SEND_UNMODIFIED
