@@ -15,7 +15,8 @@ Mas o que tudo indica não é um problema no código uma vez que rodando o mesmo
 PS: era esperado que o mesmo mostrasse o que está no 'display' do código verilog em src, mas aparentemente ele parece não simular o verilog.
 
 ### Solução
-Commit: aba048b0f3c6b44364284e42f562ac8d893478ad
+Commit: https://github.com/dcardos/NetFPGA-Danilo/commit/aba048b0f3c6b44364284e42f562ac8d893478ad
+
 recwind_modifier.v apresentava um erro na linha 226, ordem inversa nos bits:
 
 ```verilog
