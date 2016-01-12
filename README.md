@@ -32,6 +32,7 @@ hdr=scapy.TCP(sport=1025, dport=80, window=9001, chksum=0xc30a)
 
 Porém o log mostra:
 ![Recwindo log](https://github.com/dcardos/NetFPGA-Danilo/blob/master/Pictures/RecWindLogChkSum.PNG)
+Valor que é alterado a cada execução do teste.
 
 ### Hipótese
 O pacote tem o valor do *window* alterado antes de passar pelo *user_data_path* e logo seu valor de checksum.
