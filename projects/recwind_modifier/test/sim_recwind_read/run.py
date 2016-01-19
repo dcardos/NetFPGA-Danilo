@@ -19,7 +19,7 @@ tcp_hdr=20
 load = ''
 lengthh = 10
 for genr in range(lengthh):
-   load += chr(randint(0,255))
+   load += 'D'
 
 seqn=0
 
