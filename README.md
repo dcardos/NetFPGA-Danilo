@@ -36,6 +36,7 @@ Valor que é alterado a cada execução do teste.
 
 ### Hipótese
 O pacote tem o valor do *window* alterado antes de passar pelo *user_data_path* e logo seu valor de checksum. 
-PS: foi testado de que de fato o que está sendo mostrado é de fato dados da 7ª palavra (como esperado com o payload)
+
+PS: foi testado que de fato o que está sendo mostrado é de fato dados da 7ª palavra (como esperado com o payload)
 
 ### Solução
