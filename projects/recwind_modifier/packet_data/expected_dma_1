@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="yes" ?>
+<!-- File packet_data/expected_dma_1 created Tue Jan 19 12:26:57 2016 -->
+<!-- DMA_QUEUES = 4 --><DMA_PACKET_STREAM>
+
+
+<!-- Packet 1-->
+<!-- DA: d0:27:88:bc:a8:00 SA: 00:4e:46:32:43:00 [0800] 45 00 00 40 00 01...-->
+<DMA_PACKET Length="64" Port="1" Delay="0">
+d0 27 88 bc a8 00 00 4e 46 32 43 00 08 00 45 00 
+00 40 00 01 00 00 40 06 2f 65 c0 a8 65 01 c0 a8 
+65 00 03 f2 00 50 00 00 00 00 00 00 00 00 50 02 
+23 29 c3 0a 00 00 44 44 44 44 44 44 44 44 44 44
+</DMA_PACKET><!--pkt1-->
+</DMA_PACKET_STREAM>

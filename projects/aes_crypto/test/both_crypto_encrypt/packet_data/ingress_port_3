@@ -1,0 +1,29 @@
+//File packet_data/ingress_port_3 created Fri Jan 08 21:43:54 2016
+//
+//This is a data file intended to be read in by a Verilog simulation.
+//
+00000002 // BARRIER
+00000000 // Number of Packets
+// Packet 1
+// DA: 00:11:11:11:11:11 SA: 00:22:22:22:22:22 [0800] 45 00 00 2e 00 01 ...
+00000001 // SEND
+0000003c // Length without CRC
+00000003 // Port 3
+00111111
+11110022
+22222222
+08004500
+002e0001
+00004000
+f97bc0a8
+0002c0a8
+00012878
+145b2358
+b00731b3
+2cb4ad3f
+b077c038
+eedb16be
+89334071
+eeeeffff // End of pkt marker for pkt 1 (this is not sent).
+00000002 // BARRIER
+00000001 // Number of Packets

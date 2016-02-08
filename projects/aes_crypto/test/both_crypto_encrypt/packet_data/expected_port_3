@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes" ?>
+<!-- File packet_data/expected_port_3 created Fri Jan 08 21:43:54 2016 -->
+<!-- PHYS_PORTS = 4 MAX_PORTS = 4 -->
+<PACKET_STREAM>
+
+
+<!-- Packet 1-->
+<!-- DA: 00:33:33:33:33:33 SA: 00:44:44:44:44:44 [0800] 45 00 00 2e 00 01...-->
+<PACKET Length="60" Port="3" Delay="0">
+00 33 33 33 33 33 00 44 44 44 44 44 08 00 45 00 
+00 2e 00 01 00 00 40 00 f9 77 c0 a8 00 04 c0 a8 
+00 03 08 82 ae 36 2e 03 d3 bf 9f 87 c6 10 4c 3f 
+e8 85 fe c2 33 db 6f 99 c8 c2 eb 32
+</PACKET><!--pkt1-->
+</PACKET_STREAM>

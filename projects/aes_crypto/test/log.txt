@@ -1,0 +1,1302 @@
+make -C /root/NetFPGA-Danilo/projects/crypto_nic/synth registers
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/crypto_nic/synth'
++++testStarted:build.registers.crypto_nic
+
+NetFPGA environment:
+  Root dir:       /root/NetFPGA-Danilo
+  Project name:   crypto_nic
+  Project dir:    /root/NetFPGA-Danilo/projects/crypto_nic
+  Work dir:       /tmp/root
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/global.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/nf_defines.xml...
+Processing /root/NetFPGA-Danilo/projects/crypto_nic/include/project.xml...
+
+Project: 'Crypto NIC' (crypto_nic)
+Description: NIC with basic crypto
+Version: 1.0.0
+Device ID: 0
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/xml/cpu_dma_queue.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/xml/ethernet_mac.xml...
+WARNING: No module specific XML found for module 'contrib/ucsd/gig_eth_mac'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/input_arbiter/rr_input_arbiter/xml/rr_input_arbiter.xml...
+WARNING: No module specific XML found for module 'core/nf2/generic_top'
+WARNING: No module specific XML found for module 'core/nf2/reference_core'
+WARNING: No module specific XML found for module 'core/output_port_lookup/nic'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/xml/sram_rr_output_queues.xml...
+WARNING: No module specific XML found for module 'core/sram_arbiter/sram_weighted_rr'
+WARNING: No module specific XML found for module 'core/user_data_path/reference_user_data_path'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io/mdio/xml/mdio.xml...
+WARNING: No module specific XML found for module 'core/cpci_bus'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/dma/xml/dma.xml...
+WARNING: No module specific XML found for module 'core/user_data_path/udp_reg_master'
+WARNING: No module specific XML found for module 'core/io_queues/add_rm_hdr'
+WARNING: No module specific XML found for module 'core/utils/generic_regs'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/utils/xml/device_id_reg.xml...
+Processing /root/NetFPGA-Danilo/projects/crypto_nic/include/crypto.xml...
+Processed registers.
++++testFinished:build.registers.crypto_nic
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/crypto_nic/synth'
+make -C /root/NetFPGA-Danilo/projects/cpci/synth registers
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/cpci/synth'
++++testStarted:build.registers.cpci
+
+NetFPGA environment:
+  Root dir:       /root/NetFPGA-Danilo
+  Project name:   cpci
+  Project dir:    /root/NetFPGA-Danilo/projects/cpci
+  Work dir:       /tmp/root
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/global.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/nf_defines.xml...
+Processing /root/NetFPGA-Danilo/projects/cpci/include/project.xml...
+
+Project: 'CPCI' (cpci)
+Description: NetFPGA PCI interface
+Version: 4.1.0
+Device ID: 0
+
+Processing /root/NetFPGA-Danilo/projects/cpci/include/cpci_regs.xml...
+Processed registers.
++++testFinished:build.registers.cpci
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/cpci/synth'
+make -C /root/NetFPGA-Danilo/projects/crypto_nic/synth cores
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/crypto_nic/synth'
+Made cores.
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/crypto_nic/synth'
+make -C /root/NetFPGA-Danilo/projects/cpci/synth cores
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/cpci/synth'
+Made cores.
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/cpci/synth'
+
+NetFPGA environment:
+  Root dir:       /root/NetFPGA-Danilo
+  Project name:   crypto_nic
+  Project dir:    /root/NetFPGA-Danilo/projects/crypto_nic
+  Work dir:       /tmp/root
+
+--- Reading configuration file
+--- Running test.
+
+--- Generating packets...
+WARNING: No route found for IPv6 destination :: (no default route?)
+[0] 0x1
+[1] 0x23
+[2] 0x45
+[3] 0x67
+[0] 0x1
+[1] 0x23
+[2] 0x45
+[3] 0x67
+--- Running the simulation (takes a while). Logging to my_sim.log
+--- Running vsim
+Reading /modeltech/tcl/vsim/pref.tcl 
+
+# 6.5b
+
+# vsim -do {run -all} -l my_sim.log -c -voptargs=+acc testbench glbl 
+# //  ModelSim SE 6.5b May 21 2009 Linux 2.6.34.9-69.fc13.i686
+# //
+# //  Copyright 1991-2009 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.testbench(fast)
+# Loading work.u_board(fast)
+# Loading work.cpci_top(fast)
+# Loading work.cpci_clock_checker(fast)
+# Loading work.BUFGDLL(fast)
+# Loading work.CLKDLL(fast)
+# Loading work.clkdll_maximum_period_check(fast)
+# Loading work.IBUFG(fast)
+# Loading work.BUFG(fast)
+# Loading work.pcim_top(fast)
+# Loading work.pcim_lc(fast)
+# Loading work.IOBUF_PCI33_3(fast)
+# Loading work.FDPE(fast)
+# Loading work.OBUFT_PCI33_3(fast)
+# Loading work.IBUF_PCI33_3(fast)
+# Loading work.IBUFG_PCI33_3(fast)
+# Loading work.PCI_LC_I(fast)
+# Loading work.X_INV(fast)
+# Loading work.X_BUF(fast)
+# Loading work.X_OR2(fast)
+# Loading work.X_AND2(fast)
+# Loading work.X_OR3(fast)
+# Loading work.X_AND3(fast)
+# Loading work.X_FF(fast)
+# Loading work.X_FF(fast__1)
+# Loading work.X_PU(fast)
+# Loading work.X_AND4(fast)
+# Loading work.X_MUX2(fast)
+# Loading work.X_ZERO(fast)
+# Loading work.X_OR4(fast)
+# Loading work.X_ONE(fast)
+# Loading work.X_AND5(fast)
+# Loading work.X_XOR2(fast)
+# Loading work.X_TRI(fast)
+# Loading work.X_XOR4(fast)
+# Loading work.X_XOR3(fast)
+# Loading work.cfg(fast)
+# Loading work.pci_userapp(fast)
+# Loading work.reg_file(fast)
+# Loading work.cnet_reg_access(fast)
+# Loading work.cnet_reg_iface(fast)
+# Loading work.cpci_pci2net_16x60(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast)
+# Loading work.cnet_reprogram(fast)
+# Loading work.fifo_8x32(fast)
+# Loading work.cnet_dma_bus_master(fast)
+# Loading work.pci2net_dma_32x32(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__1)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast__1)
+# Loading work.fifo_generator_v4_2_bhv_ver_preload0(fast)
+# Loading work.net2pci_dma_512x32(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__2)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast__2)
+# Loading work.dma_engine(fast)
+# Loading work.dma_read_fifo_4x32(fast)
+# Loading work.dma_engine_ctrl(fast)
+# Loading work.dma_engine_rr_arb(fast)
+# Loading work.dma_engine_pci_xfer(fast)
+# Loading work.dma_engine_alignment(fast)
+# Loading work.dma_engine_cntr(fast)
+# Loading work.cpci_heartbeat(fast)
+# Loading work.nf2_top(fast)
+# Loading work.IBUF(fast)
+# Loading work.DCM(fast)
+# Loading work.dcm_clock_divide_by_2(fast)
+# Loading work.dcm_maximum_period_check(fast)
+# Loading work.dcm_maximum_period_check(fast__1)
+# Loading work.dcm_clock_lost(fast)
+# Loading work.BUFGMUX(fast)
+# Loading work.rgmii_io(fast)
+# Loading work.FDDRRSE(fast)
+# Loading work.OBUF(fast)
+# Loading work.nf2_core(fast)
+# Loading work.nf2_mac_grp(fast)
+# Loading work.gig_eth_mac(fast)
+# Loading work.gig_eth_mac_tx(fast)
+# Loading work.CRC_gen(fast)
+# Loading work.gig_eth_mac_rx(fast)
+# Loading work.CRC_chk(fast)
+# Loading work.rx_queue(fast)
+# Loading work.rxlengthfifo_128x13(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__6)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast__5)
+# Loading work.rxfifo_8kx9_to_72(fast)
+# Loading work.FIFO_GENERATOR_V3_2(fast)
+# Loading work.fifo_generator_v3_2_bhv_ver_as(fast)
+# Loading work.pulse_synchronizer(fast)
+# Loading work.tx_queue(fast)
+# Loading work.txfifo_512x72_to_9(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__7)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast__6)
+# Loading work.mac_grp_regs(fast)
+# Loading work.nf2_mac_grp(fast__1)
+# Loading work.rx_queue(fast__1)
+# Loading work.nf2_mac_grp(fast__2)
+# Loading work.rx_queue(fast__2)
+# Loading work.nf2_mac_grp(fast__3)
+# Loading work.rx_queue(fast__3)
+# Loading work.cpu_dma_queue(fast)
+# Loading work.cpu_dma_queue_regs(fast)
+# Loading work.cpu_dma_rx_queue(fast)
+# Loading work.cdq_rx_fifo_512x36_to_72(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__8)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast__7)
+# Loading work.fifo_generator_v4_2_bhv_ver_preload0(fast__1)
+# Loading work.fallthrough_small_fifo(fast__3)
+# Loading work.small_fifo(fast__3)
+# Loading work.cpu_dma_tx_queue(fast)
+# Loading work.cdq_tx_fifo_256x72_to_36(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__9)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast__8)
+# Loading work.fifo_generator_v4_2_bhv_ver_preload0(fast__2)
+# Loading work.fallthrough_small_fifo(fast__4)
+# Loading work.small_fifo(fast__4)
+# Loading work.cpu_dma_queue(fast__1)
+# Loading work.cpu_dma_rx_queue(fast__1)
+# Loading work.cpu_dma_queue(fast__2)
+# Loading work.cpu_dma_rx_queue(fast__2)
+# Loading work.cpu_dma_queue(fast__3)
+# Loading work.cpu_dma_rx_queue(fast__3)
+# Loading work.cpci_bus(fast)
+# Loading work.pci2net_16x60(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__3)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast__3)
+# Loading work.net2pci_16x32(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__4)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast__4)
+# Loading work.sram_arbiter(fast)
+# Loading work.cnet_sram_sm(fast)
+# Loading work.sram_reg_access(fast)
+# Loading work.user_data_path(fast)
+# Loading work.input_arbiter(fast)
+# Loading work.small_fifo(fast)
+# Loading work.in_arb_regs(fast)
+# Loading work.output_port_lookup(fast)
+# Loading work.crypto(fast)
+# Loading work.fallthrough_small_fifo(fast)
+# Loading work.generic_regs(fast)
+# Loading work.generic_sw_regs(fast)
+# Loading work.output_queues(fast)
+# Loading work.oq_header_parser(fast)
+# Loading work.fallthrough_small_fifo(fast__1)
+# Loading work.small_fifo(fast__1)
+# Loading work.fallthrough_small_fifo(fast__2)
+# Loading work.small_fifo(fast__2)
+# Loading work.store_pkt(fast)
+# Loading work.remove_pkt(fast)
+# Loading work.syncfifo_512x72(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__5)
+# Loading work.fifo_generator_v4_2_bhv_ver_ss(fast)
+# Loading work.oq_regs(fast)
+# Loading work.oq_regs_ctrl(fast)
+# Loading work.oq_regs_eval_empty(fast)
+# Loading work.oq_regs_eval_full(fast)
+# Loading work.oq_regs_host_iface(fast)
+# Loading work.oq_reg_instances(fast)
+# Loading work.oq_regs_generic_reg_grp(fast)
+# Loading work.oq_regs_dual_port_ram(fast)
+# Loading work.oq_regs_generic_reg_grp(fast__1)
+# Loading work.oq_regs_generic_reg_grp(fast__2)
+# Loading work.oq_regs_dual_port_ram(fast__1)
+# Loading work.oq_regs_generic_reg_grp(fast__3)
+# Loading work.oq_regs_generic_reg_grp(fast__4)
+# Loading work.oq_regs_dual_port_ram(fast__2)
+# Loading work.oq_regs_generic_reg_grp(fast__5)
+# Loading work.oq_regs_generic_reg_grp(fast__6)
+# Loading work.oq_regs_generic_reg_grp(fast__7)
+# Loading work.udp_reg_master(fast)
+# Loading work.nf2_reg_grp(fast)
+# Loading work.reg_grp(fast)
+# Loading work.reg_grp(fast__1)
+# Loading work.device_id_reg(fast)
+# Loading work.nf2_mdio(fast)
+# Loading work.nf2_dma(fast)
+# Loading work.nf2_dma_bus_fsm(fast)
+# Loading work.nf2_dma_sync(fast)
+# Loading work.small_async_fifo(fast)
+# Loading work.sync_r2w(fast)
+# Loading work.sync_w2r(fast)
+# Loading work.fifo_mem(fast)
+# Loading work.rptr_empty(fast)
+# Loading work.wptr_full(fast)
+# Loading work.small_async_fifo(fast__1)
+# Loading work.fifo_mem(fast__1)
+# Loading work.nf2_dma_que_intfc(fast)
+# Loading work.nf2_dma_regs(fast)
+# Loading work.unused_reg(fast)
+# Loading work.unused_reg(fast__1)
+# Loading work.INV(fast)
+# Loading work.cpci_program_iface(fast)
+# Loading work.cy7c1370(fast)
+# Loading work.ddr2(fast)
+# Loading work.phy_mdio_port(fast)
+# Loading work.host32(fast)
+# Loading work.target32(fast)
+# Loading work.net(fast)
+# Loading work.barrier_ctrl(fast)
+# Loading work.finish_ctrl(fast)
+# Loading work.glbl(fast)
+# ** Warning: (vsim-3017) /root/NetFPGA-Danilo/projects/crypto_nic/src/crypto.v(100): [TFMPC] - Too few port connections. Expected 10, found 9.
+#         Region: /testbench/u_board/nf2_top/nf2_core/user_data_path/crypto/input_fifo
+# ** Warning: (vsim-3722) /root/NetFPGA-Danilo/projects/crypto_nic/src/crypto.v(100): [TFMPC] - Missing connection for port 'prog_full'.
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# run -all 
+# Warning in testbench.u_board.cpci_top.cnet_reg_iface.cpci_pci2net_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.cpci_top.cnet_dma_bus_master.pci2net_dma_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.cpci_top.cnet_dma_bus_master.dma_rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[0].nf2_mac_grp.rx_queue.genblk2.pkt_chk_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[0].nf2_mac_grp.rx_queue.rx_fifo_64.gmac_rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[0].nf2_mac_grp.tx_queue.tx_fifo_64.gmac_tx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[1].nf2_mac_grp.rx_queue.genblk2.pkt_chk_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[1].nf2_mac_grp.rx_queue.rx_fifo_64.gmac_rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[1].nf2_mac_grp.tx_queue.tx_fifo_64.gmac_tx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[2].nf2_mac_grp.rx_queue.genblk2.pkt_chk_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[2].nf2_mac_grp.rx_queue.rx_fifo_64.gmac_rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[2].nf2_mac_grp.tx_queue.tx_fifo_64.gmac_tx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[3].nf2_mac_grp.rx_queue.genblk2.pkt_chk_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[3].nf2_mac_grp.rx_queue.rx_fifo_64.gmac_rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[3].nf2_mac_grp.tx_queue.tx_fifo_64.gmac_tx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpu_queues[0].cpu_dma_queue_i.cpu_dma_rx_queue.cpu_fifos64.rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpu_queues[0].cpu_dma_queue_i.cpu_dma_tx_queue.cpu_fifos64.tx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpu_queues[1].cpu_dma_queue_i.cpu_dma_rx_queue.cpu_fifos64.rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpu_queues[1].cpu_dma_queue_i.cpu_dma_tx_queue.cpu_fifos64.tx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpu_queues[2].cpu_dma_queue_i.cpu_dma_rx_queue.cpu_fifos64.rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpu_queues[2].cpu_dma_queue_i.cpu_dma_tx_queue.cpu_fifos64.tx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpu_queues[3].cpu_dma_queue_i.cpu_dma_rx_queue.cpu_fifos64.rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpu_queues[3].cpu_dma_queue_i.cpu_dma_tx_queue.cpu_fifos64.tx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpci_bus.pci2net_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpci_bus.net2pci_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Isso eh um teste: -5       =          -5
+# NOTICE      : 020 : Data bus    corruption
+# NOTICE      : 016 : ADV_LB   corruption
+# NOTICE      : 015 : CENB      corruption
+# NOTICE      : 014 : CE3B      corruption
+# NOTICE      : 013 : CE2       corruption
+# NOTICE      : 012 : CE1B       corruption
+# NOTICE      : 011 : Byte enable corruption
+# NOTICE      : 010 : Byte write  corruption
+# NOTICE      : 020 : Data bus    corruption
+# NOTICE      : 016 : ADV_LB   corruption
+# NOTICE      : 015 : CENB      corruption
+# NOTICE      : 014 : CE3B      corruption
+# NOTICE      : 013 : CE2       corruption
+# NOTICE      : 012 : CE1B       corruption
+# NOTICE      : 011 : Byte enable corruption
+# NOTICE      : 010 : Byte write  corruption
+# Read port configuration file portconfig.sim
+#     Loopback is 0000.
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "config.sim" for reading.
+# No such file or directory. (errno = ENOENT)    : /root/NetFPGA-Danilo/lib/verilog/core/testbench/finish_ctrl.v(53)
+#    Time: 1 ns  Iteration: 0  Instance: /testbench/finish_ctrl
+# No configuration file named config.sim
+#     Simulation will finish when inputs processed or time reaches 1000000.00ns.
+#     2.00ns testbench.net1.initialize_ingress Info: Reading ingress packet data from file packet_data/ingress_port_1
+#     2.00ns testbench.net2.initialize_ingress Info: Reading ingress packet data from file packet_data/ingress_port_2
+#     2.00ns testbench.net3.initialize_ingress Info: Reading ingress packet data from file packet_data/ingress_port_3
+#     2.00ns testbench.net4.initialize_ingress Info: Reading ingress packet data from file packet_data/ingress_port_4
+#     3.00ns testbench.net1.check_integrity Info: Input file contains:
+#     3.00ns testbench.net1.check_integrity Info:    0 ingress packets
+#     3.00ns testbench.net1.check_integrity Info:    2 barriers
+#     3.00ns testbench.net1.check_integrity Info:    0 delays
+#     3.00ns testbench.net1 Info: Waiting for initial configuration to complete.
+#     3.00ns testbench.net2.check_integrity Info: Input file contains:
+#     3.00ns testbench.net2.check_integrity Info:    0 ingress packets
+#     3.00ns testbench.net2.check_integrity Info:    2 barriers
+#     3.00ns testbench.net2.check_integrity Info:    0 delays
+#     3.00ns testbench.net2 Info: Waiting for initial configuration to complete.
+#     3.00ns testbench.net3.check_integrity Info: Input file contains:
+#     3.00ns testbench.net3.check_integrity Info:    1 ingress packets
+#     3.00ns testbench.net3.check_integrity Info:    2 barriers
+#     3.00ns testbench.net3.check_integrity Info:    0 delays
+#     3.00ns testbench.net3 Info: Waiting for initial configuration to complete.
+#     3.00ns testbench.net4.check_integrity Info: Input file contains:
+#     3.00ns testbench.net4.check_integrity Info:    0 ingress packets
+#     3.00ns testbench.net4.check_integrity Info:    2 barriers
+#     3.00ns testbench.net4.check_integrity Info:    0 delays
+#     3.00ns testbench.net4 Info: Waiting for initial configuration to complete.
+#  
+#                  300   System Reset Complete...
+#  
+#                  465   Operating System Configuring Device...
+#  
+#                  465   Searching for device.
+#                  645   Host read  0x00010000 with cmd 0xa:  Disconnect with Data, 0x0001feed.
+#                  705   NetFPGA-1G Device Found.
+#                  705   BAR0:
+#                  885   Host read  0x00010010 with cmd 0xa:  Disconnect with Data, 0x00000000.
+#                  945   BAR0 of expected type exists.
+#                  945   Checking size of BAR0.
+#                 1335   Host read  0x00010010 with cmd 0xa:  Disconnect with Data, 0xf8000000.
+#                 1395   Device requests 0x08000000 bytes.
+#                 1395   Locating device at 0x00000000.
+#                 1605   BAR1:
+#                 1785   Host read  0x00010014 with cmd 0xa:  Disconnect with Data, 0x00000000.
+#                 1845   BAR1 of expected type exists.
+#                 1845   Checking size of BAR1.
+#                 2235   Host read  0x00010014 with cmd 0xa:  Disconnect with Data, 0x00000000.
+#                 2295   Device requests 0x00000000 bytes.
+#                 2295   BAR2:
+#                 2475   Host read  0x00010018 with cmd 0xa:  Disconnect with Data, 0x00000000.
+#                 2535   BAR2 of expected type exists.
+#                 2535   Checking size of BAR2.
+#                 2925   Host read  0x00010018 with cmd 0xa:  Disconnect with Data, 0x00000000.
+#                 2985   Device requests 0x00000000 bytes.
+#                 2985   Setting Latency Timer to 0xff.
+#                 3195   Enabling Mem Space and Bus Master.
+#                 3585   Host read  0x00010004 with cmd 0xa:  Disconnect with Data, 0x02000146.
+#                 3645   Operating System Configuring Done
+#  
+#  
+#  3645.00ns testbench.host32.process_PCI_requests: Info: Starting PCI Write data 0x00000000 to address 0x00000008
+#  3645.00ns testbench.net4 Info: Forking ingess, egress and finish jobs.
+#                 3645 testbench.net4.handle_ingress Info: barrier request: expecting 0 pkts, seen 0 pkts
+#  3645.00ns testbench.net3 Info: Forking ingess, egress and finish jobs.
+#                 3645 testbench.net3.handle_ingress Info: barrier request: expecting 0 pkts, seen 0 pkts
+#  3645.00ns testbench.net2 Info: Forking ingess, egress and finish jobs.
+#                 3645 testbench.net2.handle_ingress Info: barrier request: expecting 0 pkts, seen 0 pkts
+#  3645.00ns testbench.net1 Info: Forking ingess, egress and finish jobs.
+#                 3645 testbench.net1.handle_ingress Info: barrier request: expecting 0 pkts, seen 0 pkts
+#  3645.00ns System appears to be up.
+#  3885.00ns testbench.host32.process_PCI_requests: Info: Starting PCI Write data 0x00000000 to address 0x00000040
+#  4125.00ns testbench.host32.service_interrupt: Info: Interrupt signaled
+#                 4305   Host read  0x00000044 with cmd 0x6:  Disconnect with Data, 0x00000200.
+#                 4365   CPCI Interrupt:  DMA queue status change
+#  4367.00ns testbench.host32.service_interrupt: DMA queue status change
+#                 4545   Host read  0x00000158 with cmd 0x6:  Disconnect with Data, 0x0000000f.
+#  4636.00ns testbench.host32.process_PCI_requests: Info: PCI delay  1000.00ns ns
+#  4636.00ns testbench.host32.process_PCI_requests: Info: delaying 1000 ns
+#  5655.00ns testbench.host32.process_PCI_requests: Info: PCI barrier
+#  5655.00ns testbench.host32.process_PCI_requests: Info:   DMA port 0: expecting 0 pkts, seen 0 pkts
+#  5655.00ns testbench.host32.process_PCI_requests: Info:   DMA port 1: expecting 0 pkts, seen 0 pkts
+#  5655.00ns testbench.host32.process_PCI_requests: Info:   DMA port 2: expecting 0 pkts, seen 0 pkts
+#  5655.00ns testbench.host32.process_PCI_requests: Info:   DMA port 3: expecting 0 pkts, seen 0 pkts
+#                 5655 testbench.host32.process_PCI_requests Info: barrier request
+#                 5687 testbench.net4.handle_ingress Info: barrier complete
+#                 5687 testbench.net4.handle_ingress Info: barrier request: expecting 0 pkts, seen 0 pkts
+#                 5687 testbench.net3.handle_ingress Info: barrier complete
+#  5687.00ns testbench.net3.handle_ingress Sending next ingress packet (len 60) to NF2.
+#                 5687 testbench.net2.handle_ingress Info: barrier complete
+#                 5687 testbench.net2.handle_ingress Info: barrier request: expecting 0 pkts, seen 0 pkts
+#                 5687 testbench.net1.handle_ingress Info: barrier complete
+#                 5687 testbench.net1.handle_ingress Info: barrier request: expecting 0 pkts, seen 0 pkts
+#                 5687 testbench.host32.process_PCI_requests Info: barrier complete
+#  5687.00ns testbench.host32.process_PCI_requests: Info: Starting PCI Write data 0x01234567 to address 0x02000000
+#  5925.00ns testbench.host32.process_PCI_requests: Info: Starting PCI DMA transfer of length 60 to DMA queue 3
+#  5925.00ns testbench.host32.process_PCI_requests: Info: Starting DMA transfer
+#  5925.00ns testbench.target32.next_ingress Setting up memory for DMA transfer (len 60 bytes) to NF2.
+#                 6105   Host read  0x00000040 with cmd 0x6:  Disconnect with Data, 0x00000000.
+#                 6353 testbench.net3.handle_ingress Info: barrier request: expecting 1 pkts, seen 0 pkts
+#  7125.00ns testbench.host32.service_interrupt: Info: Interrupt signaled
+#                 7305   Host read  0x00000044 with cmd 0x6:  Disconnect with Data, 0x00000300.
+#                 7365   CPCI Interrupt:  DMA queue status change  Pkt available
+#  7367.00ns testbench.host32.service_interrupt: DMA queue status change
+#                 8085   Host read  0x00000158 with cmd 0x6:  Disconnect with Data, 0x0004000f.
+#  8145.00ns testbench.host32.service_interrupt: Packet available. Ignoring as DMA transaction already in progress...
+#  8176.00ns testbench.host32.process_PCI_requests: Info: PCI barrier
+#  8176.00ns testbench.host32.process_PCI_requests: Info:   DMA port 0: expecting 0 pkts, seen 0 pkts
+#  8176.00ns testbench.host32.process_PCI_requests: Info:   DMA port 1: expecting 0 pkts, seen 0 pkts
+#  8176.00ns testbench.host32.process_PCI_requests: Info:   DMA port 2: expecting 1 pkts, seen 0 pkts
+#  8176.00ns testbench.host32.process_PCI_requests: Info:   DMA port 3: expecting 0 pkts, seen 0 pkts
+#                 8176 testbench.host32.process_PCI_requests Info: barrier request
+#  8206.00ns testbench.host32.service_interrupt: Info: Interrupt signaled
+#                 8385   Host read  0x00000044 with cmd 0x6:  Disconnect with Data, 0x40000100.
+#                 8445   CPCI Interrupt:  DMA egress xfer complete  Pkt available
+#                 8625   Host read  0x00000040 with cmd 0x6:  Disconnect with Data, 0x00000100.
+#  8925.00ns testbench.host32.service_interrupt: Info: DMA egress transfer complete.
+#  8925.00ns testbench.host32.service_interrupt: Packet available. Starting DMA ingress transfer
+#                 9105   Host read  0x00000040 with cmd 0x6:  Disconnect with Data, 0x00000000.
+# 10635.00ns testbench.host32.service_interrupt: Info: Interrupt signaled
+#                11355   Host read  0x00000044 with cmd 0x6:  Disconnect with Data, 0x80000200.
+#                11415   CPCI Interrupt:  DMA ingress xfer complete  DMA queue status change
+# 11417.00ns testbench.host32.service_interrupt: DMA queue status change
+#                11595   Host read  0x00000158 with cmd 0x6:  Disconnect with Data, 0x0000000f.
+#                11835   Host read  0x00000148 with cmd 0x6:  Disconnect with Data, 0x0000003c.
+#                12075   Host read  0x00000150 with cmd 0x6:  Disconnect with Data, 0x00000200.
+# 12135.00ns testbench.host32.service_interrupt: Info: DMA ingress transfer complete. Size:         60   Source:  2
+#                12315   Host read  0x00000040 with cmd 0x6:  Disconnect with Data, 0x00000100.
+#                12647 testbench.net4.handle_ingress Info: barrier complete
+#                12647 testbench.net2.handle_ingress Info: barrier complete
+#                12647 testbench.net1.handle_ingress Info: barrier complete
+#                12647 testbench.net3.handle_ingress Info: barrier complete
+#                12647 testbench.host32.process_PCI_requests Info: barrier complete
+#                12647 Simulation has reached finish time - ending.
+# ** Note: $finish    : /root/NetFPGA-Danilo/lib/verilog/core/testbench/finish_ctrl.v(125)
+#    Time: 12747 ns  Iteration: 0  Instance: /testbench/finish_ctrl
+--- Simulation is complete. Validating the output.
+	Comparing simulation output for port 1 ...
+	Port 1 matches [0 packets]
+	Comparing simulation output for port 2 ...
+	Port 2 matches [0 packets]
+	Comparing simulation output for port 3 ...
+	Error: Port 3 packet 1 : not Matched.
+	Port 3 saw 1 errors.
+
+	Comparing simulation output for port 4 ...
+	Port 4 matches [0 packets]
+	Comparing simulation output for DMA queue 1 ...
+	DMA queue 1 matches [0 packets]
+	Comparing simulation output for DMA queue 2 ...
+	DMA queue 2 matches [0 packets]
+	Comparing simulation output for DMA queue 3 ...
+	Error: Port dma packet 1 : not Matched.
+	DMA queue 3 saw 1 errors.
+
+	Comparing simulation output for DMA queue 4 ...
+	DMA queue 4 matches [0 packets]
+--- Test failed (both_crypto_encrypt) - expected and seen data differs.
+NetFPGA environment:
+   Root dir:       /root/NetFPGA-Danilo
+   Project name:   crypto_nic
+   Project dir:    /tmp/root/test/crypto_nic
+   Work dir:       /tmp/root
+=== Work directory is /tmp/root/test/crypto_nic
+=== Calling make to build simulation binary with
+make -f Makefile DUMP_CTRL= SIM_OPT=  vsim_top
+
+=== Simulation compiled.
+=== Setting up test in /tmp/root/test/crypto_nic/both_crypto_encrypt
+=== Running test /tmp/root/test/crypto_nic/both_crypto_encrypt ... using cmd ['/root/NetFPGA-Danilo/lib/scripts/verif_run/pyrun.pl', '--sim', 'vsim']
+Error: test both_crypto_encrypt failed!
+------------SUMMARY---------------
+PASSING TESTS: 
+FAILING TESTS: 
+both_crypto_encrypt
+TOTAL: 1 PASS: 0 FAIL: 1 GUI: 0
+
+make -C /root/NetFPGA-Danilo/projects/crypto_nic/synth registers
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/crypto_nic/synth'
++++testStarted:build.registers.crypto_nic
+
+NetFPGA environment:
+  Root dir:       /root/NetFPGA-Danilo
+  Project name:   crypto_nic
+  Project dir:    /root/NetFPGA-Danilo/projects/crypto_nic
+  Work dir:       /tmp/root
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/global.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/nf_defines.xml...
+Processing /root/NetFPGA-Danilo/projects/crypto_nic/include/project.xml...
+
+Project: 'Crypto NIC' (crypto_nic)
+Description: NIC with basic crypto
+Version: 1.0.0
+Device ID: 0
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/xml/cpu_dma_queue.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/xml/ethernet_mac.xml...
+WARNING: No module specific XML found for module 'contrib/ucsd/gig_eth_mac'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/input_arbiter/rr_input_arbiter/xml/rr_input_arbiter.xml...
+WARNING: No module specific XML found for module 'core/nf2/generic_top'
+WARNING: No module specific XML found for module 'core/nf2/reference_core'
+WARNING: No module specific XML found for module 'core/output_port_lookup/nic'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/xml/sram_rr_output_queues.xml...
+WARNING: No module specific XML found for module 'core/sram_arbiter/sram_weighted_rr'
+WARNING: No module specific XML found for module 'core/user_data_path/reference_user_data_path'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io/mdio/xml/mdio.xml...
+WARNING: No module specific XML found for module 'core/cpci_bus'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/dma/xml/dma.xml...
+WARNING: No module specific XML found for module 'core/user_data_path/udp_reg_master'
+WARNING: No module specific XML found for module 'core/io_queues/add_rm_hdr'
+WARNING: No module specific XML found for module 'core/utils/generic_regs'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/utils/xml/device_id_reg.xml...
+Processing /root/NetFPGA-Danilo/projects/crypto_nic/include/crypto.xml...
+Processed registers.
++++testFinished:build.registers.crypto_nic
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/crypto_nic/synth'
+make -C /root/NetFPGA-Danilo/projects/cpci/synth registers
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/cpci/synth'
++++testStarted:build.registers.cpci
+
+NetFPGA environment:
+  Root dir:       /root/NetFPGA-Danilo
+  Project name:   cpci
+  Project dir:    /root/NetFPGA-Danilo/projects/cpci
+  Work dir:       /tmp/root
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/global.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/nf_defines.xml...
+Processing /root/NetFPGA-Danilo/projects/cpci/include/project.xml...
+
+Project: 'CPCI' (cpci)
+Description: NetFPGA PCI interface
+Version: 4.1.0
+Device ID: 0
+
+Processing /root/NetFPGA-Danilo/projects/cpci/include/cpci_regs.xml...
+Processed registers.
++++testFinished:build.registers.cpci
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/cpci/synth'
+make -C /root/NetFPGA-Danilo/projects/crypto_nic/synth cores
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/crypto_nic/synth'
+Made cores.
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/crypto_nic/synth'
+make -C /root/NetFPGA-Danilo/projects/cpci/synth cores
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/cpci/synth'
+Made cores.
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/cpci/synth'
+===============================================================================
+Building ModelSim binary
+===============================================================================
++++testStarted:build.ModelSim.binary
+UNET_EXTRA_DIRS is
+# Create the behavioral directory
+cd vsim_beh &&  vlog +notimingchecks -incr +define+sg5E +define+x16 +define+MAX_MEM +define+sb166 +libext+.v  +define+VSIM_COMPILE  +incdir+/root/NetFPGA-Danilo/lib/verilog/core/common/src+/root/NetFPGA-Danilo/lib/verilog/core/testbench+/root/NetFPGA-Danilo/projects/crypto_nic/include \
+	-y /root/NetFPGA-Danilo/projects/crypto_nic/src  -y /root/NetFPGA-Danilo/projects/cpci/src -y /root/NetFPGA-Danilo/projects/cpci/src/src_coregen -y /opt/Xilinx/10.1/ISE/verilog/src/simprims -y /opt/Xilinx/10.1/ISE/verilog/src/unisims -v /opt/Xilinx/10.1/ISE/verilog/src/XilinxCoreLib/BLK_MEM_GEN_V2_4.v -y /opt/Xilinx/10.1/ISE/verilog/src/XilinxCoreLib -y /opt/Xilinx/10.1/ISE/smartmodel/lin/wrappers/mtiverilog  -y /root/NetFPGA-Danilo/lib/verilog/core/common/src -y /root/NetFPGA-Danilo/lib/verilog/core/testbench -v /root/NetFPGA-Danilo/projects/cpci/src/src_coregen/pci_lc_i.v -y /root/NetFPGA-Danilo/lib/verilog/core/common/src   /root/NetFPGA-Danilo/projects/crypto_nic/include/registers.v  /root/NetFPGA-Danilo/projects/cpci/include/registers.v /root/NetFPGA-Danilo/lib/verilog/core/common/src/NF_2.1_defines.v /root/NetFPGA-Danilo/lib/verilog/core/common/src/udp_defines.v /root/NetFPGA-Danilo/projects/cpci/include/registers.v  /root/NetFPGA-Danilo/projects/crypto_nic/include/registers.v /root/NetFPGA-Danilo/projects/crypto_nic/src/crypto.v /root/NetFPGA-Danilo/projects/crypto_nic/src/module_template.v /root/NetFPGA-Danilo/projects/crypto_nic/src/user_data_path.v    /root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/cpu_dma_queue_no_regs.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/cpu_dma_queue_regs.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/cpu_dma_queue.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/cpu_dma_rx_queue.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/cpu_dma_tx_queue.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/mac_grp_regs.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/nf2_mac_grp.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/rx_queue.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/tx_queue.v /root/NetFPGA-Danilo/lib/verilog/contrib/ucsd/gig_eth_mac/src/CRC_chk.v /root/NetFPGA-Danilo/lib/verilog/contrib/ucsd/gig_eth_mac/src/CRC_gen.v /root/NetFPGA-Danilo/lib/verilog/contrib/ucsd/gig_eth_mac/src/gig_eth_mac_rx.v /root/NetFPGA-Danilo/lib/verilog/contrib/ucsd/gig_eth_mac/src/gig_eth_mac_tx.v /root/NetFPGA-Danilo/lib/verilog/contrib/ucsd/gig_eth_mac/src/gig_eth_mac.v /root/NetFPGA-Danilo/lib/verilog/core/input_arbiter/rr_input_arbiter/src/in_arb_regs.v /root/NetFPGA-Danilo/lib/verilog/core/input_arbiter/rr_input_arbiter/src/input_arbiter.v /root/NetFPGA-Danilo/lib/verilog/core/nf2/generic_top/src/dump.v /root/NetFPGA-Danilo/lib/verilog/core/nf2/generic_top/src/nf2_top.v /root/NetFPGA-Danilo/lib/verilog/core/nf2/generic_top/src/rgmii_io.v /root/NetFPGA-Danilo/lib/verilog/core/nf2/reference_core/src/nf2_core.v /root/NetFPGA-Danilo/lib/verilog/core/nf2/reference_core/src/nf2_reg_grp.v /root/NetFPGA-Danilo/lib/verilog/core/output_port_lookup/nic/src/output_port_lookup.v /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_header_parser.v /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_reg_helper.v /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_reg_instances.v /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_ctrl.v /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_dual_port_ram.v /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_eval_empty.v /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_eval_full.v /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_generic_reg_grp.v /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs_host_iface.v /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/oq_regs.v /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/output_queues.v /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/remove_pkt.v /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/src/store_pkt.v /root/NetFPGA-Danilo/lib/verilog/core/sram_arbiter/sram_weighted_rr/src/cnet_sram_sm.v /root/NetFPGA-Danilo/lib/verilog/core/sram_arbiter/sram_weighted_rr/src/sram_arbiter.v /root/NetFPGA-Danilo/lib/verilog/core/sram_arbiter/sram_weighted_rr/src/sram_reg_access.v /root/NetFPGA-Danilo/lib/verilog/core/io/mdio/src/nf2_mdio.v /root/NetFPGA-Danilo/lib/verilog/core/cpci_bus/src/cpci_bus.v /root/NetFPGA-Danilo/lib/verilog/core/dma/src/nf2_dma_bus_fsm.v /root/NetFPGA-Danilo/lib/verilog/core/dma/src/nf2_dma_que_intfc.v /root/NetFPGA-Danilo/lib/verilog/core/dma/src/nf2_dma_regs.v /root/NetFPGA-Danilo/lib/verilog/core/dma/src/nf2_dma_sync.v /root/NetFPGA-Danilo/lib/verilog/core/dma/src/nf2_dma.v /root/NetFPGA-Danilo/lib/verilog/core/user_data_path/udp_reg_master/src/udp_reg_master.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/add_rm_hdr/src/add_hdr.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/add_rm_hdr/src/add_rm_hdr.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/add_rm_hdr/src/rm_hdr.v /root/NetFPGA-Danilo/lib/verilog/core/utils/generic_regs/src/generic_cntr_regs.v /root/NetFPGA-Danilo/lib/verilog/core/utils/generic_regs/src/generic_hw_regs.v /root/NetFPGA-Danilo/lib/verilog/core/utils/generic_regs/src/generic_regs.v /root/NetFPGA-Danilo/lib/verilog/core/utils/generic_regs/src/generic_sw_regs.v /root/NetFPGA-Danilo/lib/verilog/core/utils/generic_regs/src/generic_table_regs.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/arbitrator.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/decoder.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/device_id_reg.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/fallthrough_small_fifo_old.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/fallthrough_small_fifo.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/fallthrough_small_fifo_v2.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/lfsr32.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/priority_encoder.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/pulse_synchronizer.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/reg_grp.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/rotate.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/small_async_fifo.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/small_fifo.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/small_fifo_v2.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/small_fifo_v3.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/unused_reg.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/src_coregen/cdq_rx_fifo_512x36_to_72.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/src_coregen/cdq_rx_fifo_512x36.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/src_coregen/cdq_tx_fifo_256x72_to_36.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/src/src_coregen/cdq_tx_fifo_512x36.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/src_coregen/rxfifo_8kx9_to_36.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/src_coregen/rxfifo_8kx9_to_72.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/src_coregen/rxlengthfifo_128x13.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/src_coregen/txfifo_1024x36_to_9.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/src/src_coregen/txfifo_512x72_to_9.v /root/NetFPGA-Danilo/lib/verilog/core/cpci_bus/src/src_coregen/net2pci_16x32.v /root/NetFPGA-Danilo/lib/verilog/core/cpci_bus/src/src_coregen/pci2net_16x60.v /root/NetFPGA-Danilo/lib/verilog/core/dma/src/src_coregen/syncfifo_512x32.v /root/NetFPGA-Danilo/lib/verilog/core/io_queues/add_rm_hdr/src/src_coregen/hdr_fifo.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/src_coregen/async_fifo_256x72_to_36.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/src_coregen/async_fifo_512x36_progfull_500.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/src_coregen/async_fifo_512x36_to_72_progfull_500.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/src_coregen/syncfifo_512x36_fallthrough.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/src_coregen/syncfifo_512x36.v /root/NetFPGA-Danilo/lib/verilog/core/utils/src/src_coregen/syncfifo_512x72.v /root/NetFPGA-Danilo/lib/verilog/core/testbench/testbench.v /opt/Xilinx/10.1/ISE/verilog/src/glbl.v
+Model Technology ModelSim SE vlog 6.5b Compiler 2009.05 May 21 2009
+** Error: /root/NetFPGA-Danilo/projects/crypto_nic/src/crypto.v(192): near "initial": syntax error, unexpected "initial"
+** Error: /root/NetFPGA-Danilo/projects/crypto_nic/src/crypto.v(209): near "end": syntax error, unexpected "end"
+** Error: /root/NetFPGA-Danilo/projects/crypto_nic/src/crypto.v(227): A label for a block can be specified before 'begin' only in SystemVerilog.
+** Error: /root/NetFPGA-Danilo/projects/crypto_nic/src/crypto.v(228): near "=": syntax error, unexpected '=', expecting "IDENTIFIER" or "TYPE_IDENTIFIER" or '#' or '('
+** Error: /root/NetFPGA-Danilo/projects/crypto_nic/src/crypto.v(236): near "=": syntax error, unexpected '=', expecting "IDENTIFIER" or "TYPE_IDENTIFIER" or '#' or '('
+** Error: /root/NetFPGA-Danilo/projects/crypto_nic/src/crypto.v(242): near "endcase": syntax error, unexpected "endcase"
+** Error: /root/NetFPGA-Danilo/projects/crypto_nic/src/module_template.v(10): Compiler directive `timescale is not allowed inside a module.
+** Error: /root/NetFPGA-Danilo/projects/crypto_nic/src/module_template.v(50): 'log2' already exists; must not be redefined as a function.
+** Error: /root/NetFPGA-Danilo/projects/crypto_nic/src/module_template.v(57): 'in_fifo_nearly_full' already declared in this scope (crypto).
+** Error: /root/NetFPGA-Danilo/projects/crypto_nic/src/module_template.v(58): 'in_fifo_empty' already declared in this scope (crypto).
+** Error: /root/NetFPGA-Danilo/projects/crypto_nic/src/module_template.v(60): 'in_fifo_rd_en' already declared in this scope (crypto).
+** Error: /root/NetFPGA-Danilo/projects/crypto_nic/src/module_template.v(88): 'input_fifo' already declared in this scope.
+-- Skipping module user_data_path
+-- Skipping module cpu_dma_queue_no_regs
+-- Skipping module cpu_dma_queue_regs
+-- Skipping module cpu_dma_queue
+-- Skipping module cpu_dma_rx_queue
+-- Skipping module cpu_dma_tx_queue
+-- Skipping module mac_grp_regs
+-- Skipping module nf2_mac_grp
+-- Skipping module rx_queue
+-- Skipping module tx_queue
+-- Skipping module CRC_chk
+-- Skipping module CRC_gen
+-- Skipping module gig_eth_mac_rx
+-- Skipping module gig_eth_mac_tx
+-- Skipping module gig_eth_mac
+-- Skipping module in_arb_regs
+-- Skipping module input_arbiter
+-- Skipping module dump
+-- Skipping module nf2_top
+-- Skipping module rgmii_io
+-- Skipping module nf2_core
+-- Skipping module nf2_reg_grp
+-- Skipping module output_port_lookup
+-- Skipping module oq_header_parser
+-- Skipping module oq_reg_helper
+-- Skipping module oq_reg_instances
+-- Skipping module oq_regs_ctrl
+-- Skipping module oq_regs_dual_port_ram
+-- Skipping module oq_regs_eval_empty
+-- Skipping module oq_regs_eval_full
+-- Skipping module oq_regs_generic_reg_grp
+-- Skipping module oq_regs_host_iface
+-- Skipping module oq_regs
+-- Skipping module output_queues
+-- Skipping module remove_pkt
+-- Skipping module store_pkt
+-- Skipping module cnet_sram_sm
+-- Skipping module sram_arbiter
+-- Skipping module sram_reg_access
+-- Skipping module nf2_mdio
+-- Skipping module cpci_bus
+-- Skipping module nf2_dma_bus_fsm
+-- Skipping module nf2_dma_que_intfc
+-- Skipping module nf2_dma_regs
+-- Skipping module nf2_dma_sync
+-- Skipping module nf2_dma
+-- Skipping module udp_reg_master
+-- Skipping module add_hdr
+-- Skipping module add_rm_hdr
+-- Skipping module rm_hdr
+-- Skipping module generic_cntr_regs
+-- Skipping module generic_hw_regs
+-- Skipping module generic_regs
+-- Skipping module generic_sw_regs
+-- Skipping module generic_table_regs
+-- Skipping module arbitrator
+-- Skipping module decoder
+-- Skipping module device_id_reg
+-- Skipping module fallthrough_small_fifo_old
+-- Skipping module fallthrough_small_fifo
+-- Skipping module fallthrough_small_fifo_tester
+** Warning: /root/NetFPGA-Danilo/lib/verilog/core/utils/src/fallthrough_small_fifo_v2.v(15): 'fallthrough_small_fifo' already exists and will be overwritten.
+-- Skipping module fallthrough_small_fifo
+** Warning: /root/NetFPGA-Danilo/lib/verilog/core/utils/src/fallthrough_small_fifo_v2.v(103): 'fallthrough_small_fifo_tester' already exists and will be overwritten.
+-- Skipping module fallthrough_small_fifo_tester
+-- Skipping module lfsr32
+-- Skipping module priority_encoder
+-- Skipping module pri_encode_test
+-- Skipping module pulse_synchronizer
+-- Skipping module reg_grp
+-- Skipping module rotate
+-- Skipping module small_async_fifo
+-- Skipping module sync_r2w
+-- Skipping module sync_w2r
+-- Skipping module rptr_empty
+-- Skipping module wptr_full
+-- Skipping module fifo_mem
+-- Skipping module small_fifo_v1
+-- Skipping module small_fifo_v2
+-- Skipping module small_fifo_tester
+-- Skipping module small_fifo
+-- Skipping module unused_reg
+-- Skipping module cdq_rx_fifo_512x36_to_72
+-- Skipping module cdq_rx_fifo_512x36
+-- Skipping module cdq_tx_fifo_256x72_to_36
+-- Skipping module cdq_tx_fifo_512x36
+-- Skipping module rxfifo_8kx9_to_36
+-- Skipping module rxfifo_8kx9_to_72
+-- Skipping module rxlengthfifo_128x13
+-- Skipping module txfifo_1024x36_to_9
+-- Skipping module txfifo_512x72_to_9
+-- Skipping module net2pci_16x32
+-- Skipping module pci2net_16x60
+-- Skipping module syncfifo_512x32
+-- Skipping module hdr_fifo
+-- Skipping module async_fifo_256x72_to_36
+-- Skipping module async_fifo_512x36_progfull_500
+-- Skipping module async_fifo_512x36_to_72_progfull_500
+-- Skipping module syncfifo_512x36_fallthrough
+-- Skipping module syncfifo_512x36
+-- Skipping module syncfifo_512x72
+-- Skipping module testbench
+-- Skipping module glbl
+NetFPGA environment:
+   Root dir:       /root/NetFPGA-Danilo
+   Project name:   crypto_nic
+   Project dir:    /tmp/root/test/crypto_nic
+   Work dir:       /tmp/root
+=== Work directory is /tmp/root/test/crypto_nic
+=== Calling make to build simulation binary with
+make -f Makefile DUMP_CTRL= SIM_OPT=  vsim_top
+
+Error: 
+make -C /root/NetFPGA-Danilo/projects/crypto_nic/synth registers
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/crypto_nic/synth'
++++testStarted:build.registers.crypto_nic
+
+NetFPGA environment:
+  Root dir:       /root/NetFPGA-Danilo
+  Project name:   crypto_nic
+  Project dir:    /root/NetFPGA-Danilo/projects/crypto_nic
+  Work dir:       /tmp/root
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/global.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/nf_defines.xml...
+Processing /root/NetFPGA-Danilo/projects/crypto_nic/include/project.xml...
+
+Project: 'Crypto NIC' (crypto_nic)
+Description: NIC with basic crypto
+Version: 1.0.0
+Device ID: 0
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io_queues/cpu_dma_queue/xml/cpu_dma_queue.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io_queues/ethernet_queue/xml/ethernet_mac.xml...
+WARNING: No module specific XML found for module 'contrib/ucsd/gig_eth_mac'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/input_arbiter/rr_input_arbiter/xml/rr_input_arbiter.xml...
+WARNING: No module specific XML found for module 'core/nf2/generic_top'
+WARNING: No module specific XML found for module 'core/nf2/reference_core'
+WARNING: No module specific XML found for module 'core/output_port_lookup/nic'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/output_queues/sram_rr_output_queues/xml/sram_rr_output_queues.xml...
+WARNING: No module specific XML found for module 'core/sram_arbiter/sram_weighted_rr'
+WARNING: No module specific XML found for module 'core/user_data_path/reference_user_data_path'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/io/mdio/xml/mdio.xml...
+WARNING: No module specific XML found for module 'core/cpci_bus'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/dma/xml/dma.xml...
+WARNING: No module specific XML found for module 'core/user_data_path/udp_reg_master'
+WARNING: No module specific XML found for module 'core/io_queues/add_rm_hdr'
+WARNING: No module specific XML found for module 'core/utils/generic_regs'
+Processing /root/NetFPGA-Danilo/lib/verilog/core/utils/xml/device_id_reg.xml...
+Processing /root/NetFPGA-Danilo/projects/crypto_nic/include/crypto.xml...
+Processed registers.
++++testFinished:build.registers.crypto_nic
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/crypto_nic/synth'
+make -C /root/NetFPGA-Danilo/projects/cpci/synth registers
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/cpci/synth'
++++testStarted:build.registers.cpci
+
+NetFPGA environment:
+  Root dir:       /root/NetFPGA-Danilo
+  Project name:   cpci
+  Project dir:    /root/NetFPGA-Danilo/projects/cpci
+  Work dir:       /tmp/root
+
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/global.xml...
+Processing /root/NetFPGA-Danilo/lib/verilog/core/common/xml/nf_defines.xml...
+Processing /root/NetFPGA-Danilo/projects/cpci/include/project.xml...
+
+Project: 'CPCI' (cpci)
+Description: NetFPGA PCI interface
+Version: 4.1.0
+Device ID: 0
+
+Processing /root/NetFPGA-Danilo/projects/cpci/include/cpci_regs.xml...
+Processed registers.
++++testFinished:build.registers.cpci
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/cpci/synth'
+make -C /root/NetFPGA-Danilo/projects/crypto_nic/synth cores
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/crypto_nic/synth'
+Made cores.
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/crypto_nic/synth'
+make -C /root/NetFPGA-Danilo/projects/cpci/synth cores
+make[1]: Entering directory `/root/NetFPGA-Danilo/projects/cpci/synth'
+Made cores.
+make[1]: Leaving directory `/root/NetFPGA-Danilo/projects/cpci/synth'
+
+NetFPGA environment:
+  Root dir:       /root/NetFPGA-Danilo
+  Project name:   crypto_nic
+  Project dir:    /root/NetFPGA-Danilo/projects/crypto_nic
+  Work dir:       /tmp/root
+
+--- Reading configuration file
+--- Running test.
+
+--- Generating packets...
+WARNING: No route found for IPv6 destination :: (no default route?)
+[0] 0x1
+[1] 0x23
+[2] 0x45
+[3] 0x67
+[0] 0x1
+[1] 0x23
+[2] 0x45
+[3] 0x67
+--- Running the simulation (takes a while). Logging to my_sim.log
+--- Running vsim
+Reading /modeltech/tcl/vsim/pref.tcl 
+
+# 6.5b
+
+# vsim -do {run -all} -l my_sim.log -c -voptargs=+acc testbench glbl 
+# //  ModelSim SE 6.5b May 21 2009 Linux 2.6.34.9-69.fc13.i686
+# //
+# //  Copyright 1991-2009 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+# Loading work.testbench(fast)
+# Loading work.u_board(fast)
+# Loading work.cpci_top(fast)
+# Loading work.cpci_clock_checker(fast)
+# Loading work.BUFGDLL(fast)
+# Loading work.CLKDLL(fast)
+# Loading work.clkdll_maximum_period_check(fast)
+# Loading work.IBUFG(fast)
+# Loading work.BUFG(fast)
+# Loading work.pcim_top(fast)
+# Loading work.pcim_lc(fast)
+# Loading work.IOBUF_PCI33_3(fast)
+# Loading work.FDPE(fast)
+# Loading work.OBUFT_PCI33_3(fast)
+# Loading work.IBUF_PCI33_3(fast)
+# Loading work.IBUFG_PCI33_3(fast)
+# Loading work.PCI_LC_I(fast)
+# Loading work.X_INV(fast)
+# Loading work.X_BUF(fast)
+# Loading work.X_OR2(fast)
+# Loading work.X_AND2(fast)
+# Loading work.X_OR3(fast)
+# Loading work.X_AND3(fast)
+# Loading work.X_FF(fast)
+# Loading work.X_FF(fast__1)
+# Loading work.X_PU(fast)
+# Loading work.X_AND4(fast)
+# Loading work.X_MUX2(fast)
+# Loading work.X_ZERO(fast)
+# Loading work.X_OR4(fast)
+# Loading work.X_ONE(fast)
+# Loading work.X_AND5(fast)
+# Loading work.X_XOR2(fast)
+# Loading work.X_TRI(fast)
+# Loading work.X_XOR4(fast)
+# Loading work.X_XOR3(fast)
+# Loading work.cfg(fast)
+# Loading work.pci_userapp(fast)
+# Loading work.reg_file(fast)
+# Loading work.cnet_reg_access(fast)
+# Loading work.cnet_reg_iface(fast)
+# Loading work.cpci_pci2net_16x60(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast)
+# Loading work.cnet_reprogram(fast)
+# Loading work.fifo_8x32(fast)
+# Loading work.cnet_dma_bus_master(fast)
+# Loading work.pci2net_dma_32x32(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__1)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast__1)
+# Loading work.fifo_generator_v4_2_bhv_ver_preload0(fast)
+# Loading work.net2pci_dma_512x32(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__2)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast__2)
+# Loading work.dma_engine(fast)
+# Loading work.dma_read_fifo_4x32(fast)
+# Loading work.dma_engine_ctrl(fast)
+# Loading work.dma_engine_rr_arb(fast)
+# Loading work.dma_engine_pci_xfer(fast)
+# Loading work.dma_engine_alignment(fast)
+# Loading work.dma_engine_cntr(fast)
+# Loading work.cpci_heartbeat(fast)
+# Loading work.nf2_top(fast)
+# Loading work.IBUF(fast)
+# Loading work.DCM(fast)
+# Loading work.dcm_clock_divide_by_2(fast)
+# Loading work.dcm_maximum_period_check(fast)
+# Loading work.dcm_maximum_period_check(fast__1)
+# Loading work.dcm_clock_lost(fast)
+# Loading work.BUFGMUX(fast)
+# Loading work.rgmii_io(fast)
+# Loading work.FDDRRSE(fast)
+# Loading work.OBUF(fast)
+# Loading work.nf2_core(fast)
+# Loading work.nf2_mac_grp(fast)
+# Loading work.gig_eth_mac(fast)
+# Loading work.gig_eth_mac_tx(fast)
+# Loading work.CRC_gen(fast)
+# Loading work.gig_eth_mac_rx(fast)
+# Loading work.CRC_chk(fast)
+# Loading work.rx_queue(fast)
+# Loading work.rxlengthfifo_128x13(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__6)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast__5)
+# Loading work.rxfifo_8kx9_to_72(fast)
+# Loading work.FIFO_GENERATOR_V3_2(fast)
+# Loading work.fifo_generator_v3_2_bhv_ver_as(fast)
+# Loading work.pulse_synchronizer(fast)
+# Loading work.tx_queue(fast)
+# Loading work.txfifo_512x72_to_9(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__7)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast__6)
+# Loading work.mac_grp_regs(fast)
+# Loading work.nf2_mac_grp(fast__1)
+# Loading work.rx_queue(fast__1)
+# Loading work.nf2_mac_grp(fast__2)
+# Loading work.rx_queue(fast__2)
+# Loading work.nf2_mac_grp(fast__3)
+# Loading work.rx_queue(fast__3)
+# Loading work.cpu_dma_queue(fast)
+# Loading work.cpu_dma_queue_regs(fast)
+# Loading work.cpu_dma_rx_queue(fast)
+# Loading work.cdq_rx_fifo_512x36_to_72(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__8)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast__7)
+# Loading work.fifo_generator_v4_2_bhv_ver_preload0(fast__1)
+# Loading work.fallthrough_small_fifo(fast__3)
+# Loading work.small_fifo(fast__3)
+# Loading work.cpu_dma_tx_queue(fast)
+# Loading work.cdq_tx_fifo_256x72_to_36(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__9)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast__8)
+# Loading work.fifo_generator_v4_2_bhv_ver_preload0(fast__2)
+# Loading work.fallthrough_small_fifo(fast__4)
+# Loading work.small_fifo(fast__4)
+# Loading work.cpu_dma_queue(fast__1)
+# Loading work.cpu_dma_rx_queue(fast__1)
+# Loading work.cpu_dma_queue(fast__2)
+# Loading work.cpu_dma_rx_queue(fast__2)
+# Loading work.cpu_dma_queue(fast__3)
+# Loading work.cpu_dma_rx_queue(fast__3)
+# Loading work.cpci_bus(fast)
+# Loading work.pci2net_16x60(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__3)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast__3)
+# Loading work.net2pci_16x32(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__4)
+# Loading work.fifo_generator_v4_2_bhv_ver_as(fast__4)
+# Loading work.sram_arbiter(fast)
+# Loading work.cnet_sram_sm(fast)
+# Loading work.sram_reg_access(fast)
+# Loading work.user_data_path(fast)
+# Loading work.input_arbiter(fast)
+# Loading work.small_fifo(fast)
+# Loading work.in_arb_regs(fast)
+# Loading work.output_port_lookup(fast)
+# Loading work.crypto(fast)
+# Loading work.fallthrough_small_fifo(fast)
+# Loading work.generic_regs(fast)
+# Loading work.generic_sw_regs(fast)
+# Loading work.output_queues(fast)
+# Loading work.oq_header_parser(fast)
+# Loading work.fallthrough_small_fifo(fast__1)
+# Loading work.small_fifo(fast__1)
+# Loading work.fallthrough_small_fifo(fast__2)
+# Loading work.small_fifo(fast__2)
+# Loading work.store_pkt(fast)
+# Loading work.remove_pkt(fast)
+# Loading work.syncfifo_512x72(fast)
+# Loading work.FIFO_GENERATOR_V4_2(fast__5)
+# Loading work.fifo_generator_v4_2_bhv_ver_ss(fast)
+# Loading work.oq_regs(fast)
+# Loading work.oq_regs_ctrl(fast)
+# Loading work.oq_regs_eval_empty(fast)
+# Loading work.oq_regs_eval_full(fast)
+# Loading work.oq_regs_host_iface(fast)
+# Loading work.oq_reg_instances(fast)
+# Loading work.oq_regs_generic_reg_grp(fast)
+# Loading work.oq_regs_dual_port_ram(fast)
+# Loading work.oq_regs_generic_reg_grp(fast__1)
+# Loading work.oq_regs_generic_reg_grp(fast__2)
+# Loading work.oq_regs_dual_port_ram(fast__1)
+# Loading work.oq_regs_generic_reg_grp(fast__3)
+# Loading work.oq_regs_generic_reg_grp(fast__4)
+# Loading work.oq_regs_dual_port_ram(fast__2)
+# Loading work.oq_regs_generic_reg_grp(fast__5)
+# Loading work.oq_regs_generic_reg_grp(fast__6)
+# Loading work.oq_regs_generic_reg_grp(fast__7)
+# Loading work.udp_reg_master(fast)
+# Loading work.nf2_reg_grp(fast)
+# Loading work.reg_grp(fast)
+# Loading work.reg_grp(fast__1)
+# Loading work.device_id_reg(fast)
+# Loading work.nf2_mdio(fast)
+# Loading work.nf2_dma(fast)
+# Loading work.nf2_dma_bus_fsm(fast)
+# Loading work.nf2_dma_sync(fast)
+# Loading work.small_async_fifo(fast)
+# Loading work.sync_r2w(fast)
+# Loading work.sync_w2r(fast)
+# Loading work.fifo_mem(fast)
+# Loading work.rptr_empty(fast)
+# Loading work.wptr_full(fast)
+# Loading work.small_async_fifo(fast__1)
+# Loading work.fifo_mem(fast__1)
+# Loading work.nf2_dma_que_intfc(fast)
+# Loading work.nf2_dma_regs(fast)
+# Loading work.unused_reg(fast)
+# Loading work.unused_reg(fast__1)
+# Loading work.INV(fast)
+# Loading work.cpci_program_iface(fast)
+# Loading work.cy7c1370(fast)
+# Loading work.ddr2(fast)
+# Loading work.phy_mdio_port(fast)
+# Loading work.host32(fast)
+# Loading work.target32(fast)
+# Loading work.net(fast)
+# Loading work.barrier_ctrl(fast)
+# Loading work.finish_ctrl(fast)
+# Loading work.glbl(fast)
+# ** Warning: (vsim-3017) /root/NetFPGA-Danilo/projects/crypto_nic/src/crypto.v(100): [TFMPC] - Too few port connections. Expected 10, found 9.
+#         Region: /testbench/u_board/nf2_top/nf2_core/user_data_path/crypto/input_fifo
+# ** Warning: (vsim-3722) /root/NetFPGA-Danilo/projects/crypto_nic/src/crypto.v(100): [TFMPC] - Missing connection for port 'prog_full'.
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# ** Warning: (vsim-8598) Non-positive replication multiplier inside concat. Replication will be ignored
+# run -all 
+# Warning in testbench.u_board.cpci_top.cnet_reg_iface.cpci_pci2net_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.cpci_top.cnet_dma_bus_master.pci2net_dma_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.cpci_top.cnet_dma_bus_master.dma_rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[0].nf2_mac_grp.rx_queue.genblk2.pkt_chk_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[0].nf2_mac_grp.rx_queue.rx_fifo_64.gmac_rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[0].nf2_mac_grp.tx_queue.tx_fifo_64.gmac_tx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[1].nf2_mac_grp.rx_queue.genblk2.pkt_chk_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[1].nf2_mac_grp.rx_queue.rx_fifo_64.gmac_rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[1].nf2_mac_grp.tx_queue.tx_fifo_64.gmac_tx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[2].nf2_mac_grp.rx_queue.genblk2.pkt_chk_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[2].nf2_mac_grp.rx_queue.rx_fifo_64.gmac_rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[2].nf2_mac_grp.tx_queue.tx_fifo_64.gmac_tx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[3].nf2_mac_grp.rx_queue.genblk2.pkt_chk_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[3].nf2_mac_grp.rx_queue.rx_fifo_64.gmac_rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.mac_groups[3].nf2_mac_grp.tx_queue.tx_fifo_64.gmac_tx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpu_queues[0].cpu_dma_queue_i.cpu_dma_rx_queue.cpu_fifos64.rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpu_queues[0].cpu_dma_queue_i.cpu_dma_tx_queue.cpu_fifos64.tx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpu_queues[1].cpu_dma_queue_i.cpu_dma_rx_queue.cpu_fifos64.rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpu_queues[1].cpu_dma_queue_i.cpu_dma_tx_queue.cpu_fifos64.tx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpu_queues[2].cpu_dma_queue_i.cpu_dma_rx_queue.cpu_fifos64.rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpu_queues[2].cpu_dma_queue_i.cpu_dma_tx_queue.cpu_fifos64.tx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpu_queues[3].cpu_dma_queue_i.cpu_dma_rx_queue.cpu_fifos64.rx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpu_queues[3].cpu_dma_queue_i.cpu_dma_tx_queue.cpu_fifos64.tx_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpci_bus.pci2net_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# Warning in testbench.u_board.nf2_top.nf2_core.cpci_bus.net2pci_fifo.inst at time                    0: When using an asynchronous configuration for the FIFO Generator, the behavioral model is not cycle-accurate. You may wish to choose the structural simulation model instead of the behavioral model. This will ensure accurate behavior and latencies during simulation. You can enable this from CORE Generator by selecting Project -> Project Options -> Generation tab -> Structural Simulation. See the FIFO Generator User Guide for more information.
+# NOTICE      : 020 : Data bus    corruption
+# NOTICE      : 016 : ADV_LB   corruption
+# NOTICE      : 015 : CENB      corruption
+# NOTICE      : 014 : CE3B      corruption
+# NOTICE      : 013 : CE2       corruption
+# NOTICE      : 012 : CE1B       corruption
+# NOTICE      : 011 : Byte enable corruption
+# NOTICE      : 010 : Byte write  corruption
+# NOTICE      : 020 : Data bus    corruption
+# NOTICE      : 016 : ADV_LB   corruption
+# NOTICE      : 015 : CENB      corruption
+# NOTICE      : 014 : CE3B      corruption
+# NOTICE      : 013 : CE2       corruption
+# NOTICE      : 012 : CE1B       corruption
+# NOTICE      : 011 : Byte enable corruption
+# NOTICE      : 010 : Byte write  corruption
+# Read port configuration file portconfig.sim
+#     Loopback is 0000.
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "config.sim" for reading.
+# No such file or directory. (errno = ENOENT)    : /root/NetFPGA-Danilo/lib/verilog/core/testbench/finish_ctrl.v(53)
+#    Time: 1 ns  Iteration: 0  Instance: /testbench/finish_ctrl
+# No configuration file named config.sim
+#     Simulation will finish when inputs processed or time reaches 1000000.00ns.
+#     2.00ns testbench.net1.initialize_ingress Info: Reading ingress packet data from file packet_data/ingress_port_1
+#     2.00ns testbench.net2.initialize_ingress Info: Reading ingress packet data from file packet_data/ingress_port_2
+#     2.00ns testbench.net3.initialize_ingress Info: Reading ingress packet data from file packet_data/ingress_port_3
+#     2.00ns testbench.net4.initialize_ingress Info: Reading ingress packet data from file packet_data/ingress_port_4
+#     3.00ns testbench.net1.check_integrity Info: Input file contains:
+#     3.00ns testbench.net1.check_integrity Info:    0 ingress packets
+#     3.00ns testbench.net1.check_integrity Info:    2 barriers
+#     3.00ns testbench.net1.check_integrity Info:    0 delays
+#     3.00ns testbench.net1 Info: Waiting for initial configuration to complete.
+#     3.00ns testbench.net2.check_integrity Info: Input file contains:
+#     3.00ns testbench.net2.check_integrity Info:    0 ingress packets
+#     3.00ns testbench.net2.check_integrity Info:    2 barriers
+#     3.00ns testbench.net2.check_integrity Info:    0 delays
+#     3.00ns testbench.net2 Info: Waiting for initial configuration to complete.
+#     3.00ns testbench.net3.check_integrity Info: Input file contains:
+#     3.00ns testbench.net3.check_integrity Info:    1 ingress packets
+#     3.00ns testbench.net3.check_integrity Info:    2 barriers
+#     3.00ns testbench.net3.check_integrity Info:    0 delays
+#     3.00ns testbench.net3 Info: Waiting for initial configuration to complete.
+#     3.00ns testbench.net4.check_integrity Info: Input file contains:
+#     3.00ns testbench.net4.check_integrity Info:    0 ingress packets
+#     3.00ns testbench.net4.check_integrity Info:    2 barriers
+#     3.00ns testbench.net4.check_integrity Info:    0 delays
+#     3.00ns testbench.net4 Info: Waiting for initial configuration to complete.
+#  
+#                  300   System Reset Complete...
+#  
+#                  465   Operating System Configuring Device...
+#  
+#                  465   Searching for device.
+#                  645   Host read  0x00010000 with cmd 0xa:  Disconnect with Data, 0x0001feed.
+#                  705   NetFPGA-1G Device Found.
+#                  705   BAR0:
+#                  885   Host read  0x00010010 with cmd 0xa:  Disconnect with Data, 0x00000000.
+#                  945   BAR0 of expected type exists.
+#                  945   Checking size of BAR0.
+#                 1335   Host read  0x00010010 with cmd 0xa:  Disconnect with Data, 0xf8000000.
+#                 1395   Device requests 0x08000000 bytes.
+#                 1395   Locating device at 0x00000000.
+#                 1605   BAR1:
+#                 1785   Host read  0x00010014 with cmd 0xa:  Disconnect with Data, 0x00000000.
+#                 1845   BAR1 of expected type exists.
+#                 1845   Checking size of BAR1.
+#                 2235   Host read  0x00010014 with cmd 0xa:  Disconnect with Data, 0x00000000.
+#                 2295   Device requests 0x00000000 bytes.
+#                 2295   BAR2:
+#                 2475   Host read  0x00010018 with cmd 0xa:  Disconnect with Data, 0x00000000.
+#                 2535   BAR2 of expected type exists.
+#                 2535   Checking size of BAR2.
+#                 2925   Host read  0x00010018 with cmd 0xa:  Disconnect with Data, 0x00000000.
+#                 2985   Device requests 0x00000000 bytes.
+#                 2985   Setting Latency Timer to 0xff.
+#                 3195   Enabling Mem Space and Bus Master.
+#                 3585   Host read  0x00010004 with cmd 0xa:  Disconnect with Data, 0x02000146.
+#                 3645   Operating System Configuring Done
+#  
+#  
+#  3645.00ns testbench.host32.process_PCI_requests: Info: Starting PCI Write data 0x00000000 to address 0x00000008
+#  3645.00ns testbench.net4 Info: Forking ingess, egress and finish jobs.
+#                 3645 testbench.net4.handle_ingress Info: barrier request: expecting 0 pkts, seen 0 pkts
+#  3645.00ns testbench.net3 Info: Forking ingess, egress and finish jobs.
+#                 3645 testbench.net3.handle_ingress Info: barrier request: expecting 0 pkts, seen 0 pkts
+#  3645.00ns testbench.net2 Info: Forking ingess, egress and finish jobs.
+#                 3645 testbench.net2.handle_ingress Info: barrier request: expecting 0 pkts, seen 0 pkts
+#  3645.00ns testbench.net1 Info: Forking ingess, egress and finish jobs.
+#                 3645 testbench.net1.handle_ingress Info: barrier request: expecting 0 pkts, seen 0 pkts
+#  3645.00ns System appears to be up.
+#  3885.00ns testbench.host32.process_PCI_requests: Info: Starting PCI Write data 0x00000000 to address 0x00000040
+#  4125.00ns testbench.host32.service_interrupt: Info: Interrupt signaled
+#                 4305   Host read  0x00000044 with cmd 0x6:  Disconnect with Data, 0x00000200.
+#                 4365   CPCI Interrupt:  DMA queue status change
+#  4367.00ns testbench.host32.service_interrupt: DMA queue status change
+#                 4545   Host read  0x00000158 with cmd 0x6:  Disconnect with Data, 0x0000000f.
+#  4636.00ns testbench.host32.process_PCI_requests: Info: PCI delay  1000.00ns ns
+#  4636.00ns testbench.host32.process_PCI_requests: Info: delaying 1000 ns
+#  5655.00ns testbench.host32.process_PCI_requests: Info: PCI barrier
+#  5655.00ns testbench.host32.process_PCI_requests: Info:   DMA port 0: expecting 0 pkts, seen 0 pkts
+#  5655.00ns testbench.host32.process_PCI_requests: Info:   DMA port 1: expecting 0 pkts, seen 0 pkts
+#  5655.00ns testbench.host32.process_PCI_requests: Info:   DMA port 2: expecting 0 pkts, seen 0 pkts
+#  5655.00ns testbench.host32.process_PCI_requests: Info:   DMA port 3: expecting 0 pkts, seen 0 pkts
+#                 5655 testbench.host32.process_PCI_requests Info: barrier request
+#                 5687 testbench.net4.handle_ingress Info: barrier complete
+#                 5687 testbench.net4.handle_ingress Info: barrier request: expecting 0 pkts, seen 0 pkts
+#                 5687 testbench.net3.handle_ingress Info: barrier complete
+#  5687.00ns testbench.net3.handle_ingress Sending next ingress packet (len 60) to NF2.
+#                 5687 testbench.net2.handle_ingress Info: barrier complete
+#                 5687 testbench.net2.handle_ingress Info: barrier request: expecting 0 pkts, seen 0 pkts
+#                 5687 testbench.net1.handle_ingress Info: barrier complete
+#                 5687 testbench.net1.handle_ingress Info: barrier request: expecting 0 pkts, seen 0 pkts
+#                 5687 testbench.host32.process_PCI_requests Info: barrier complete
+#  5687.00ns testbench.host32.process_PCI_requests: Info: Starting PCI Write data 0x01234567 to address 0x02000000
+#  5925.00ns testbench.host32.process_PCI_requests: Info: Starting PCI DMA transfer of length 60 to DMA queue 3
+#  5925.00ns testbench.host32.process_PCI_requests: Info: Starting DMA transfer
+#  5925.00ns testbench.target32.next_ingress Setting up memory for DMA transfer (len 60 bytes) to NF2.
+#                 6105   Host read  0x00000040 with cmd 0x6:  Disconnect with Data, 0x00000000.
+#                 6353 testbench.net3.handle_ingress Info: barrier request: expecting 1 pkts, seen 0 pkts
+# Current IP: 00010000   IP chosen: c0a80004
+# Current IP: c0a80002   IP chosen: c0a80004
+# Current IP: d20db35e   IP chosen: c0a80004
+# Current IP: 1bd2709d   IP chosen: c0a80004
+# Current IP: d7e29458   IP chosen: c0a80004
+# Current IP: d6ab9b53   IP chosen: c0a80004
+#  7125.00ns testbench.host32.service_interrupt: Info: Interrupt signaled
+#                 7305   Host read  0x00000044 with cmd 0x6:  Disconnect with Data, 0x00000300.
+#                 7365   CPCI Interrupt:  DMA queue status change  Pkt available
+#  7367.00ns testbench.host32.service_interrupt: DMA queue status change
+#                 8085   Host read  0x00000158 with cmd 0x6:  Disconnect with Data, 0x0004000f.
+#  8145.00ns testbench.host32.service_interrupt: Packet available. Ignoring as DMA transaction already in progress...
+#  8176.00ns testbench.host32.process_PCI_requests: Info: PCI barrier
+#  8176.00ns testbench.host32.process_PCI_requests: Info:   DMA port 0: expecting 0 pkts, seen 0 pkts
+#  8176.00ns testbench.host32.process_PCI_requests: Info:   DMA port 1: expecting 0 pkts, seen 0 pkts
+#  8176.00ns testbench.host32.process_PCI_requests: Info:   DMA port 2: expecting 1 pkts, seen 0 pkts
+#  8176.00ns testbench.host32.process_PCI_requests: Info:   DMA port 3: expecting 0 pkts, seen 0 pkts
+#                 8176 testbench.host32.process_PCI_requests Info: barrier request
+#  8206.00ns testbench.host32.service_interrupt: Info: Interrupt signaled
+# Current IP: 00010000   IP chosen: c0a80004
+# Current IP: c0a80004   IP chosen: c0a80004
+#                 8385   Host read  0x00000044 with cmd 0x6:  Disconnect with Data, 0x40000100.
+#                 8445   CPCI Interrupt:  DMA egress xfer complete  Pkt available
+#                 8625   Host read  0x00000040 with cmd 0x6:  Disconnect with Data, 0x00000100.
+#  8925.00ns testbench.host32.service_interrupt: Info: DMA egress transfer complete.
+#  8925.00ns testbench.host32.service_interrupt: Packet available. Starting DMA ingress transfer
+#                 9105   Host read  0x00000040 with cmd 0x6:  Disconnect with Data, 0x00000000.
+# 10635.00ns testbench.host32.service_interrupt: Info: Interrupt signaled
+#                11355   Host read  0x00000044 with cmd 0x6:  Disconnect with Data, 0x80000200.
+#                11415   CPCI Interrupt:  DMA ingress xfer complete  DMA queue status change
+# 11417.00ns testbench.host32.service_interrupt: DMA queue status change
+#                11595   Host read  0x00000158 with cmd 0x6:  Disconnect with Data, 0x0000000f.
+#                11835   Host read  0x00000148 with cmd 0x6:  Disconnect with Data, 0x0000003c.
+#                12075   Host read  0x00000150 with cmd 0x6:  Disconnect with Data, 0x00000200.
+# 12135.00ns testbench.host32.service_interrupt: Info: DMA ingress transfer complete. Size:         60   Source:  2
+#                12315   Host read  0x00000040 with cmd 0x6:  Disconnect with Data, 0x00000100.
+#                12647 testbench.net4.handle_ingress Info: barrier complete
+#                12647 testbench.net2.handle_ingress Info: barrier complete
+#                12647 testbench.net1.handle_ingress Info: barrier complete
+#                12647 testbench.net3.handle_ingress Info: barrier complete
+#                12647 testbench.host32.process_PCI_requests Info: barrier complete
+#                12647 Simulation has reached finish time - ending.
+# ** Note: $finish    : /root/NetFPGA-Danilo/lib/verilog/core/testbench/finish_ctrl.v(125)
+#    Time: 12747 ns  Iteration: 0  Instance: /testbench/finish_ctrl
+--- Simulation is complete. Validating the output.
+	Comparing simulation output for port 1 ...
+	Port 1 matches [0 packets]
+	Comparing simulation output for port 2 ...
+	Port 2 matches [0 packets]
+	Comparing simulation output for port 3 ...
+	Error: Port 3 packet 1 : not Matched.
+	Port 3 saw 1 errors.
+
+	Comparing simulation output for port 4 ...
+	Port 4 matches [0 packets]
+	Comparing simulation output for DMA queue 1 ...
+	DMA queue 1 matches [0 packets]
+	Comparing simulation output for DMA queue 2 ...
+	DMA queue 2 matches [0 packets]
+	Comparing simulation output for DMA queue 3 ...
+	Error: Port dma packet 1 : not Matched.
+	DMA queue 3 saw 1 errors.
+
+	Comparing simulation output for DMA queue 4 ...
+	DMA queue 4 matches [0 packets]
+--- Test failed (both_crypto_encrypt) - expected and seen data differs.
+NetFPGA environment:
+   Root dir:       /root/NetFPGA-Danilo
+   Project name:   crypto_nic
+   Project dir:    /tmp/root/test/crypto_nic
+   Work dir:       /tmp/root
+=== Work directory is /tmp/root/test/crypto_nic
+=== Calling make to build simulation binary with
+make -f Makefile DUMP_CTRL= SIM_OPT=  vsim_top
+
+=== Simulation compiled.
+=== Setting up test in /tmp/root/test/crypto_nic/both_crypto_encrypt
+=== Running test /tmp/root/test/crypto_nic/both_crypto_encrypt ... using cmd ['/root/NetFPGA-Danilo/lib/scripts/verif_run/pyrun.pl', '--sim', 'vsim']
+Error: test both_crypto_encrypt failed!
+------------SUMMARY---------------
+PASSING TESTS: 
+FAILING TESTS: 
+both_crypto_encrypt
+TOTAL: 1 PASS: 0 FAIL: 1 GUI: 0
+
