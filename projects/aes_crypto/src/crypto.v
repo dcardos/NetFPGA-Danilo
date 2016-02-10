@@ -79,6 +79,10 @@ module crypto
   wire                             in_fifo_empty;
 
   wire [`CPCI_NF2_DATA_WIDTH-1:0]  key;
+	
+	wire [127:0]											data_encrypt;
+	wire [127:0]											key_encrypt;
+	wire [127:0]											output_encrypt;
 
   reg [NUM_STATES-1:0]             state;
   reg [NUM_STATES-1:0]             state_next;
@@ -213,6 +217,8 @@ module crypto
             out_wr = 1;
             in_fifo_rd_en = 1;
             out_data[63:48] = in_fifo_data_dout[63:48];
+						// problems: state is shorter than 16Bytes (8B actually). When it is ready?
+						// aes_128 a1(clk, state, key, out)		// State and key requires 128 bits (two words)
             out_data[47:0] = in_fifo_data_dout[47:0] ^ {key[15:0], key};
             state_next = PAYLOAD;
           end
@@ -226,8 +232,15 @@ module crypto
             in_fifo_rd_en = 1;
 
             // Encrypt/decrypt the data
-            out_data = in_fifo_data_dout ^ {key, key};
-
+            //out_data = in_fifo_data_dout ^ {key, key};
+						assign data_encrypt = {in_fifo_data_dout, 64'h0};
+						assign key_encrypt = {key, key, key, key};
+						$display("\n\n data_encrypt: %h\n key_encrypt: %h\n", 
+								data_encrypt, key_encrypt);
+						aes_128 aes1(clk, data_encrypt, key_encrypt, output_encrypt);
+						$display("\n\n output_encrypt: %h\n", output_encrypt);
+						out_data = output_encrypt;
+						$display("\n\n out_data: %h\n", out_data);
             // Check for EOP
             if (in_fifo_ctrl_dout != 'h0) begin
               state_next = PROCESS_CTRL_HDR;
