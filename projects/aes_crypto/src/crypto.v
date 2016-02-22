@@ -139,6 +139,12 @@ module crypto
     .clk              (clk),
     .reset            (reset)
   );
+	
+	
+	// --- AES module
+	assign data_encrypt = {in_fifo_data_dout, 64'h0};
+	assign key_encrypt = {key, key, key, key};
+	aes_128 aes1(clk, data_encrypt, key_encrypt, output_encrypt);
 
   //----------------------- Logic -----------------------------
 
@@ -233,11 +239,9 @@ module crypto
 
             // Encrypt/decrypt the data
             //out_data = in_fifo_data_dout ^ {key, key};
-						assign data_encrypt = {in_fifo_data_dout, 64'h0};
-						assign key_encrypt = {key, key, key, key};
+						
 						$display("\n\n data_encrypt: %h\n key_encrypt: %h\n", 
 								data_encrypt, key_encrypt);
-						aes_128 aes1(clk, data_encrypt, key_encrypt, output_encrypt);
 						$display("\n\n output_encrypt: %h\n", output_encrypt);
 						out_data = output_encrypt;
 						$display("\n\n out_data: %h\n", out_data);
