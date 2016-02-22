@@ -243,6 +243,7 @@ module crypto
 						$display("\n\n data_encrypt: %h\n key_encrypt: %h\n", 
 								data_encrypt, key_encrypt);
 						$display("\n\n output_encrypt: %h\n", output_encrypt);
+						// --- necessário esperar X clock para pegar o output
 						out_data = output_encrypt;
 						$display("\n\n out_data: %h\n", out_data);
             // Check for EOP
